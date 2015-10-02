@@ -1,0 +1,86 @@
+\section{\texorpdfstring{Vlastnosti kondenzátorù a rezistorù pøi kmitoètech nad 1~MHz }{Vlastnosti kondenzatoru a rezistoru pri kmitoctech nad 1 MHz}}
+
+\subsection{\texorpdfstring{Úvod}{Uvod}}
+
+Rezistory a kapacitory nejsou ideální souèástky, take mimo svou dominantní vlastnost (odpor, kapacita) vykazují ještì parazitní vlastnosti (indukènost, kapacitu, sériovı a paralelní odpor). Ty ovlivòují jejich vlastnosti, a to pøedevším v obvodech s vyššími frekvencemi. Mìøení slouí k ovìøení kmitoètového rozsahu, v nìm souèástka vykazuje pøevánì svou dominantní vlastnost. Vlastnosti jednotlivıch vzorkù závisí na jejich rozmìrech, pouitıch materiálech, technologii vıroby atd.
+
+%---------------------------------------------
+\subsection{\texorpdfstring{Kmitoètová závislost rezistorù}{Kmitoctova zavislost rezistoru}}
+
+\subsubsection{\texorpdfstring{Úkol mìøení}{Ukol mereni}}
+Pro zadané vzorky rezistorù zmìøte závislost absolutní hodnoty impedance a fáze ($\left|Z\right|$, $\varphi$) na kmitoètu. Namìøené hodnoty vyneste do grafu. V závìru diskutujte vliv hodnoty a technologie rezistoru na namìøené frekvenèní charakteristiky.
+
+\subsubsection{\texorpdfstring{Postup mìøení}{Postup mereni}}
+
+Mìøení proveïte v rozsahu frekvencí 1 MHz a 100 MHz s pouitím pøístroje Agilent E5062A. Vyhodnote, jak se jednotlivé vzorky projevují v závislosti na jejich hodnotì a technologii. Zaznamenejte rezonanèní frekvence jednotlivıch souèástek.
+
+\subsubsection{\texorpdfstring{Mìøené vzorky}{Merene vzorky}}
+\begin{tabular}{lll}
+ 1.& 10~$\Omega$/ 330~$\Omega$/ 10~k$\Omega$& rezistor metalizovanı, 0,6 W, velikost 0207  \\
+ 2.& 10~$\Omega$/ 330~$\Omega$/ 10~k$\Omega$& rezistor metalizovanı, 2 W  \\
+ 3.& 10~$\Omega$/ 330~$\Omega$/ 10~k$\Omega$& rezistor drátovı, 5 W  \\ 
+\end{tabular}
+
+%---------------------------------------------
+\subsection{\texorpdfstring{Kmitoètová závislost kondenzátorù}{Kmitoctova zavislost kondenzatoru}}
+
+\subsubsection{\texorpdfstring{Úkol mìøení}{Ukol mereni}}
+Pro zadané vzorky kondenzátorù zmìøte závislost kapacity a ztrátového èinitele ($C$, $tg\delta$) na kmitoètu. Namìøené hodnoty vyneste do grafu. V závìru diskutujte vliv technologie kondenzátoru na namìøené frekvenèní charakteristiky.
+
+\subsubsection{\texorpdfstring{Postup mìøení}{Postup mereni}}
+
+Mìøení proveïte v rozsahu frekvencí 1~MHz a 100~MHz s pouitím pøístroje Agilent E5062A. Vyhodnote, jak se jednotlivé vzorky projevují v závislosti na jejich technologii. Zaznamenejte rezonanèní frekvence jednotlivıch souèástek.
+
+\subsubsection{\texorpdfstring{Mìøené vzorky}{Merene vzorky}}
+\begin{tabular}{llll}
+ 1.& Elektrolytickı kondenzátor hliníkovı, 330 $\mu$F/ 25 V &  5.& Keram. kondenzátor, 1 nF  \\
+ 2.& Elektrolytickı kondenzátor tantalovı, 22 $\mu$F/ 10 V & 6.& Keram. kondenzátor, 10 nF  \\ 
+ 3.& Foliovı kondenzátor radiální, 10 nF/ 100 V  & 7.& Keram. kondenzátor, 68 nF  \\ 
+ 4.& Foliovı kondenzátor axiální, 10 nF/ 100 V  && \\
+\end{tabular}
+
+%---------------------------------------------
+\subsection{\texorpdfstring{Mìøení pøístrojem Agilent E5062A}{Mereni pristrojem Agilent E5062A}}
+
+\subsubsection{\texorpdfstring{Schéma zapojení}{Schema zapojeni}}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.2\columnwidth]{rc_nad_1MHz/RCmer21}
+  \label{fig:rcNad1MHz:schemaZap}
+\end{figure}
+
+\subsubsection{\texorpdfstring{Postup mìøení}{Postup mereni}}
+Bez zaloeného vzorku na zaèátku mìøení zkontrolujeme kalibraci pøístroje – kurzor ukazuje na pravı okraj krunice na displeji (poloha 3 hodiny). Pokud ne, je tøeba kalibrovat:
+
+\textbf{\uv{Save/Recall} / \uv{Recall/State} / \uv{File Dialog} / \uv{Lab.sta} / \uv{Open}} 
+
+\noindent Zaloíme vzorek do èelistí. Tlaèítky \textbf{START} a \textbf{STOP} lze zadat z klávesnice poèáteèní a koneènou frekvenci mìøení. Body køivky mùeme èíst manuálnì nebo zaznamenat celou køivku automaticky na pamìové medium.
+
+\subsubsection*{\texorpdfstring{Manuální nastavení frekvence:}{Manualni nastaveni frekvence}}
+Aktuální frekvenci mùeme nastavit pøi nastavení volby Marker /Marker1. Frekvenci nastavujeme otáèením volièe nebo z klávesnice. Na displeji je moné odeèíst údaje v následujícím poøadí: frekvence ($f$), odpor ($R$), reaktance ($X$), indukènost ($L$) nebo kapacita ($C$) podle znamenka reaktance.
+
+\subsubsection*{\texorpdfstring{Automatické mìøení:}{Automaticka mereni}}
+Mìøení probíhá kontinuálnì. Data zapisujeme na flash disk. Postupnì volíme:
+
+\textbf{\uv{Save/Recall} / \uv{Save Trace Data}}
+
+\noindent \textbf{Nezapomeòte zvolit vhodné uloištì!!!}. Jméno souboru je nutné zadat z klávesnice. Stiskem \textbf{\uv{Save}} se data uloí ve fotmátu CSV. Formát ukládání je CSV. Tento formát souborù lze bìnì editovat softwary Excel, Matlab apod.
+
+\subsubsection{\texorpdfstring{Smithùv diagram}{Smithuv diagram}}
+\begin{multicols}{2}
+
+\begin{centering}
+  \includegraphics[width=0.8\columnwidth]{rc_nad_1MHz/smithDiag}
+  \label{fig:rcNad1MHz:smithDiag}
+\end{centering}
+
+Smithùv diagram graficky znázoròuje závislost èinitele odrazu na zakonèovací impedanci vedení $Z$.
+
+\begin{equation}
+\rho = \frac{Z-Z_0}{Z+Z_0}
+\label{eq:rcNad1MHz:cinitelOdrazu}
+\end{equation}
+
+Pøi známém èiniteli odrazu $\rho$ (lze zmìøit) a známé charakteristické impedanci vedení $Z_0$ lze ze Smithova diagramu urèit zakonèovací impedanci vedení.
+\end{multicols}

@@ -1,0 +1,47 @@
+\section{\texorpdfstring{Osazování DPS}{Osazovani DPS}}
+
+\subsection{\texorpdfstring{Úvod}{Uvod}}
+Pájení je zpùsob spojování dvou kovových materiálù pomocí jiného roztaveného kovového materiálu, tzv. pájky. Teplota tání pájky je obvykle mnohem nižší, než je tomu u pájených materiálù, proto pøi pájení nedochází k tavení spojovaných souèástí. V elektrotechnice se pro vytváøení vodivých spojù používají témìø výhradnì tzv. mìkké pájky. To jsou materiály, u nichž je teplota tání nižší než 400~$^\circ$C. Lze se setkat se dvìma skupinami používaných slitin:
+Pájky obsahující olovo – jsou založeny na slitinì Sn-Pb. Jejich výhodou je nízký bod tání, který je pouze 183~$^\circ$C. Nevýhodou je obsah olova, které je toxické. Používání tìchto pájek je omezeno smìrnicí RoHS pouze pro speciální úèely.
+Pájky bez olova – jde o slitiny cínu a dalších kovù, jako napøíklad Ag, Zn, Cu a další. Teplota tání je vyšší než u pájek s olovem a její obvyklá hodnota je 217~$^\circ$C.
+Tavidla jsou nekovové materiály usnadòující pájení. Zlepšují smáèivost daných materiálù pájkou a brání oxidaci roztavené pájky. Nejèastìji se pro tento úèel používá kalafuna.
+
+%--------------------------------------
+\subsection{\texorpdfstring{Osazování desky plošného spoje}{Mereni frekvencni zavislosti cinitele previseni Q}}
+
+\subsubsection{\texorpdfstring{Úkol mìøení}{Ukol mereni}}
+Osaïte pøipravený plošný spoj a pomocí pøípravku ovìøte jeho funkènost.
+
+\subsubsection{\texorpdfstring{Popis zapojení}{Popis zapojeni}}
+Schéma zapojení osazovaného obvodu je na \ref{fig:osDPS:schemaZap}. Jedná se o akustickou signalizaci, která má upozornit øidièe na nutnost rozsvítit svìtla. Napájecí napìtí a logické signály svìtel jsou pøivádìny na konektor K1. Reproduktor je pøipojen mezi vývody J1 a J2. Ke generování obdélníkového signálu pro reproduktor je použit integrovaný obvod èasovaèe TS555. Signál je odebírán proti zemi z výstupu Q. Hodnotu periody generovaného signálu lze ovlivnit zmìnou èasové konstanty RC èlánku, který je složen z rezistoru R1 a kondenzátoru C3.
+Èinnost èasovaèe je ovlivòována logickou úrovní na vstupu R. Pokud je zde nízká úroveò, pak je èasovaè vyøazen z èinnosti. Po pøipojení napájecího napìtí (otoèení klíèku automobilu) je na tomto vstupu napìtí blízké 0 V díky rezistoru R2, který je pøipojen proti plovoucí zemi (bude vysvìtleno dále). Èasovaè tedy nekmitá, dokud napìtí na tomto vstupu nedosáhne požadované vysoké úrovnì. Napìtí je na vstup pøivádìno pøes diodu D5 z kondenzátoru C2, který je pozvolna nabíjen z napájecího zdroje pøes diodu D3 a rezistor R4. Volbou hodnot rezistoru R4 a kondenzátoru C2 tak ovlivòujeme délku èasové prodlevy pøed spuštìním akustické signalizace po zapnutí pøípravku.
+Napájecí napìtí pro èasovaè je vyvedeno mezi uzly V+ a GND. GND je zde znaèena plovoucí zem, což je uzel, který je oddìlen od skuteèné zemì napájecího zdroje rezistorem R5. Pøivedením urèitého napìtí na tento rezistor pøes diody D1 nebo D2 snížíme o jeho hodnotu napájecí napìtí èasovaèe. Pokud je toto napìtí rovno napìtí zdroje napájení, pak je napájecí napìtí èasovaèe rovno nule a obvod opìt nemùže kmitat.
+
+\subsubsection{\texorpdfstring{Postup pájeni}{Postup pajeni}}
+Desku plošného spoje osazujeme dle obrázku \ref{fig:osDPS:schemaPokl}, který ukazuje pozice souèástek ze strany souèástek (druhá strana se nazývá strana plošného spoje a jsou na ní vyleptané vodivé trasy). Dbáme na polaritu diod a elektrolytických kondenzátorù a také na správné natoèení pouzdra integrovaného obvodu, které je vyznaèeno klíèem (symbol na pouzdøe – teèka, výøez apod.). Pøi osazování je vhodné zaèít souèástkami s nízkým profilem (výškou). Pájení bude jednodušší, pokud si desku plošného spoje upevníme do držáku.
+\newpage
+\noindent
+Spoje pájíme následujícím posupem:
+\begin{enumerate}
+	\item Pájeèku držíme v jedné ruce, trubièkovou pájku ve druhé.
+	\item Pøiložíme pájeèku ke spoji a zaèneme jej prohøívat (pøípadnì ještì pøedtím namoèíme pájeèku do kalafuny).
+	\item Dotkneme se pájkou prohøívaného spoje – trocha pájky se roztaví a zùstane na pájeèce a spoji. Pájeèkou stále prohøíváme spoj!!!
+	\item Poté co se pájka rozteèe po spoji, pájeèku odejmeme. Vždy se snažíme, zkrátit dobu pájení na minimum.
+\end{enumerate}
+Výsledný pájený spoj by mìl mít vzhled sopky.
+
+\subsubsection{\texorpdfstring{Schéma zapojení}{Schéma zapojení}}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\columnwidth]{osazovani_dps/svetla_piskle_schema}
+	\caption{Schéma zapojení signalizace rozsvícených svìtel}
+  \label{fig:osDPS:schemaZap}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.4\columnwidth]{osazovani_dps/piskle_S}
+	\caption{Pokládací (osazovací) schéma}
+  \label{fig:osDPS:schemaPokl}
+\end{figure}
