@@ -1,0 +1,69 @@
+\section{\texorpdfstring{Nelineární rezistory}{Nelinearni rezistory}}
+
+\subsection{\texorpdfstring{Úvod}{Uvod}}
+
+V praxi se nejèastìji setkáváme s lineárními rezistory, tj. souèástkami, u nich pøedpokládáme konstantní velikost odporu nezávislou na vnìjších podmínkách aplikace, tj. nezávislost na teplotì, frekvenci, mechanickıch vlivech apod. Odlišují se vıkonovou zatíitelností, teplotní a frekvenèní závislostí podle pouitıch materiálù a  technologií vıroby, tolerancí jmenovité hodnoty a provedením. Pøedpoklad konstantní velikosti odporu vyhovuje obvykle pøi aplikacích do frekvencí 50~kHz a 1~MHz (podle provedení). Pro vyšší frekvence je nutné uvaovat úplné náhradní schéma rezistoru s jeho reaktanèními prvky.
+
+Nelineární rezistory  jsou na rozdíl od lineárních konstruovány tak, aby  velikost odporu byla vıraznì závislá na vnìjších podmínkách, napø. teplotì (termistory NTC, PTC) nebo pøiloenému napìtí (varistory) a pokud mono nezávisela na dalších vlivech aplikace. Vzhledem k tìmto vlastnostem se vyuívají k mìøení teploty, v obvodech pro tepelnou ochranu pøístrojù, strojù a zaøízení, jako pøepìové ochrany atd.
+
+%---------------------------------------------
+\subsection{\texorpdfstring{Mìøení teplotní závislosti termistorù}{Mereni teplotni zavislosti termistoru}}
+
+\subsubsection{\texorpdfstring{Úkol mìøení}{Ukol mereni}}
+Zmìøte závislost odporu 6 vzorkù rezistorù a termistorù pro zmìnu teploty 20~$^\circ$C a 120~$^\circ$C. Namìøené závislosti $R= f(\vartheta)$ vyneste do grafu! Ovìøte, zda dané charakteristiky odpovídají teoretickım vztahùm (lineární závislost, exponenciální závislost apod.)
+
+\subsubsection{\texorpdfstring{Schéma zapojení}{Schema zapojeni}}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\columnwidth]{nelin_rezistory/NelinRez11}
+  \label{fig:nelinRez:termistory}
+\end{figure}
+
+\subsubsection{\texorpdfstring{Postup mìøení}{Postup mereni}}
+
+Mìøené vzorky jsou umístìny na destièce v pícce a vyvedeny na pøepínaè mìøicích míst. K mìøení teploty slouí orientaènì teplomìr, kterı je souèástí konstrukce pece. Pro pøesné mìøení vyuijeme Pt odporovı teplomìr s lineární závislostí odporu na teplotì. Pro odpor Pt teplomìru uvaujte následující vztah:
+
+\begin{equation}
+R_\vartheta = R_0 \cdot \left(1 + \alpha \cdot\left(\vartheta - \vartheta_0\right)\right)
+\label{eq:nelinRez:OdporNaTeplote}
+\end{equation}
+
+\begin{tabular}{ll}
+ $R_0$& \ldots je odpor v $\Omega$ pøi 0~$^\circ$C, \\
+ $\alpha$& \ldots je teplotní koeficient odporu, pro platinovı teplomìr je $\alpha = 4,5 \cdot 10^{-3}$ K$^{-1}$, \\
+ $\vartheta$& \ldots je teplota okolí ve $^\circ$C nebo K, \\ 
+ $\vartheta_0$& \ldots je teplota ve $^\circ$C nebo K, pøi které byl mìøen odpor $R_0$, zde 0~$^\circ$C. \\
+\end{tabular}
+
+\subsubsection{\texorpdfstring{Mìøené vzorky}{Merene vzorky}}
+\begin{tabular}{llll}
+ 1.& odporovı Pt teplomìr 100~$\Omega$ pøi 0~$^\circ$C&  4.&  rezistor uhlíkovı TR 212  4,7~k$\Omega$  \\
+ 2.& termistor NTC 100~$\Omega$&  5.& termistor NTC 6,8~k$\Omega$  \\
+ 3.& rezistor metaloxidovı TR154  6,8~k$\Omega$ &  6.& termistor PTC 60~$\Omega$  \\ 
+\end{tabular}
+
+%---------------------------------------------
+\subsection{\texorpdfstring{Mìøení VA charakteristiky varistorù}{Mereni VA charakteristiky varistoru}}
+
+\subsubsection{\texorpdfstring{Úkol mìøení}{Ukol mereni}}
+Zmìøte voltampérovou charakteristiku 5 vzorkù varistorù pomocí osciloskopu, kterı pracuje v reimu x/y (souøadnicovı zapisovaè). Ovìøte, zda údaje uvedené k jednotlivım vzorkùm odpovídají mìøení.
+
+\subsubsection{\texorpdfstring{Schéma zapojení}{Schema zapojeni}}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\columnwidth]{nelin_rezistory/NelinRez12}
+  \label{fig:nelinRez:varistory}
+\end{figure}
+
+\subsubsection{\texorpdfstring{Postup mìøení}{Postup mereni}}
+
+Mìøenı vzorek umístíme do pøípravku. Pro mìøení pouijeme zdroj krátkıch napìovıch pulzù nastavitelné velikosti. Pozor pøi vımìnì vzorkù -  pøed manipulací snite napìtí na 0~V! Napìtí na vzorku snímáme sondou s dìlièem 1:100 (nastaveno na osciloskopu – zkontrolovat!), proud je snímán jako úbytek napìtí na odporu 0,5~$\Omega$ nebo pomocí proudové sondy.  Sejmuté charakteristiky zaznamenejte na disketu v osciloskopu, pøeneste do PC a ulote na vhodné pamìové medium pro vytisknutí do referátu z mìøení.
+
+\subsubsection{\texorpdfstring{Mìøené vzorky}{Merene vzorky}}
+\begin{tabular}{llll}
+ 1.& 15D201K, 200 V, zelenı&  4.& S20K20, 40 V, velkı modrı  \\
+ 2.& 14D220K, 22 V, modrı&  5.& TR 152, 100 Ohmù, lineární rezistor  \\
+ 3.& 14D101K, 100 V, svìtle modrı&  &  \\ 
+\end{tabular}

@@ -1,0 +1,92 @@
+<document type="ProfiCAD sxe" version="5.0" bgColor="FFFFF0" pgsHor="1" pgsVer="1" pgsOri="LANDSCAPE" pgsMrgn="0, 0, 1, 1" zoom="75" frame="YES" rastr="20" showT="YES" showV="YES">
+<summary author="" date="29.9.2010"/>
+<PrintSettings PrinterName="" PaperSize="1" FormName="letter" SheetSizeX="288" SheetSizeY="201" WantsCustom="0" CustomSizeX="283" CustomSizeY="203"/>
+<fonts letter="155,0,0,0,Lucida Sans Unicode,000000" text="110,0,0,0,Lucida Sans Unicode,000000" type="85,0,0,0,Arial,000000" value="85,0,0,0,Arial,000000"/>
+<tb use="0" h="0" v="0" name=""/>
+<repo>
+<ppd name="spínače mechanické\tlačítko zapínací.ppd" t="" v="" n="" m="" fG="b956d715-f39e-42af-9f07-b6be1969124e" lG="c179ac65-9716-4961-afb0-42e1eb9c0b0d">
+<elements>
+<polyline op-lw="4" pts="-25,0,25,0,"/>
+<polyline pts="0,0,0,-25,"/>
+<ellipse left="-26" top="5" right="-16" bottom="15"/>
+<ellipse left="16" top="5" right="26" bottom="15"/>
+<outlet x="-26" y="10"/>
+<outlet x="26" y="10"/>
+</elements>
+</ppd>
+<ppd name="RLC\rezistory\rezistor.ppd" t="R" v="10K" n="ČSN EN 60617: ČSN EN 60617: 04-01-01" m="" fG="28c7548c-a963-45ba-b852-59afda220b0d" lG="2f9a12a0-0c17-4b74-aafe-7d8c4b646eb0">
+<elements>
+<rect left="-8" top="-25" right="8" bottom="25"/>
+<outlet x="0" y="-25"/>
+<outlet x="0" y="25"/>
+</elements>
+</ppd>
+</repo>
+<elements>
+<rect left="280" top="700" right="520" bottom="840"/>
+<text x="400" y="740" f="110,0,0,0,Arial,000000">Multimetr</text>
+<text x="400" y="789" f="110,0,0,0,Arial,000000">( Ω )</text>
+<elem lGuid="2f9a12a0-0c17-4b74-aafe-7d8c4b646eb0" x="1040" y="300" t="2">
+<type x="1015" y="270" v="1">R1</type>
+<value x="1075" y="320">10K</value>
+</elem>
+<elem lGuid="c179ac65-9716-4961-afb0-42e1eb9c0b0d" x="720" y="289">
+<type x="733" y="269" v="1">S1</type>
+</elem>
+<elem lGuid="2f9a12a0-0c17-4b74-aafe-7d8c4b646eb0" x="1040" y="380" t="2">
+<type x="1015" y="350" v="1">R2</type>
+<value x="1075" y="400">10K</value>
+</elem>
+<elem lGuid="c179ac65-9716-4961-afb0-42e1eb9c0b0d" x="720" y="369">
+<type x="733" y="349" v="1">S2</type>
+</elem>
+<elem lGuid="2f9a12a0-0c17-4b74-aafe-7d8c4b646eb0" x="1040" y="460" t="2">
+<type x="1015" y="430" v="1">R3</type>
+<value x="1075" y="480">10K</value>
+</elem>
+<elem lGuid="c179ac65-9716-4961-afb0-42e1eb9c0b0d" x="720" y="449">
+<type x="733" y="429" v="1">S3</type>
+</elem>
+<elem lGuid="2f9a12a0-0c17-4b74-aafe-7d8c4b646eb0" x="1040" y="540" t="2">
+<type x="1015" y="510" v="1">R4</type>
+<value x="1075" y="560">10K</value>
+</elem>
+<elem lGuid="c179ac65-9716-4961-afb0-42e1eb9c0b0d" x="720" y="529">
+<type x="733" y="509" v="1">S4</type>
+</elem>
+<elem lGuid="2f9a12a0-0c17-4b74-aafe-7d8c4b646eb0" x="1040" y="620" t="2">
+<type x="1015" y="590" v="1">R5</type>
+<value x="1075" y="640">10K</value>
+</elem>
+<elem lGuid="c179ac65-9716-4961-afb0-42e1eb9c0b0d" x="720" y="609">
+<type x="733" y="589" v="1">S5</type>
+</elem>
+<elem lGuid="2f9a12a0-0c17-4b74-aafe-7d8c4b646eb0" x="1040" y="700" t="2">
+<type x="1015" y="670" v="1">R6</type>
+<value x="1075" y="720">10K</value>
+</elem>
+<elem lGuid="c179ac65-9716-4961-afb0-42e1eb9c0b0d" x="720" y="689">
+<type x="733" y="669" v="1">S6</type>
+</elem>
+<wire pts="746,299,1015,300,"/>
+<wire pts="746,379,1015,380,"/>
+<wire pts="746,459,1015,460,"/>
+<wire pts="746,539,1015,540,"/>
+<wire pts="746,619,1015,620,"/>
+<wire pts="746,699,1015,700,"/>
+<wire pts="1065,300,1100,300,1100,700,1065,700,"/>
+<wire pts="1065,620,1100,620," drop2="1"/>
+<wire pts="1065,540,1100,540," drop2="1"/>
+<wire pts="1065,460,1100,460," drop2="1"/>
+<wire pts="1065,380,1100,380," drop2="1"/>
+<wire pts="694,299,660,299,660,699,694,699,"/>
+<wire pts="694,619,660,619," drop2="1"/>
+<wire pts="694,539,660,539," drop2="1"/>
+<wire pts="694,459,660,459," drop2="1"/>
+<wire pts="694,379,660,379," drop2="1"/>
+<wire pts="660,699,660,740,520,740," drop1="1"/>
+<wire pts="1100,700,1100,800,520,800," drop1="1"/>
+<rect left="900" top="200" right="1200" bottom="820" op-lw="4"/>
+<text x="1140" y="220" f="110,0,0,0,Arial,000000">PEC</text>
+</elements>
+</document>

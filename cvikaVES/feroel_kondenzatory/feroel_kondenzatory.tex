@@ -1,0 +1,82 @@
+\section{\texorpdfstring{Feroelektrické kondenzátory}{Feroelektricke kondenzatory}}
+
+\subsection{\texorpdfstring{Úvod}{Uvod}}
+Kondenzátor je souèástka, pomocí ní v elektrickém obvodu realizujeme kapacitu. Podobnì jako ostatní souèástky vykazuje øadu vedlejších závislostí (indukènost, sériovı a paralelní odpor, teplotní a napìovou závislost). Hodnota kapacity $C$ závisí, jak známo, na ploše elektrod ($S$), dielektrické konstantì ($\epsilon$) a nepøímo na vzdálenosti elektrod ($d$). Z toho vycházejí odlišné konstrukce kondenzátorù (plošné - napø. slídové, svitkové, keramické, elektrolytické). Poadavek na minimální rozmìry pøedpokládá pouití materiálù dielektrika s vysokou pomìrnou dielektrickou konstantou (tzv. feroelektrika). Tyto materiály jsou však pøi vyšších teplotách znaènì teplotnì závislé a jejich $\epsilon_r$ pøi vyšší teplotì rychle klesá.
+
+%--------------------------------------
+\subsection{\texorpdfstring{Mìøení teplotní závislosti kapacity a ztrátového èinitele vybranıch vzorkù kondenzátorù}{Mereni teplotni zavislosti kapacity a ztratoveho cinitele vybranych vzorku kondenzatoru}}
+
+\subsubsection{\texorpdfstring{Úkol mìøení}{Ukol mereni}}
+Zmìøte závislost kapacity $C$ a ztrátového èinitele $D$ u tøí vzorkù keramickıch kondenzátorù s odlišnım dielektrikem na teplotì $T$ pro teploty 20~$^\circ$C a 120~$^\circ$C. Závislosti $C = f(T)$, $D = g(T)$ vyneste do grafu.
+
+\subsubsection{\texorpdfstring{Schéma zapojení}{Schema zapojeni}}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.7\columnwidth]{feroel_kondenzatory/feroelKond1}
+  \label{fig:feroelKond:feroelKond1}
+\end{figure}
+
+\subsubsection{\texorpdfstring{Postup mìøení}{Postup mereni}}
+Mìøené vzorky jsou umístìny na destièce v pícce a vyvedeny na pøepínaè mìøicích míst. K mìøení teploty slouí orientaènì dotykovı teplomìr zasazenı do mìrné jímky na tìlese pícky. Kapacitu vzorkù a ztrátovı èinitel mìøíme RLC metrem. K pøesnému zmìøení teploty slouí odporovı teplomìr (èidlo Pt1000, $R_0 = 1008$~$\Omega$ pøi 0~$^\circ$C, $\alpha = 4,5 \cdot 10^{-3}$ K$^{-1}$), jeho odpor mìøíme pomocí multimetru. Teplotu vypoèteme z údajù uvedenıch vıše v návodu a za pøedpokladu linearní závislosti mezi hodnotou odporu a teplotou:
+ 
+\begin{equation}
+R_\vartheta = R_0 \cdot \left(1 + \alpha \cdot\left(\vartheta - \vartheta_0\right)\right)
+\label{eq:feroelKond:OdporNaTeplote}
+\end{equation}
+
+\begin{tabular}{ll}
+ $R_0$& \ldots je odpor v $\Omega$ pøi 0~$^\circ$C, \\
+ $\alpha$& \ldots je teplotní koeficient odporu, pro platinovı teplomìr je $\alpha = 4,5 \cdot 10^{-3}$ K$^{-1}$, \\
+ $\vartheta$& \ldots je teplota okolí ve $^\circ$C nebo K, \\ 
+ $\vartheta_0$& \ldots je teplota ve $^\circ$C nebo K, pøi které byl mìøen odpor $R_0$, zde 0~$^\circ$C. \\
+\end{tabular}
+
+\subsubsection{\texorpdfstring{Mìøené vzorky}{Merene vzorky}}
+\begin{tabular}{ll}
+ 1.& keramickı kondenzátor 100 nF, hmota X7R \\
+ 2.& keramickı kondenzátor 150 nF, hmota Z5U \\
+ 3.& keramickı kondenzátor 150 nF, hmota Y5VV \\ 
+\end{tabular}
+
+%--------------------------------------
+\subsection{\texorpdfstring{Mìøení napìové závislosti kapacity vybranıch vzorkù kondenzátorù}{Mereni napetove zavislosti kapacity vybranych vzorku kondenzatoru}}
+
+\subsubsection{\texorpdfstring{Úkol mìøení}{Ukol mereni}}
+Zmìøte závislost kapacity tøí vzorkù keramickıch kondenzátorù na velikosti pøiloeného stejnosmìrného napìtí. Závislost $C = f(U)$ vyneste do grafu.
+
+\subsubsection{\texorpdfstring{Schéma zapojení}{Schema zapojeni}}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.7\columnwidth]{feroel_kondenzatory/feroelKond2}
+  \label{fig:feroelKond:feroelKond2}
+\end{figure}
+
+\subsubsection{\texorpdfstring{Postup mìøení}{Postup mereni}}
+Mìøené vzorky postupnì zapojujeme na svorky \uv{$C_X$} mìøicího pøípravku, kterı umoòuje oddìlení pøiloeného napìtí (z bateriového DC zdroje) a mìøicího malého støídavého napìtí, které vyuíváme pro mìøení kapacity. Pøi mìøení dbáme na to, aby nebylo pøekroèeno jmenovité provozní napìtí vzorku.
+
+\subsubsection{\texorpdfstring{Mìøené vzorky}{Merene vzorky}}
+\begin{tabular}{ll}
+ 1.& keramickı kondenzátor TK666, 40 V,100 nF, hmota Supermit (kotouèovı, hnìdı) \\
+ 2.& keramickı kondenzátor 4H30, 40 V, 33 nF (zelenı) \\
+ 3.& svitkovı kondenzátor CF2, 63 V, 100 nF, tereftalátovı (lutı) \\ 
+\end{tabular}
+
+%--------------------------------------
+\newpage
+\subsection{\texorpdfstring{Mìøení uvolnìní náboje feroelektrického kondenzátoru}{Mereni uvolneni naboje feroelektrickeho kondenzatoru}}
+V objemu dielektrika feroelektrického kondenzátoru je obecnì vdy vázán malı zbytkovı náboj $Q_1$. Jemu odpovídá nízké napìtí $U_1$ na svorkách kondenzátoru, které je dáno rovnicí: 
+
+\begin{equation}
+U_1 = \frac{Q_1}{C_1}
+\label{eq:feroelKond:NapetiNabojKapacita}
+\end{equation}
+
+Pøi zvıšení teploty dochází u feroelektrik k vıraznému zmenšení jejich kapacity (z $C_1$ na $C_2$) díky zmenšení relativní permitivity z $\epsilon_{r1}$ na $\epsilon_{r2}$. Aby zùstal zachován zbytkovı náboj ($Q_1 = Q_2$), musí na kondenzátoru vıraznì vzrùst napìtí ($U_2$). V ideálním pøípadì platí, e vzrùst napìtí ($U_2/U_1$) je roven zmìnì permitivity ($\epsilon_{r1}/\epsilon_{r2}$).
+
+\subsubsection{\texorpdfstring{Úkol mìøení}{Ukol mereni}}
+Ovìøte uvolnìní elektrického náboje u pøedloeného vzorku kondenzátoru z feroelektrického materiálu.
+
+\subsubsection{\texorpdfstring{Postup mìøení}{Postup mereni}}
+Kondenzátor pøipojenı k elektrostatickému voltmetru nabijte na plné napìtí bateriového zdroje (asi 120~V). Kondenzátor vybijte a po chvíli ohøejte v olejové lázni na cca 150~$^\circ$C. Odeètìte maximální napìtí kondenzátoru.

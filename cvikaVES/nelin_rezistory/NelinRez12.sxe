@@ -1,0 +1,134 @@
+<document type="ProfiCAD sxe" version="5.0" bgColor="FFFFF0" pgsHor="1" pgsVer="1" pgsOri="LANDSCAPE" pgsMrgn="0, 0, 1, 1" zoom="50" frame="YES" rastr="50" showT="YES" showV="YES">
+<summary author="" date="29.9.2010"/>
+<PrintSettings PrinterName="" PaperSize="1" FormName="letter" SheetSizeX="288" SheetSizeY="201" WantsCustom="0" CustomSizeX="283" CustomSizeY="203"/>
+<fonts letter="155,0,0,0,Lucida Sans Unicode,000000" text="110,0,0,0,Lucida Sans Unicode,000000" type="85,0,0,0,Arial,000000" value="85,0,0,0,Arial,000000"/>
+<tb use="0" h="0" v="0" name=""/>
+<repo>
+<ppd name="měřící přístroje\osciloskop.ppd" t="" v="" n="ČSN EN 60617: 08-02-10" m="" fG="75edae9c-f454-4598-8cf9-64fb5a8c6fea" lG="7c05a177-6bb9-4455-9104-de895fbba7e0">
+<elements>
+<ellipse left="-40" top="-40" right="40" bottom="40"/>
+<outlet x="-40" y="0"/>
+<outlet x="40" y="0"/>
+<polyline pts="-30,10,0,-10,"/>
+<polyline pts="0,-10,0,10,"/>
+<polyline pts="0,10,30,-10,"/>
+</elements>
+</ppd>
+<ppd name="měřící přístroje\voltmetr.ppd" t="MP" v="" n="ČSN EN 60617: 08-02-01" m="" fG="bd6c4c1b-d22c-45e1-8bf0-041b6dec5664" lG="b7951494-490d-4db8-96eb-d9fd0acb3579">
+<elements>
+<ellipse left="-40" top="-40" right="40" bottom="40"/>
+<outlet x="-40" y="0"/>
+<outlet x="40" y="0"/>
+<text x="0" y="2" f="95,1,0,0,Arial,000000" l="1">V</text>
+</elements>
+</ppd>
+<ppd name="měřící přístroje\ampérmetr.ppd" t="MP" v="" n="" m="" fG="989fea73-73eb-4031-be9f-9db6053ffb4d" lG="2095a77f-c808-4dc1-b713-ef6781489191">
+<elements>
+<ellipse left="-40" top="-40" right="40" bottom="40"/>
+<outlet x="-40" y="0"/>
+<outlet x="40" y="0"/>
+<text x="0" y="0" f="120,0,0,0,Arial,000000" l="1" tws="0">A</text>
+</elements>
+</ppd>
+<ppd name="RLC\rezistory\rezistor.ppd" t="R" v="10K" n="ČSN EN 60617: ČSN EN 60617: 04-01-01" m="" fG="28c7548c-a963-45ba-b852-59afda220b0d" lG="2f9a12a0-0c17-4b74-aafe-7d8c4b646eb0">
+<elements>
+<rect left="-8" top="-25" right="8" bottom="25"/>
+<outlet x="0" y="-25"/>
+<outlet x="0" y="25"/>
+</elements>
+</ppd>
+<ppd name="přenosová technika\zesilovač\zesilovač - tvar 2.ppd" t="" v="" n="ČSN EN 60617: 10-15-02" m="" fG="d814200b-ea4f-4546-a300-d22cb94be1b1" lG="daf8ef79-d960-414e-ab71-d747d140050b">
+<elements>
+<rect left="-60" top="-60" right="60" bottom="60"/>
+<outlet x="-60" y="0"/>
+<outlet x="60" y="0"/>
+<polyline pts="-40,40,-40,-40,"/>
+<polyline pts="-40,-40,40,0,"/>
+<polyline pts="-40,40,40,0,"/>
+</elements>
+</ppd>
+<ppd name="konstrukční prvky\svorka.ppd" t="" v="" n="" m="" fG="6b78d699-2542-47fd-a146-a5205997bb18" lG="861c0839-b943-4827-9431-2de9d2f7b8f6">
+<elements>
+<ellipse left="-8" top="-8" right="8" bottom="8"/>
+<outlet x="-8" y="0"/>
+<outlet x="8" y="0"/>
+<outlet x="0" y="-8"/>
+<outlet x="0" y="8"/>
+</elements>
+</ppd>
+</repo>
+<elements>
+<elem lGuid="861c0839-b943-4827-9431-2de9d2f7b8f6" x="720" y="740">
+<type x="755" y="720">1</type>
+</elem>
+<elem lGuid="861c0839-b943-4827-9431-2de9d2f7b8f6" x="840" y="860">
+<type x="875" y="840">2</type>
+</elem>
+<elem lGuid="861c0839-b943-4827-9431-2de9d2f7b8f6" x="840" y="780">
+<type x="875" y="760">3</type>
+</elem>
+<elem lGuid="861c0839-b943-4827-9431-2de9d2f7b8f6" x="720" y="920">
+<type x="755" y="900">4</type>
+</elem>
+<ellipse left="510" top="780" right="610" bottom="880"/>
+<text x="559" y="832" f="140,1,0,0,Arial,000000">U</text>
+<wire pts="712,740,560,740,560,780,"/>
+<wire pts="712,920,560,920,560,880,"/>
+<elem lGuid="daf8ef79-d960-414e-ab71-d747d140050b" x="860" y="1040">
+<type x="947" y="1020">5</type>
+</elem>
+<elem lGuid="861c0839-b943-4827-9431-2de9d2f7b8f6" x="1120" y="780">
+<type x="1155" y="760">6</type>
+</elem>
+<elem lGuid="861c0839-b943-4827-9431-2de9d2f7b8f6" x="1120" y="860">
+<type x="1155" y="840">7</type>
+</elem>
+<elem lGuid="861c0839-b943-4827-9431-2de9d2f7b8f6" x="1210" y="740">
+<type x="1245" y="720">8</type>
+</elem>
+<elem lGuid="861c0839-b943-4827-9431-2de9d2f7b8f6" x="1210" y="900">
+<type x="1245" y="880">9</type>
+</elem>
+<elem lGuid="861c0839-b943-4827-9431-2de9d2f7b8f6" x="880" y="1160">
+<type x="915" y="1140">10</type>
+</elem>
+<elem lGuid="861c0839-b943-4827-9431-2de9d2f7b8f6" x="1040" y="1160">
+<type x="1075" y="1140">11</type>
+</elem>
+<elem lGuid="2f9a12a0-0c17-4b74-aafe-7d8c4b646eb0" x="1240" y="820">
+<type x="1275" y="800" v="1">Rm</type>
+<value x="1275" y="840">10K</value>
+</elem>
+<wire pts="1128,780,1240,780,1240,795,"/>
+<wire pts="1128,860,1240,860,1240,845,"/>
+<elem lGuid="7c05a177-6bb9-4455-9104-de895fbba7e0" x="1000" y="520">
+<type x="1067" y="500">12</type>
+</elem>
+<elem lGuid="2f9a12a0-0c17-4b74-aafe-7d8c4b646eb0" x="940" y="820">
+<type x="975" y="800" v="1">Rb</type>
+<value x="975" y="840" v="1">0,5 ohm</value>
+</elem>
+<ellipse left="911" top="1200" right="1011" bottom="1300"/>
+<text x="960" y="1252" f="140,1,0,0,Arial,000000">G</text>
+<wire pts="1040,1168,1040,1250,1010,1250,"/>
+<wire pts="880,1168,880,1250,910,1250,"/>
+<wire op-lw="9" pts="960,520,800,520,800,780,"/>
+<wire op-lw="9" pts="1040,520,1630,520,1630,740,"/>
+<wire pts="832,780,800,780,"/>
+<wire pts="832,860,800,860,800,780,"/>
+<wire pts="1220,740,1630,740,"/>
+<wire pts="1220,900,1630,900,1630,740,"/>
+<wire pts="940,795,940,740,1202,740,"/>
+<wire pts="940,845,940,900,1202,900,"/>
+<rect left="760" top="660" right="1180" bottom="1190" op-lw="5"/>
+<wire pts="728,740,760,740,"/>
+<wire pts="728,920,760,920,"/>
+<text x="1393" y="852" f="110,0,0,0,Arial,000000">Měřený vzorek</text>
+<text x="1020" y="1052" f="110,0,0,0,Arial,000000">Zesilovač</text>
+<text x="967" y="612" f="110,0,0,0,Arial,000000">Kanál 1 - napětí, X</text>
+<text x="1800" y="615" f="110,0,0,0,Arial,000000">Kanál 2 - proud, Y</text>
+<text x="1000" y="452" f="110,1,0,0,Arial,000000">OSC</text>
+<text x="520" y="692" f="110,0,0,0,Arial,000000">Zdroj napětí, max. 6V !!!</text>
+<text x="1180" y="1272" f="110,0,0,0,Arial,000000">Pulzní generátor</text>
+</elements>
+</document>
