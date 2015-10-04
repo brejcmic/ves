@@ -1,0 +1,69 @@
+\section{\texorpdfstring{Ideální souèástky elektronickıch obvodù}{Idealni soucastky elektronickych obvodu}}
+
+\subsection{\texorpdfstring{Úvod}{Uvod}}
+Pøi návrhu elektrickıch obvodù zpravidla jednotlivé obvodové prvky povaujeme za ideální a vyjma polovodièovıch souèástek také za lineární. Toto cvièení se zamìøuje na stanovení frekvenèních vlastností pasivních souèástek, jakımi jsou rezistor, cívka a kondenzátor. Pøitom pøedpokládáme, e uvedené prvky vykazují pouze svùj hlavní charakter a neuvaujeme jejich parazitní vlastnosti, jako napøíklad svodovı odpor u kondenzátoru nebo odpor vinutí u cívky.
+
+\subsubsection{\texorpdfstring{Fázorovı diagram}{Fazorovy diagram}}
+
+%---------------------------------------------
+\subsection{\texorpdfstring{Mìøení impedance a frekvenèní vlastnosti obvodovıch prvkù}{Mereni impedance obvodovych prvku}}
+
+\subsubsection{\texorpdfstring{Úkol mìøení}{Ukol mereni}}
+\begin{enumerate}
+ \item [a)] Pomocí funkèního generátoru a osciloskopu identifikujte typ obvodového prvku, kterı je pøipojen uvnitø mìøeného pøípravku mezi svorkami: 2-1, 3-1, 4-1;
+ \item [b)] Urèete hodnoty hlavních parametrù jednotlivıch prvkù (R, L, C);
+ \item [c)] Zmìøte závislosti impedancí danıch prvkù na frekvenci v rozsahu 200~Hz a 2~kHz.
+\end{enumerate}
+
+\subsubsection{\texorpdfstring{Schéma zapojení}{Schema zapojeni}}
+
+\subsubsection{\texorpdfstring{Postup mìøení}{Postup mereni}}
+
+\begin{description}
+ \item [ad a)] Dle schématu zapojení pøipojte osciloskop a funkèní generátor k mìøenému pøípravku. Na funkèním generátoru nastavte sinusovı prùbìh o amplitudì 5~V a frekvenci 500~Hz. Z prùbìhù na osciloskop u vysledujte, zda existuje kladnı nebo zápornı fázovı posun mezi napìtím a proudem. Dále zmìòte frekvenci na 200~Hz a 1~kHz a sledujte, zda a jak se mìní amplituda mìøeného proudu. Uvedené zopakujte pro všechny impedance.
+ \item [ad b)] Z hodnot z pøedešlého mìøení nebo dalším mìøením stanovte z Ohmova zákona hodnotu impedance. Podle typu obvodového prvku dopoèítejte hlavní parametr:
+ 
+ \item [ad c)] Zapojení zùstává nezmìnìno. Zmìøte závislost amplitudy (pøíp. efektivní hodnoty) proudu danım prvkem a napìtí (nemìní se) na frekvenci v rozsahu 200~Hz a 2~kHz. Frekvenci nastavujte pomocí funkèního generátoru. Ze zmìøenıch obvodovıch velièin urèete podle Ohmova zákona impedance a vyneste je do spoleèného grafu v závislosti na frekvenci.
+\end{description}
+
+\subsubsection{\texorpdfstring{Mìøené vzorky}{Merene vzorky}}
+\begin{tabular}{ll}
+ 1.& Black box - pøípravek RLC s nepopsanımi vstupy \\
+\end{tabular}
+
+%---------------------------------------------
+\subsection{\texorpdfstring{Mìøení RLC - fázorové diagramy}{Mereni RLC - fazorove diagramy}}
+
+\subsubsection{\texorpdfstring{Úkol mìøení}{Ukol mereni}}
+Na osciloskopu zobrazte prùbìhy napìtí a proudu u jednotlivıch spojení pasivních obvodovıch prvkù:
+
+\begin{tabular}{ll}
+ obv. 1.& rezistor samostatnì,  \\
+ obv. 2.& kapacitor samostatnì,  \\
+ obv. 3.& induktor samostatnì,  \\ 
+ obv. 4.& sériové spojení kapacitoru a rezistoru,  \\
+ obv. 5.& sériové spojení induktoru a kapacitoru,  \\
+ obv. 6.& paralelní spojení rezistoru a kapacitoru,  \\ 
+ obv. 7.& sériové spojení induktoru a kapacitoru,  \\ 
+ obv. 8.& paralelní spojení induktoru a kapacitoru,  \\ 
+\end{tabular}
+
+Namìøené obvodové velièiny zakreslete do vektorovıch diagramù. U obvodù obsahujících spojení induktoru a kapacitoru vypoètìte rezonanèní frekvenci. Zjistìte, zda jsou tyto obvody v rezonanci. Hodnoty hlavního parametru jednotlivıch obvodovıch prvkù urèete ohmovou metodou tak, jak byly urèovány v pøedcházejícím úkolu mìøení v bodì b). Získané vısledky porovnejte s mìøením na RLC mùstku.
+
+\subsubsection{\texorpdfstring{Schéma zapojení}{Schema zapojeni}}
+
+\subsubsection{\texorpdfstring{Postup mìøení}{Postup mereni}}
+Jednotlivé obvody zapojujte dle schémat zapojení. Pro napájení obvodù vyuívejte \textbf{vıhradnì} pøipraveného zdroje vyhlazené sinusovky o frekvenci 50~Hz. Tento zdroj má mìkkou vıstupní charakteristiku (nenulovı vnitøní odpor), jeliko nìkterá obvodová spojení vytváøejí velmi malou vıslednou impedanci. Napájení jinım zdrojem (s tvrdou charakteristikou) mùe zpùsobit jeho znièení nebo destrukci souèástek.
+
+Kadı zde mìøenı obvod má jednu spoleènou obvodovou velièinu. V pøípadì sériovıch spojení teèe skrz všechny souèástky stejnı proud, u paralelních spojení je na všech souèástkách shodné napìtí. Tuto spoleènou velièinu vdy uvaujte jako referenèní (fázovı úhel je $\varphi = 0^\circ$, tj. fázor ukazuje ve smìru reálné osy). Vùèi referenèní hodnotì obvodové velièiny mìøte fázové posuny ostatních velièin.
+
+\textbf{POZOR:} Pøi zobrazování prùbìhù by mìly bıt sondy osciloskopu umisovány ve stejném smyslu, v jakém uvaujeme tok proudu a jím vyvolané úbytky napìtí (a mìøení respektuje Kirchhoffovy zákony). Pøi prohazování koncù sond mùe dojít k neádoucímu posunu prùbìhu o $180^\circ$.
+
+Fázorové diagramy vynášejte v amplitudách, tj. z osciloskopu odeèítejte vdy amplitudy prùbìhù. Je vhodné zaznamenat si všechny namìøené hodnoty (vdy amplituda + fáze) do tabulky a pak teprve vynést jednotlivé fázorové diagramy.
+
+\subsubsection{\texorpdfstring{Mìøené vzorky}{Merene vzorky}}
+\begin{tabular}{ll}
+ 1.& Drátovı rezistor \\
+ 2.& Foliovı kondenzátor \\
+ 3.& Cívka na jádøe z magnetickıch plechù \\
+\end{tabular}

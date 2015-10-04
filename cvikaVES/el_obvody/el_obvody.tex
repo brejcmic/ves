@@ -1,0 +1,43 @@
+\section{\texorpdfstring{Elektrické obvody}{Elektricke obvody}}
+
+\subsection{\texorpdfstring{Úvod}{Uvod}}
+Alespoò urèitá schopnost návrhu elektrického obvod musí patøit mezi základní vìdomosti absolventa 
+technického oboru se zamìøením na elektrotechniku. Elektrické obvody lze tøídit z mnoha  hledisek. Podle pouitıch souèástek je lze rozdìlit napøíklad na aktivní, tj. ty které obsahují zdroje energie a pasivní, tj. ty které energii pouze spotøebovávají. Dále pak na vysokofrekvenèní, nízkofrekvenèní, lineární, nelineární atd.
+
+V tomto cvièení je pozornost zamìøena na pasivní dìlièe napìtí. Aèkoliv se jedná o velice jednoduchı stavební blok elektrickıch obvodù, patøí také mezi ty nejpouívanìjší. Prakticky v ádném elektronickém obvodu je nelze vynechat. Lze se s nimi setkat ve zpìtnıch vazbách zesilovaèù, pøi nastavování pracovních bodù tranzistorù, lze jimi impedanènì pøizpùsobovat vıstupy zdrojù napìtí, pouívají se v sondách osciloskopù atd.
+
+\subsubsection{\texorpdfstring{Dìliè napìtí}{Delic napeti}}
+
+\begin{equation}
+\frac{R_1 - \frac{j}{\omega\cdot C_1}}{R_2 - \frac{j}{\omega\cdot C_2}} = K
+\label{eq:elObvody:kompenzace}
+\end{equation}
+
+%---------------------------------------------
+\subsection{\texorpdfstring{Frekvenèní pøizpùsobení pasivního dìlièe napìtí}{Frekvencni prizpusobeni pasivniho delice napeti}}
+
+\subsubsection{\texorpdfstring{Úkol mìøení}{Ukol mereni}}
+\begin{enumerate}
+ \item [a)] Pro danı frekvenènì nepøizpùsobenı dìliè spoètìte vhodnou hodnotu kapacity vıstupního kondenzátoru, kterım zajistíte konstantní dìlící pomìr vıstupního napìtí v širokém rozsahu frekvencí.
+ \item [b)] Svùj návrh ovìøte mìøením na pøípravku pro vstupní napìtí obdélníkového prùbìhu o frekvenci 500 Hz. Zaznamenejte vıstupní prùbìh napìtí pro pøekompenzovanı, nedostateènì kompenzovanı a frekvenènì kompenzovanı dìliè napìtí.
+ \item [c)] Pomocí osciloskopu a generátoru sinusového napìtí zmìøte frekvenèní závislost vıstupního napìtí dìlièe po pøipojení kondenzátorù o hodnotách 150~nF, 68~nF a 33~nF. Mìøení proveïte pro rozsah frekvencí 100~Hz a 10~kHz.
+\end{enumerate}
+
+Vysvìtlete v závìru rozdíly mezi frekvenèními charakteristikami.
+
+\subsubsection{\texorpdfstring{Schéma zapojení}{Schema zapojeni}}
+
+\subsubsection{\texorpdfstring{Postup mìøení}{Postup mereni}}
+
+\begin{description}
+ \item [ad a)] Úkol lze vyøešit více zpùsoby. Hodnotu vhodné kapacity lze urèit vıpoètem úpravou vztahu (\ref{eq:elObvody:kompenzace}). Tak získáme pøímo závislost mezi jednotlivımi prvky obvodu dìlièe. Druhou moností je odzkoušet jednotlivé mìøené vzorky kondenzátorù pøipojováním na vıstup dìlièe pøi napájení dìlièe obdélníkovım signálem. Pro správnou hodnotu kapacity bude vıstupní obdélníkovı signál nezkreslenı. Pøi znalosti správné hodnoty kapacity pak lze dodateènì snadno vyvodit její závislost na ostatních prvcích obvodu.
+ \item [ad b)] Pøi ovìøování pøipojte 1.~kanál osciloskopu na vstup funkèního generátoru a 2.~kanál na vıstup dìlièe. Generátor pøipojte na vstup dìlièe a nastavte na nìm obdélníkovı prùbìh o amplitudì 15~V a frekvenci 500~Hz. Jednotlivé vıstupní prùbìhy obdélníkovıch signálù zaznamenejte na pamìové medium nebo pøekreslete do sešitu.
+ \item [ad c)] Na funkèním generátoru nastavte vıstupní sinusovı prùbìh. Zapojení osciloskopu a generátoru je stejné jako v pøedchozím úkolu. Pomocí osciloskopu mìøte amplitudu vstupního (nemìní  se) a vıstupního sinusového prùbìhu. K mìøení amplitudy lze vyuít rastru stínítka osciloskopu nebo kursorù (seznamte se s uvedenımi monostmi). Frekvenci v daném rozsahu mìòte s logaritmickım krokem 100~Hz, 200~Hz, 500~Hz, 1~kHz,..., 10~kHz. Èásti rychlıch zmìn promìøte s menším krokem. Napìovı pøenos urèete jako pomìr vıstupního ke vstupnímu napìtí a vyneste jej do spoleèného grafu pro jednotlivé kondenzátory pøipojené k vıstupu.
+\end{description}
+
+\subsubsection{\texorpdfstring{Mìøené vzorky}{Merene vzorky}}
+\begin{tabular}{ll}
+ 1.& Foliovı kondenzátor TC215, axiální, 150 nF, 100 V \\
+ 2.& Foliovı kondenzátor TC215, axiální, 68 nF, 400 V \\
+ 3.& Foliovı kondenzátor TC215, axiální, 33 nF, 250 V \\ 
+\end{tabular}
