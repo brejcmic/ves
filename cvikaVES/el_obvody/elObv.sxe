@@ -1,0 +1,156 @@
+<document type="ProfiCAD sxe" version="7.0">
+<fonts letter="155,0,0,0,Lucida Sans Unicode,000000" text="110,0,0,0,Lucida Sans Unicode,000000" type="85,0,0,0,Arial,000000" refs="85,0,0,0,Arial,000000" cross_refs="85,0,0,1,Arial,0000FF"/>
+<PrintSettings PrinterName="" PaperSize="1" FormName="letter" SheetSizeX="289" SheetSizeY="202" WantsCustom="0" CustomSizeX="283" CustomSizeY="203"/>
+<tb use="1" h="0" v="0" name="C:\Users\Public\Documents\ProfiCAD Library\_TB\standard7.ptb">
+<layers current="0"/>
+</tb>
+<PageSettings bgColor="FFFFFF" pgsHor="1" pgsVer="1" pgsMrgn="0, 0, 0, 0" pageMargins="10, 10, 10, 10" zoom="300" frame="YES" rastr="20" showT="YES" showV="YES" includeMargins="YES"/>
+<RefGridSettings FieldSize="50"/>
+<NumberingWire Digits="3" TypeRenumbering="0" ShowWireName="0" WireLabelDist_a="6" WireLabelDist_b="7" WireLabelDist_c="7"/>
+<summary _pc="1" author="" _file="elSouc" date="15.10.2014" _path="C:\Users\Brejcmic\Desktop\Flash zaloha\X13VSE\Cvika\elSouc.sxe"/>
+<BillColumns/>
+<repo id="15629">
+<ppd name="měřící přístroje\osciloskop.ppd" t="" v="" n="ČSN EN 60617: 08-02-10" m="" fG="75edae9c-f454-4598-8cf9-64fb5a8c6fea" lG="7c05a177-6bb9-4455-9104-de895fbba7e0">
+<layers current="0">
+<layer name="0" v="1">
+<ellipse left="-40" top="-40" right="40" bottom="40"/>
+<outlet x="-40" y="0"/>
+<outlet x="40" y="0"/>
+<polyline pts="-30,10,0,-10,"/>
+<polyline pts="0,-10,0,10,"/>
+<polyline pts="0,10,30,-10,"/>
+</layer>
+</layers>
+</ppd>
+<ppd name="pasívní komponenty\rezistory\rezistor.ppd" t="R" v="10K" n="ČSN EN 60617: ČSN EN 60617: 04-01-01" m="" fG="28c7548c-a963-45ba-b852-59afda220b0d" lG="2f9a12a0-0c17-4b74-aafe-7d8c4b646eb0">
+<layers current="0">
+<layer name="0" v="1">
+<rect left="-8" top="-25" right="8" bottom="25"/>
+<outlet x="0" y="-25"/>
+<outlet x="0" y="25"/>
+</layer>
+</layers>
+</ppd>
+<ppd name="pasívní komponenty\kondenzátory\kondenzátor.ppd" t="C" v="10k" n="" m="" fG="3fbd61fd-fc00-4eb8-872e-cd3da5b023bf" lG="3c3e597e-a91e-4b34-8520-0c5b3b7b4cc2">
+<layers current="0">
+<layer name="0" v="1">
+<polyline op-lw="4" pts="-18,-4,18,-4,"/>
+<polyline op-lw="4" pts="-18,4,18,4,"/>
+<outlet x="0" y="-4"/>
+<outlet x="0" y="4"/>
+</layer>
+</layers>
+</ppd>
+<ppd name="mechanické díly\konstrukční prvky\svorka.ppd" t="" v="" n="" m="" fG="6b78d699-2542-47fd-a146-a5205997bb18" lG="861c0839-b943-4827-9431-2de9d2f7b8f6">
+<layers current="0">
+<layer name="0" v="1">
+<ellipse left="-8" top="-8" right="8" bottom="8"/>
+<outlet x="-8" y="0"/>
+<outlet x="8" y="0"/>
+<outlet x="0" y="-8"/>
+<outlet x="0" y="8"/>
+</layer>
+</layers>
+</ppd>
+<ppd name="pasívní komponenty\kondenzátory\kondenzátor elektrolyt.ppd" t="C" v="10k" n="" m="" fG="21914c9c-0116-4040-ba42-0245f783b845" lG="63bb643a-e219-46ce-b952-5af54085a702">
+<layers current="0">
+<layer name="0" v="1">
+<polyline op-lw="4" pts="-18,-4,18,-4,"/>
+<polyline op-lw="4" pts="-18,4,18,4,"/>
+<outlet x="0" y="-4"/>
+<outlet x="0" y="4"/>
+<polyline pts="-14,-14,-6,-14,"/>
+<polyline pts="-10,-18,-10,-10,"/>
+</layer>
+</layers>
+</ppd>
+<ppd name="polovodiče a elektronky\diody\dioda.ppd" t="D" v="1N4007" n="ČSN EN 60617: 05-03-01" m="" fG="6087fe49-9c75-4d49-bbc1-f41506f9f45c" lG="83556bd4-7c91-4bfd-9e2e-0f1d744523a5">
+<layers current="0">
+<layer name="0" v="1">
+<polyline pts="-20,0,20,0,"/>
+<polyline pts="-20,-20,-20,20,"/>
+<polyline pts="20,-20,20,20,"/>
+<polyline pts="-20,0,20,-20,"/>
+<polyline pts="-20,0,20,20,"/>
+<outlet x="-20" y="0"/>
+<outlet x="20" y="0"/>
+</layer>
+</layers>
+</ppd>
+<ppd name="mechanické díly\konektory\stíněný.ppd" t="stinkon" v="" n="" m="" fG="b0f57313-81f3-4442-8809-7d300ec23be6" lG="a12df116-ade0-4a32-8dc1-f2b87bb9ae8f">
+<layers current="0">
+<layer name="0" v="1">
+<polybezier pts="-15,-10,30,-14,30,14,-15,10,"/>
+<polyline op-lw="4" pts="-11,0,0,0,"/>
+<outlet x="0" y="0"/>
+<outlet x="0" y="10"/>
+</layer>
+</layers>
+</ppd>
+</repo>
+<pages current="0">
+<page name="1">
+<summary _potb="1" _po="1" _pa="1"/>
+<layers current="1">
+<layer name="-1" v="1"/>
+<layer name="0" v="1">
+<elem lGuid="2f9a12a0-0c17-4b74-aafe-7d8c4b646eb0" x="1200" y="500" t="2">
+<type x="1165" y="480" al="6" v="1">R1</type>
+<value x="1165" y="520" al="6" v="1">15k</value>
+</elem>
+<elem lGuid="2f9a12a0-0c17-4b74-aafe-7d8c4b646eb0" x="1100" y="600" t="4">
+<type x="1065" y="580" al="6" v="1">R2</type>
+<value x="1065" y="620" al="6" v="1">3k3</value>
+</elem>
+<elem lGuid="3c3e597e-a91e-4b34-8520-0c5b3b7b4cc2" x="1200" y="400" t="6">
+<type x="1165" y="380" al="6" v="1">C1</type>
+<value x="1165" y="420" al="6" v="1">15n</value>
+</elem>
+<elem lGuid="861c0839-b943-4827-9431-2de9d2f7b8f6" x="1400" y="500" t="6">
+<type x="1365" y="480" al="6">1</type>
+</elem>
+<elem lGuid="861c0839-b943-4827-9431-2de9d2f7b8f6" x="1400" y="700" t="6">
+<type x="1365" y="680" al="6">2</type>
+</elem>
+<elem lGuid="861c0839-b943-4827-9431-2de9d2f7b8f6" x="940" y="500" t="6">
+<type x="905" y="480" al="6">3</type>
+</elem>
+<elem lGuid="861c0839-b943-4827-9431-2de9d2f7b8f6" x="940" y="700" t="6">
+<type x="905" y="680" al="6">4</type>
+</elem>
+<wire pts="948,500,1175,500,"/>
+<wire pts="1225,500,1392,500,"/>
+<wire pts="1392,700,948,700,"/>
+<wire pts="1204,400,1300,400,1300,500," drop2="1"/>
+<wire pts="1196,400,1100,400,1100,500," drop2="1"/>
+<wire pts="1100,575,1100,500," drop2="1"/>
+<wire pts="1100,625,1100,700," drop2="1"/>
+<elem lGuid="7c05a177-6bb9-4455-9104-de895fbba7e0" x="700" y="600">
+<type x="633" y="580" al="6">5</type>
+<value x="733" y="660" al="6" v="1">OSC</value>
+</elem>
+<rect left="1600" top="550" right="1760" bottom="650"/>
+<text x="1680" y="600" f="155,0,0,0,Arial,000000" l="1" al="9">Gen</text>
+<wire pts="1600,560,1540,560,1540,500,1408,500,"/>
+<wire pts="1600,640,1470,640,1470,700,1408,700,"/>
+<wire pts="1470,700,1470,770,1540,770,1540,560," drop1="1" drop2="1"/>
+<wire op-lw="5" op-at="6" pts="1470,770,600,770,600,600,660,600,"/>
+<wire pts="932,500,800,500,800,700,932,700,"/>
+<wire op-lw="5" op-at="6" pts="800,600,740,600,"/>
+<elem lGuid="3c3e597e-a91e-4b34-8520-0c5b3b7b4cc2" x="940" y="600">
+<type x="895" y="580" al="6" v="1">C2</type>
+<value x="895" y="620" al="6" v="1">?</value>
+</elem>
+<wire pts="940,596,940,508,">
+<op-lt head="čárkovaná (.5x), _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _" body="A,.25,-.125"/>
+</wire>
+<wire pts="940,604,940,692,">
+<op-lt head="čárkovaná (.5x), _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _" body="A,.25,-.125"/>
+</wire>
+<text x="630" y="570" f="80,0,0,0,Arial,000000" al="9">ch1</text>
+<text x="770" y="570" f="80,0,0,0,Arial,000000" al="9">ch2</text>
+</layer>
+</layers>
+</page>
+</pages>
+</document>
