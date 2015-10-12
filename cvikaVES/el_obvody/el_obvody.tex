@@ -46,7 +46,7 @@ Vysvìtlete v závìru rozdíly mezi frekvenèními charakteristikami.
 \begin{description}
  \item [ad a)] Úkol lze vyøešit více zpùsoby. Hodnotu vhodné kapacity lze urèit vıpoètem úpravou vztahu (\ref{eq:elObv:kompenzace}). Tak získáme pøímo závislost mezi jednotlivımi prvky obvodu dìlièe. Druhou moností je odzkoušet jednotlivé mìøené vzorky kondenzátorù pøipojováním na vıstup dìlièe pøi napájení dìlièe obdélníkovım signálem. Pro správnou hodnotu kapacity bude vıstupní obdélníkovı signál nezkreslenı. Pøi znalosti správné hodnoty kapacity pak lze dodateènì snadno vyvodit její závislost na ostatních prvcích obvodu.
  \item [ad b)] Pøi ovìøování pøipojte 1.~kanál osciloskopu na vstup funkèního generátoru a 2.~kanál na vıstup dìlièe. Generátor pøipojte na vstup dìlièe a nastavte na nìm obdélníkovı prùbìh o amplitudì 15~V a frekvenci 500~Hz. Jednotlivé vıstupní prùbìhy obdélníkovıch signálù zaznamenejte na pamìové medium nebo pøekreslete do sešitu.
- \item [ad c)] Na funkèním generátoru nastavte vıstupní sinusovı prùbìh. Zapojení osciloskopu a generátoru je stejné jako v pøedchozím úkolu. Pomocí osciloskopu mìøte amplitudu vstupního (nemìní  se) a vıstupního sinusového prùbìhu. K mìøení amplitudy lze vyuít rastru stínítka osciloskopu nebo kursorù (seznamte se s uvedenımi monostmi). Frekvenci v daném rozsahu mìòte s logaritmickım krokem 100~Hz, 200~Hz, 500~Hz, 1~kHz,..., 10~kHz. Èásti rychlıch zmìn promìøte s menším krokem. Napìovı pøenos urèete jako pomìr vıstupního ke vstupnímu napìtí a vyneste jej do spoleèného grafu pro jednotlivé kondenzátory pøipojené k vıstupu.
+ \item [ad c)] Na funkèním generátoru nastavte vıstupní sinusovı prùbìh. Zapojení osciloskopu a generátoru je stejné jako v pøedchozím úkolu. Pomocí osciloskopu mìøte amplitudu vstupního (nemìní  se) a vıstupního sinusového prùbìhu. K mìøení amplitudy lze vyuít rastru stínítka osciloskopu nebo kursorù (seznamte se s uvedenımi monostmi). Frekvenci v daném rozsahu mìòte s logaritmickım krokem 100~Hz, 200~Hz, 500~Hz, 1~kHz,..., 10~kHz. Èásti rychlıch zmìn amplitudy vıstupního napìtí promìøte s menším krokem. Napìovı pøenos urèete jako pomìr vıstupního ke vstupnímu napìtí a vyneste jej do spoleèného grafu pro jednotlivé kondenzátory pøipojené k vıstupu.
 \end{description}
 
 %---------------------------------------------
@@ -56,19 +56,36 @@ Vysvìtlete v závìru rozdíly mezi frekvenèními charakteristikami.
 \subsubsection{\texorpdfstring{Úkol mìøení}{Ukol mereni}}
 
 \begin{enumerate}
- \item [a)] Spojení generátoru a kompenzovaného dìlièe z pøedchozí èásti mìøení uvaujte jako zdroj obdélníkového napìtí s definovanım vnitøním odporem a sériovou kapacitou. Vrcholovou hodnotu obdélníkového prùbìhu napìtí nastavte na generátoru na 5~V. Urèete (a zmìøte):
+ \item [a)] Spojení generátoru a kompenzovaného dìlièe z pøedchozí èásti mìøení uvaujte jako zdroj obdélníkového napìtí s definovanım vnitøním odporem a sériovou vıstupní kapacitou. Vrcholovou hodnotu obdélníkového prùbìhu napìtí nastavte na generátoru na 5~V. Urèete (a zmìøte):
  \begin{itemize}
 	\item vrcholovou hodnotu napìtí naprázdno - spoètìte a ovìøte osciloskopem nebo voltmetrem pøi napájení stejnosmìrnım zdrojem 5~V,
 	\item vnitøní (vıstupní) odpor dìlièe - spoètìte a ovìøte pomocí mìøení se stejnosmìrnım zdrojem,
-	\item vnitøní (vıstupní) sériovou kapacitu dìlièe - pouze spoètìte.
+	\item vnitøní (vıstupní) sériovou vıstupní kapacitu dìlièe - pouze spoètìte.
  \end{itemize}
 Do sešitu zakreslete náhradní schéma tohoto zdroje s urèenımi hodnotami prvkù.
- \item [b)] Upravenı zdroj propojte s pøípravkem tranzistorového zesilovaèe $A_U=20$~dB. Navrhnìte a zapojte dìliè v bázovém obvodu, kterım nastavíte stejnosmìrnı pracovní bod tranzistoru a zároveò definujete vstupní odpor zesilovaèe. Vstupní odpor zesilovaèe zvolte tak, aby po propojení s dìlièem byl na vısup zesilovaèe obdélníkovı signál o vrcholové hodnotì 4~V, 3~V nebo 2~V (urèí vedoucí cvièení). Urèitì bude tøeba upravit paralelní kapacitu dìlièe, provee. Svùj návrh popište do sešitu a jeho správnost ovìøte mìøením pomocí osciloskopu.
+ \item [b)] Upravenı zdroj propojte s pøípravkem tranzistorového zesilovaèe s napìovım zesílením $A_U=20$~dB. Navrhnìte a zapojte dìliè v bázovém obvodu, kterım nastavíte stejnosmìrnı pracovní bod tranzistoru a zároveò definujete vstupní odpor zesilovaèe. Vstupní odpor zesilovaèe zvolte tak, aby po propojení s dìlièem byl na vıstup zesilovaèe obdélníkovı signál o vrcholové hodnotì 4~V, 3~V nebo 2~V (urèí vedoucí cvièení). Dìliè pøitom napájejte z generátoru obdélníkovım signálem o vrcholové hodnotì 5~V a frekvenci 1~kHz. Zcela jistì bude tøeba upravit paralelní kapacitu dìlièe, proveïte! Svùj návrh popište do sešitu a jeho správnost ovìøte mìøením pomocí osciloskopu.
 \end{enumerate}
 
 \subsubsection{\texorpdfstring{Schéma zapojení}{Schema zapojeni}}
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\columnwidth]{el_obvody/zesilovac}
+  \label{fig:elObv:zesilovac}
+\end{figure}
+
 \subsubsection{\texorpdfstring{Postup mìøení}{Postup mereni}}
+
+\begin{description}
+ \item [ad a)] Jeliko je dìliè frekvenènì kompenzovanı, bude napìtí naprázdno $U_0$ dáno buï pomìrem obou rezistorù nebo obou kapacit (tj. dle pøíslušnıch vztahù!!!). Ovìøení mìøením provedeme pro takøka nezatíenı dìliè, kdy na jeho vıstup pøipojíme voltmetr a vstup budeme napájet stejnosmìrnım zdrojem o napìtí 5~V. Vnitøní odpor dìlièe $R_i$ lze spoèítat po zjednodušení obvodu podle Theveninova teorému. Hodnotu lze ovìøit mìøením nìkolika, avšak podobnımi zpùsoby. Ten nejjednodušší spoèívá ve zkratování dìlièe pomocí ampérmetru pøi napájení dìlièe stejnosmìrnım zdrojem. Z ampérmetru odeèteme zkratovı proud náhradního zdroje napìtí. Vnitøní odpor pak získáme jako podíl napìtí naprázdno a zkratového proudu. Na základì zjednodušení obvodu podle Theveninova teorému vypoèítáme i vıslednou vıstupní kapacitu $C_i$ náhradního zdroje. Ovìøení její hodnoty mìøením je obtíné. Její hodnotu je moné získat ze zmìøeného pøechodného dìje, nebo alespoò pøiblinì pøi mìøení na vyšších frekvencích. V pøípadì zájmu o mìøení vnitøní kapacity zdroje pomùe cvièící.
+ \item [ad b)] Vstupní odpor zesilovaèe zatíí pøipojenı zdroj signálu, v dùsledku èeho poklesne jeho svorkové napìtí. V prvním kroku je tedy nutné urèit na jakou hodnotu mùe klesnout vstupní napìtí. Pro pøíklad uvaujme, e vıstupní špièkovou hodnotu napìtí zesilovaèe poadujeme 6~V. Jeliko zesilovaè zesiluje 10$\times$, pak poadovanım vstupním napìtím je 0,6~V.
+
+Vnitøní odpor zdroje signálu $R_i$ a vstupní odpor zesilovaèe $R_{vst}$ spoleènì vytváøejí dìliè napìtí naprázdno $U_0$ zdroje signálu. Vıstupní napìtí daného dìlièe poadujeme právì spoètenıch 0,6~V. Ze vztahu pro vıstupní napìtí nezatíeného dìlièe vypoèítáme poadovanou hodnotu vstupního odporu zesilovaèe $R_{vst}$. Zároveò pro jeho hodnotu podle døíve odvozenıch pravidel dopoèítáme kapacitu $C_{vst}$ kondenzátoru, kterı musí bıt pøipojen na vstup zesilovaèe, aby vstupní napìtí bylo frekvenènì nezávislé.
+
+Pøi návrhu dìlièe nastavující pracovní bod tranzistoru zanedbejte odbìr bázového obvodu. Pøedpokládejte, e je dìliè nezatíenı a neuvaujte ani hodnotu pøipojeného potenciometru Rb, kterı slouí pouze k doladìní vısledné hodnoty vstupního odporu. Pro správné nastavení pracovního bodu, musí bıt vıstupní napìtí dìlièe rovno \textbf{1,2~V}. Vnitøní odpor navrhovaného dìlièe je roven poadovanému vstupnímu odporu zesilovaèe. Podle pøíslušnıch vztahù dopoèítejte hodnoty prvkù Rx a Ry.
+
+Z øady E24 zvolte nejbliší hodnoty odporù a kapacity kompenzaèního kondenzátoru. Obvodové prvky pøipojte na pøíslušné svorky pøípravku zesilovaèe. Vstup celého obvodu napájejte obdélníkovım signálem o špièkové hodnotì 5~V a frekvenci 1~kHz. Vıstup zesilovaèe zobrazte na osciloskoupu. Pokud je patrné zkreslení hran signálu, pokuste se doladit hodnotu vstupního odporu pomocí potenciometru na pøípravku. Pokud nelze dosáhnout vykompenzovaného signálu nebo je špièková hodnota prùbìhu napìtí odlišná (více jak o 0,4~V) od poadované, pak se pravdìpodobnì jedná o chybu v návrhu dìlièe.
+\end{description}
 
 \subsubsection{\texorpdfstring{Pouitı materiál}{Pouitı materiál}}
 \begin{tabular}{ll}
