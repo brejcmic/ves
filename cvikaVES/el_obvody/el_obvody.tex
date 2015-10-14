@@ -8,17 +8,46 @@ V tomto cvièení je pozornost zamìøena na pasivní dìlièe napìtí. Aèkoliv se jedná
 
 \subsubsection{\texorpdfstring{Dìliè napìtí}{Delic napeti}}
 
-Pasivní dìliè napìtí je realizován dvìma rezistory. Vstupní napájecí napìtí je rozdìleno v podobì úbytkù napìtí v pomìru daném hodnotami obou rezistorù. Vıstupní napìtí se obvykle získává pouze z rezistoru se spoleènou zemí s napájecím zdrojem. Vztah pro dìlící pomìr lze získat z ohmova zákona:
+Pasivní dìliè napìtí je realizován dvìma rezistory. Vstupní napájecí napìtí je rozdìleno v podobì úbytkù napìtí v pomìru daném hodnotami obou rezistorù. Vıstupní napìtí se obvykle získává pouze z rezistoru se spoleènou zemí s napájecím zdrojem. Vztah pro dìlící pomìr nezatíeného dìlièe lze získat z ohmova zákona:
 
 \begin{equation}
-U_2 = R_2 \cdot I = R_2 \cdot \frac{U_1}{R_1 + R_2} \Longrightarrow \frac{U_2}{U_1}=\frac{R_2}{R_1 + R_2}
+U_{20} = R_2 \cdot I = R_2 \cdot \frac{U_1}{R_1 + R_2} \Longrightarrow \frac{U_{20}}{U_1}=\frac{R_2}{R_1 + R_2}=\frac{1}{1 + \frac{R_1}{R_2}}
 \label{eq:elObv:vystNapDel}
 \end{equation}
 
+Podle Theveninova teorému lze spojení dìlièe napìtí a napìového zdroje nahradit zdrojem napìtí s napìtím $U_{20}$ a s vnitøním odporem $R_i$. Vnitøní odpor náhradního zdroje je získán jako odpor mezi vıstupními svorkami po nahrazení všech zdrojù napìtí v obvodu zkratem. V pøípadì dìlièe jsou pak oba odpory paralelnì a získáváme vztah:
+
 \begin{equation}
-\frac{R_1 - \frac{j}{\omega\cdot C_1}}{R_2 - \frac{j}{\omega\cdot C_2}} = K
+R_i = \frac{R_2 \cdot R_1}{R_1 + R_2}
+\label{eq:elObv:vnitrOdpor}
+\end{equation}
+
+Uvedené úvahy neplatí jen pro rezistory, ale i pro obecnou impedanci (tj. v dìlièi mohou bıt i reaktance).
+
+\subsubsection{\texorpdfstring{Frekvenèní pøizpùsobení}{Frekvencni prizpusobeni}}
+
+Vıstupní napìtí $U_2$ odporového dìlièe mùe bıt frekvenènì závislé v dùsledku pøítomnosti parazitních rekatancí. Pøi spojování funkèních blokù, jako napøíklad zdroj napìtí a zátì,  je obvykle tøeba kompenzovat pøedevším kapacitu zátìe $C_2$. Pomyslnı dìliè napìtí vzniká mezi vnitøním odporem zdroje $R_1$ a odporem zátìe $R_2$. Pøipojená kapacita s rostoucí frekvencí sniuje vıslednou impedanci zátìe a napìtí na zátìi klesá. Danı jev lze kompenzovat pøipojením dalšího kondenzátoru $C_1$ paralelnì k vnitønímu odporu zdroje $R_1$. Pro dìlící pomìr daného obvodu lze postupnì odvodit:
+
+\begin{equation}
+\frac{U_2}{U_1} = \frac{\frac{R_2}{1+j\omega R_2 C_2}}{\frac{R_1}{1+j\omega R_1 C_1} + \frac{R_2}{1+j\omega R_2 C_2}}=\frac{1}{1+\frac{R_1 \cdot (1+j\omega R_2 C_2)}{R_2 \cdot (1+j\omega R_1 C_1)}}
+\label{eq:elObv:odvozKompenzace}
+\end{equation}
+
+V rovnici (\ref{eq:elObv:odvozKompenzace}) je $\omega = 2\cdot\pi\cdot f$ uhlova frekvence. Zøejmì bude dìlící pomìr frekvenènì nezávislı za pøedpokladu:
+\begin{equation}
+\frac{R_1 - \frac{j}{\omega\cdot C_1}}{R_2 - \frac{j}{\omega\cdot C_2}} = K,
 \label{eq:elObv:kompenzace}
 \end{equation}
+
+\noindent
+kde $K$ je urèitá konstanta. Hodnotu konstanty lze odvodit pøi znalosti jednotlivıch prvkù obvodu a tento úkol je souèástí následujících cvièení. Vnitøní impedanci náhradního zdroje napìtí lze opìt odvodit dle Theveninova teorému, èím získáme všechny ètyøi prvky dìlièe paralelnì.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\columnwidth]{el_obvody/teorie}
+	\caption{a) frekvenènì kompenzovanı dìliè napìtí, b) náhradní schéma zdroje podle Thevenina}
+  \label{fig:elObv:teorie}
+\end{figure}
 
 %---------------------------------------------
 \newpage
@@ -63,7 +92,7 @@ Vysvìtlete v závìru rozdíly mezi frekvenèními charakteristikami.
 	\item vnitøní (vıstupní) sériovou vıstupní kapacitu dìlièe - pouze spoètìte.
  \end{itemize}
 Do sešitu zakreslete náhradní schéma tohoto zdroje s urèenımi hodnotami prvkù.
- \item [b)] Upravenı zdroj propojte s pøípravkem tranzistorového zesilovaèe s napìovım zesílením $A_U=20$~dB. Navrhnìte a zapojte dìliè v bázovém obvodu, kterım nastavíte stejnosmìrnı pracovní bod tranzistoru a zároveò definujete vstupní odpor zesilovaèe. Vstupní odpor zesilovaèe zvolte tak, aby po propojení s dìlièem byl na vıstup zesilovaèe obdélníkovı signál o vrcholové hodnotì 4~V, 3~V nebo 2~V (urèí vedoucí cvièení). Dìliè pøitom napájejte z generátoru obdélníkovım signálem o vrcholové hodnotì 5~V a frekvenci 1~kHz. Zcela jistì bude tøeba upravit paralelní kapacitu dìlièe, proveïte! Svùj návrh popište do sešitu a jeho správnost ovìøte mìøením pomocí osciloskopu.
+ \item [b)] Upravenı zdroj propojte s pøípravkem tranzistorového zesilovaèe s napìovım zesílením $A_U=20$~dB. Navrhnìte a zapojte dìliè v bázovém obvodu, kterım nastavíte stejnosmìrnı pracovní bod tranzistoru a zároveò definujete vstupní odpor zesilovaèe. Vstupní odpor zesilovaèe zvolte tak, aby po propojení s dìlièem byl na vıstupu zesilovaèe obdélníkovı signál o vrcholové hodnotì 4~V, 3~V nebo 2~V (urèí vedoucí cvièení). Dìliè napájejte z generátoru obdélníkovım signálem o vrcholové hodnotì 5~V a frekvenci 1~kHz. Zcela jistì bude tøeba upravit paralelní kapacitu dìlièe, proveïte! Svùj návrh popište do sešitu a jeho správnost ovìøte mìøením pomocí osciloskopu.
 \end{enumerate}
 
 \subsubsection{\texorpdfstring{Schéma zapojení}{Schema zapojeni}}
@@ -82,14 +111,15 @@ Do sešitu zakreslete náhradní schéma tohoto zdroje s urèenımi hodnotami prvkù.
 
 Vnitøní odpor zdroje signálu $R_i$ a vstupní odpor zesilovaèe $R_{vst}$ spoleènì vytváøejí dìliè napìtí naprázdno $U_0$ zdroje signálu. Vıstupní napìtí daného dìlièe poadujeme právì spoètenıch 0,6~V. Ze vztahu pro vıstupní napìtí nezatíeného dìlièe vypoèítáme poadovanou hodnotu vstupního odporu zesilovaèe $R_{vst}$. Zároveò pro jeho hodnotu podle døíve odvozenıch pravidel dopoèítáme kapacitu $C_{vst}$ kondenzátoru, kterı musí bıt pøipojen na vstup zesilovaèe, aby vstupní napìtí bylo frekvenènì nezávislé.
 
-Pøi návrhu dìlièe nastavující pracovní bod tranzistoru zanedbejte odbìr bázového obvodu. Pøedpokládejte, e je dìliè nezatíenı a neuvaujte ani hodnotu pøipojeného potenciometru Rb, kterı slouí pouze k doladìní vısledné hodnoty vstupního odporu. Pro správné nastavení pracovního bodu, musí bıt vıstupní napìtí dìlièe rovno \textbf{1,2~V}. Vnitøní odpor navrhovaného dìlièe je roven poadovanému vstupnímu odporu zesilovaèe. Podle pøíslušnıch vztahù dopoèítejte hodnoty prvkù Rx a Ry.
+Pøi návrhu dìlièe nastavující pracovní bod tranzistoru zanedbejte odbìr bázového obvodu. Pøedpokládejte, e je dìliè nezatíenı a neuvaujte ani hodnotu pøipojeného potenciometru Rb, kterı slouí pouze k doladìní vısledné hodnoty vstupního odporu. Pro správné nastavení pracovního bodu, musí bıt vıstupní napìtí dìlièe rovno \textbf{1,3~V} pøi napájení 15~V. Vnitøní odpor navrhovaného dìlièe je roven poadovanému vstupnímu odporu zesilovaèe. Podle pøíslušnıch vztahù dopoèítejte hodnoty prvkù Rx a Ry.
 
-Z øady E24 zvolte nejbliší hodnoty odporù a kapacity kompenzaèního kondenzátoru. Obvodové prvky pøipojte na pøíslušné svorky pøípravku zesilovaèe. Vstup celého obvodu napájejte obdélníkovım signálem o špièkové hodnotì 5~V a frekvenci 1~kHz. Vıstup zesilovaèe zobrazte na osciloskoupu. Pokud je patrné zkreslení hran signálu, pokuste se doladit hodnotu vstupního odporu pomocí potenciometru na pøípravku. Pokud nelze dosáhnout vykompenzovaného signálu nebo je špièková hodnota prùbìhu napìtí odlišná (více jak o 0,4~V) od poadované, pak se pravdìpodobnì jedná o chybu v návrhu dìlièe.
+Z øady E12 zvolte nejbliší hodnoty odporù a kapacity kompenzaèního kondenzátoru. Obvodové prvky pøipojte na pøíslušné svorky pøípravku zesilovaèe. Vstup celého obvodu napájejte obdélníkovım signálem o špièkové hodnotì 5~V a frekvenci 1~kHz. Vıstup zesilovaèe zobrazte na osciloskoupu. Pokud je patrné zkreslení hran signálu, pokuste se doladit hodnotu vstupního odporu pomocí potenciometru na pøípravku. Pokud nelze dosáhnout vykompenzovaného signálu nebo je špièková hodnota prùbìhu napìtí odlišná (více jak o 0,4~V) od poadované, pak je tøeba návrh dìlièe pøehodnotit.
 \end{description}
 
 \subsubsection{\texorpdfstring{Pouitı materiál}{Pouitı materiál}}
 \begin{tabular}{ll}
  1.& Rezistory øady hodnot E12, 1~k$\Omega$ - 82~k$\Omega$ \\
- 2.& Foliové kondenzátory øady hodnot E12, 10~nF - 330~nF \\
- 3.& Pøípravek tranzistorového zesilovaèe  \\ 
+ 2.& Foliové kondenzátory, 33~nF, 68~nF, 150~nF \\
+ 3.& Keramické kondenzátory øady hodnot E12, 10~nF - 330~nF \\
+ 4.& Pøípravek tranzistorového zesilovaèe  \\ 
 \end{tabular}

@@ -1,9 +1,76 @@
 \section{\texorpdfstring{Ideální souèástky elektronickıch obvodù}{Idealni soucastky elektronickych obvodu}}
 
 \subsection{\texorpdfstring{Úvod}{Uvod}}
-Pøi návrhu elektrickıch obvodù zpravidla jednotlivé obvodové prvky povaujeme za ideální a vyjma polovodièovıch souèástek také za lineární. Toto cvièení se zamìøuje na stanovení frekvenèních vlastností pasivních souèástek, jakımi jsou rezistor, cívka a kondenzátor. Pøitom pøedpokládáme, e uvedené prvky vykazují pouze svùj hlavní charakter a neuvaujeme jejich parazitní vlastnosti, jako napøíklad svodovı odpor u kondenzátoru nebo odpor vinutí u cívky.
+Pøi návrhu elektrickıch obvodù zpravidla jednotlivé obvodové prvky povaujeme za ideální a vyjma polovodièovıch souèástek také za lineární. Toto cvièení se zamìøuje na popis a chování elektronickıch obvodù sloenıch z pasivních souèástek, jakımi jsou rezistor, cívka a kondenzátor pøi harmonickém (sinusovém) napájení. Pøitom pøedpokládáme, e uvedené prvky vykazují pouze svùj hlavní charakter a neuvaujeme jejich parazitní vlastnosti, jako napøíklad svodovı odpor u kondenzátoru nebo odpor vinutí u cívky.
+
+\subsubsection{\texorpdfstring{Odpor, reaktance, impedance}{Odpor, reaktance, impedance}}
+
+Pøi harmonickém napájení lze prùbìhy obvodovıch velièin popsat fázorovım diagramem a vyuít moností operátorového poètu Steinmetzovy transformace (nìkde i Fourierovy transformace), kterı nahradí derivace a integrace násobením a dìlením èlenem $j\omega$. $\omega$ zde má vıznam úhlové frekvence zkoumaného signálu. Zøejmì se tento typ transformace hodí pøedevším pro analızu harmonického ustáleného stavu obvodu. Tímto zpùsobem získáme pro ideální obvodové prvky operátorové impedance (odpor, induktivní reaktance, kapacitní reaktance), které jsou definované následující vztahy:
+
+\begin{equation}
+R =\frac{\widehat{U}_R}{\widehat{I}_R}
+\label{eq:idSouc:odpor}
+\end{equation}
+
+\begin{equation}
+\frac{-j}{\omega C} =\frac{\widehat{U}_C}{\widehat{I}_C}
+\label{eq:idSouc:kapacita}
+\end{equation}
+
+\begin{equation}
+j\omega L =\frac{\widehat{U}_L}{\widehat{I}_L}
+\label{eq:idSouc:indukcnost}
+\end{equation}
+
+Ze vztahù plyne, e po zobrazení fázorù (vektorù, komplexních èísel) napìtí a proudu v komplexní (Gaussovì) rovinì dochází u kapacitoru a induktoru mezi obìma velièinami k fázovému posunu o 90$^\circ$. U ideální cívky (induktor) se proud za napìtím zpoïuje o 90$^\circ$, zatímco u ideálního kondenzátoru (kapacitor) proud napìtí o 90$^\circ$ pøedbíhá. Dále je zøejmı i vliv frekvence, kdy v pøípadì ideální cívky je reaktance úmìrná frekvenci, tj. její hodnota roste, zatímco u kondenzátoru reaktance s frekvencí klesá a to nepøímo úmìrnì.
+
+Pøi spojování více prvkù vyuíváme poèítání s komplexními èísly. Obecnı komplexní vısledek nazıváme impedancí obvodu a oznaèujeme jí $\widehat{Z}$. Platí pro ní stejná vyjádøení jako pro komplexní èísla. Napøíklad impedanci sériového spojení rezistoru a induktoru lze popasat jako:
+
+\begin{equation}
+\widehat{Z} = R+jX_L = R+j\omega L
+\label{eq:idSouc:Zkomplex}
+\end{equation}
+
+\noindent
+nebo
+
+\begin{equation}
+\widehat{Z} = \left|Z\right|\cdot e^{j\varphi}
+\label{eq:idSouc:Zexp}
+\end{equation}
+
+\noindent
+Pro èleny v rovnici (\ref{eq:idSouc:Zexp}) platí:
+
+\begin{equation}
+\left|Z\right|= \sqrt{R^2 + (\omega L)^2}
+\label{eq:idSouc:absZ}
+\end{equation}
+
+\begin{equation}
+\varphi= arctg\left(\frac{\omega L}{R}\right)
+\label{eq:idSouc:fiZ}
+\end{equation}
 
 \subsubsection{\texorpdfstring{Fázorovı diagram}{Fazorovy diagram}}
+Fázorové diagramy jsou vlastnì zobrazením hodnot obvodovıch velièin v komplexní rovinì. Diagram musí vdy splòovat Kirchhoffovy zákony, proto souèet všech fázorù proudù v jednom uzlu musí bıt nula a stejnì tak i souèet všech fázorù napìtí jedné smyèky (jinımi slovy, v diagram tyto fázory musí tvoøit uzavøenı obrazec). Pokud známe hodnoty napìtí, proudù a fází v jednotlivıch èástech obvodu, je jedno, kterı fázor nakreslíme jako první. V ostatních pøípadech vdy zaèínáme od fázoru, kterı je v obvodu nejdále od napájecích svorek, tak jako bychom obvod øešili postupnım zjednodušováním. Dále máme monost volby natoèení reálné a imaginární osy vùèi celému diagramu. U komplikovanìjších obvodù bıvá obvyklé (ne pøedepsané) u napájení napìovım zdrojem umisovat do reálné osy fázor napájecího napìtí a pøi napájení zdrojem proudu fázor napájecího proudu. U jednoduchıch zapojení (1-3 prvky) se do reálné osy obvykle umisuje obvodová velièina, která je spoleèná všem prvkùm.
+
+Poøadí kreslení jednotlivıch fázorù pro urèitı obvod ukazuje obrázek \ref{fig:idSouc:fazDiag}. Pro pøehlednost jsou oddìleny fázory napìtí a proudu. Diagram zaèíná vyøešením fázorù proudu v RC obvodu. Proud rezistorem je v mìøítku zakreslen horizontálnì. Jeliko napìtí na paralelní kombinaci je obìma prvkùm spoleèné a ve fázi s proudem rezistoru, musí proud kapacitorem pøedbíhat o 90$^\circ$. Souèet obou fázorù pak dává vıslednı proud $I$. Následuje zakreslení napìtí $U_{RC}$ ve fázi s proudem rezistoru. Napìtí na cívce musí o 90$^\circ$ pøedbíhat vıslednı proud $I$ a souèet obou napìtí dá vısledné napìtí zdroje. Jako poslední se zakreslují osy, vùèi kterım se mìøí všechny fázové úhly a podle potøeby se diagram otoèí (pøekreslí).
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.80\columnwidth]{id_soucastky/fazDiag}
+	\caption{Ukázka kreslení fázorového diagramu}
+  \label{fig:idSouc:fazDiag}
+\end{figure}
+
+\subsubsection{\texorpdfstring{Rezonance}{Rezonance}}
+Pøi sériovém resp. paralelním spojení induktoru a kapacitoru mùe dojít k jevu, kdy se o fázory napìtí resp. proudu vzájemnì kompenzují (odeètou) a obvod dosáhne nejniší resp. nejvyšší moné impedance. K danému jevu dojde kdy se absolutní hodnoty kapacitní a induktivní reaktance rovnají. Z této podmínky lze odvodit tzv. Thompsonùv vztah pro rezonanci:
+
+\begin{equation}
+\omega _{REZ}L = \frac{1}{\omega _{REZ} C} \Longrightarrow \omega _{REZ} = 2\cdot \pi \cdot f_{REZ} = \frac{1}{\sqrt{LC}}
+\label{eq:idSouc:thompson}
+\end{equation}
 
 %---------------------------------------------
 \newpage
@@ -69,7 +136,7 @@ Namìøené obvodové velièiny zakreslete do vektorovıch diagramù. U obvodù obsahují
 \subsubsection{\texorpdfstring{Postup mìøení}{Postup mereni}}
 Jednotlivé obvody zapojujte dle schémat zapojení. Pro napájení obvodù vyuívejte \textbf{vıhradnì} pøipraveného zdroje vyhlazené sinusovky o frekvenci 50~Hz. Tento zdroj má mìkkou vıstupní charakteristiku (nenulovı vnitøní odpor), jeliko nìkterá obvodová spojení vytváøejí velmi malou vıslednou impedanci. Napájení jinım zdrojem (s tvrdou charakteristikou) mùe zpùsobit jeho znièení nebo destrukci souèástek.
 
-Kadı zde mìøenı obvod má jednu spoleènou obvodovou velièinu. V pøípadì sériovıch spojení teèe skrz všechny souèástky stejnı proud, u paralelních spojení je na všech souèástkách shodné napìtí. Tuto spoleènou velièinu vdy uvaujte jako referenèní (fázovı úhel je $\varphi = 0^\circ$, tj. fázor ukazuje ve smìru reálné osy). Vùèi referenèní hodnotì obvodové velièiny mìøte fázové posuny ostatních velièin.
+Kadı zde mìøenı obvod má jednu spoleènou obvodovou velièinu. V pøípadì sériovıch spojení teèe skrz všechny souèástky stejnı proud, u paralelních spojení je na všech souèástkách shodné napìtí. Tuto spoleènou velièinu vdy uvaujte jako referenèní (fázovı úhel je $\varphi = 0^\circ$, tj. fázor ukazuje ve smìru reálné osy). Vùèi referenèní hodnotì obvodové velièiny mìøte fázové posuny ostatních velièin. Pro takto jednoduché obvody tímto zpùsobem vdy získáme ve fázorovém diagramu velièiny na odporu ve smìru reálné osy a na reaktancích ve smìru imaginární osy.
 
 \textbf{POZOR:} Pøi zobrazování prùbìhù by mìly bıt sondy osciloskopu umisovány ve stejném smyslu, v jakém uvaujeme tok proudu a jím vyvolané úbytky napìtí (a mìøení respektuje Kirchhoffovy zákony). Pøi prohazování koncù sond mùe dojít k neádoucímu posunu prùbìhu o $180^\circ$.
 

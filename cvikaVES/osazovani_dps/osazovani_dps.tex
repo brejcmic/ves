@@ -14,7 +14,7 @@ Tavidla jsou nekovové materiály usnadòující pájení. Zlepšují smáèivost daných ma
 Osaïte pøipravený plošný spoj a pomocí pøípravku ovìøte jeho funkènost.
 
 \subsubsection{\texorpdfstring{Popis zapojení}{Popis zapojeni}}
-Schéma zapojení osazovaného obvodu je na \ref{fig:osDPS:schemaZap}. Jedná se o akustickou signalizaci, která má upozornit øidièe na nutnost rozsvítit svìtla. Napájecí napìtí a logické signály svìtel jsou pøivádìny na konektor K1. Reproduktor je pøipojen mezi vývody J1 a J2. Ke generování obdélníkového signálu pro reproduktor je použit integrovaný obvod èasovaèe TS555. Signál je odebírán proti zemi z výstupu Q. Hodnotu periody generovaného signálu lze ovlivnit zmìnou èasové konstanty RC èlánku, který je složen z rezistoru R1 a kondenzátoru C3.
+Schéma zapojení osazovaného obvodu je na obrázku \ref{fig:osDPS:schemaZap}. Jedná se o akustickou signalizaci, která má upozornit øidièe na nutnost rozsvítit svìtla. Napájecí napìtí a logické signály svìtel jsou pøivádìny na konektor K1. Reproduktor je pøipojen mezi vývody J1 a J2. Ke generování obdélníkového signálu pro reproduktor je použit integrovaný obvod èasovaèe TS555. Signál je odebírán proti zemi z výstupu Q. Hodnotu periody generovaného signálu lze ovlivnit zmìnou èasové konstanty RC èlánku, který je složen z rezistoru R1 a kondenzátoru C3.
 Èinnost èasovaèe je ovlivòována logickou úrovní na vstupu R. Pokud je zde nízká úroveò, pak je èasovaè vyøazen z èinnosti. Po pøipojení napájecího napìtí (otoèení klíèku automobilu) je na tomto vstupu napìtí blízké 0 V díky rezistoru R2, který je pøipojen proti plovoucí zemi (bude vysvìtleno dále). Èasovaè tedy nekmitá, dokud napìtí na tomto vstupu nedosáhne požadované vysoké úrovnì. Napìtí je na vstup pøivádìno pøes diodu D5 z kondenzátoru C2, který je pozvolna nabíjen z napájecího zdroje pøes diodu D3 a rezistor R4. Volbou hodnot rezistoru R4 a kondenzátoru C2 tak ovlivòujeme délku èasové prodlevy pøed spuštìním akustické signalizace po zapnutí pøípravku.
 Napájecí napìtí pro èasovaè je vyvedeno mezi uzly V+ a GND. GND je zde znaèena plovoucí zem, což je uzel, který je oddìlen od skuteèné zemì napájecího zdroje rezistorem R5. Pøivedením urèitého napìtí na tento rezistor pøes diody D1 nebo D2 snížíme o jeho hodnotu napájecí napìtí èasovaèe. Pokud je toto napìtí rovno napìtí zdroje napájení, pak je napájecí napìtí èasovaèe rovno nule a obvod opìt nemùže kmitat.
 
@@ -34,7 +34,7 @@ Výsledný pájený spoj by mìl mít vzhled sopky.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.9\columnwidth]{osazovani_dps/svetla_piskle_schema}
+  \includegraphics[width=0.8\columnwidth]{osazovani_dps/svetla_piskle_schema}
 	\caption{Schéma zapojení signalizace rozsvícených svìtel}
   \label{fig:osDPS:schemaZap}
 \end{figure}
@@ -45,3 +45,26 @@ Výsledný pájený spoj by mìl mít vzhled sopky.
 	\caption{Pokládací (osazovací) schéma}
   \label{fig:osDPS:schemaPokl}
 \end{figure}
+
+\subsubsection{\texorpdfstring{Znaèení rezistorù}{Znaceni rezistoru}}
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+ Barva & 1. pruh & 2. pruh & 3. pruh & Násobitel & Tolerance \\
+\hline
+ èerná & 0 & 0 & 0 & 1 &\\
+ hnìdá & 1 & 1 & 1 & 10 & 1\% \\
+ èervená & 2 & 2 & 2 & 100 & 2\% \\
+ oranžová & 3 & 3 & 3 & $10^3$ & \\
+ žlutá & 4 & 4 & 4 & $10^4$ & \\
+ zelená & 5 & 5 & 5 & $10^5$ & 0,5\% \\
+ modrá & 6 & 6 & 6 & $10^6$ & 0,25\%\\
+ fialová & 7 & 7 & 7 & $10^7$ & 0,1\% \\
+ šedá & 8 & 8 & 8 & $10^8$ & 0,05\%\\
+ bílá & 9 & 9 & 9 & $10^9$ & \\
+ zlatá &&&& 0,1 & 5\%\\
+ støíbrná &&&& 0,01 & 10\%\\
+\hline
+\end{tabular}
+\end{center}
