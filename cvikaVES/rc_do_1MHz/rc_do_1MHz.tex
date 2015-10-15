@@ -1,9 +1,54 @@
 \section{\texorpdfstring{Vlastnosti kondenzátorù a rezistorù pøi kmitoètech do 1~MHz }{Vlastnosti kondenzatoru a rezistoru pri kmitoctech do 1 MHz}}
 
 \subsection{\texorpdfstring{Úvod}{Uvod}}
-Reálné souèástky (obvodové prvky) vykazují kromì svého hlavního parametru, také parametry parazitní. V pøípadì rezistorù je to pøi frekvencích do 1~MHz paralelní kapacita nebo sériová indukènost, v pøípadì kondenzátorù pøedevším parazitní odpor. Na tìchto frekvencích zpravidla ještì u vìtšiny souèástek nedochází k vlastní rezonanci. Pøesto identifikování hodnoty parazitního parametru má svùj vıznam. Parazitní kapacita odporu napøíklad mùe zpùsobit frekvenèní závislost vıstupního napìtí napìového dìlièe, nebo v pøípadì kondenzátorù pùsobí parazitní odpor další ztráty v obvodu.
+Reálné souèástky (obvodové prvky) vykazují kromì svého hlavního parametru také parametry parazitní. V pøípadì rezistorù je to pøi frekvencích do 1~MHz paralelní kapacita nebo sériová indukènost, v pøípadì kondenzátorù pøedevším parazitní odpor. Na tìchto frekvencích zpravidla ještì u vìtšiny souèástek nedochází k vlastní rezonanci. Pøesto identifikování hodnoty parazitního parametru má svùj vıznam. Parazitní kapacita odporu napøíklad mùe zpùsobit frekvenèní závislost vıstupního napìtí napìového dìlièe, nebo v pøípadì kondenzátorù pùsobí parazitní odpor pøídavné ztráty v obvodu, se kterımi je tøeba poèítat. Cvièení se zamìøuje na identifikaci jednotlivıch parazitních parametrù v závislosti na technologii souèástky a hodnotì jejího hlavního parametru. Vliv parazit na souèástku budeme posuzovat pomocí frekvenèní závislosti její impedance.
 
 \subsubsection{\texorpdfstring{Náhradní schémata pasivních prvkù}{Nahradni schemata pasivnich prvku}}
+
+Vlastnosti skuteènıch souèástek lze pøiblíit náhradními obvody na obrázku~\ref{fig:rcDo1MHz:nahrSch}. Na frekvencích do 1~MHz se v náhradním obvodu kondenzátorù zpravidla neuplatní parazitní sériová indukènost. Vıjimku tvoøí elektrolytické kondenzátory, které mimojiné kvùli své vysoké kapacitì èasto rezonují ji v tomto pásmu. Podobnì lze obvykle zanedbat i sériovı odpor, jeliko jeho hodnota je relativnì malá v porovnání s reaktancí kondenzátoru a vliv jeho ztrát se projeví a pøi vìtších proudech. Náhradní obvod kondenzátoru lze tedy pro dané frekvenèní pásmo obvykle zjednodušit na paralelní spojení odporu a kapacity. Hodnoty parametrù náhradního schéma závisejí pøedevším na technologii konstrukce kondenzátorù.
+
+Náhradní obvod rezistoru je na frekvencích do 1~MHz závislı na hodnotì odporu. Pro jeho nízké hodnoty (ménì ne 330~$\Omega$) pøevauje vliv indukènosti. Pro vysoké hodnoty odporu (více ne 330~$\Omega$) pøevauje vliv kapacity. Pro hodnoty kolem 330~$\Omega$ se oba vlivy dokonce kompenzují a souèástka jeví jen malou frekvenèní závislost. Pochopitelnì frekvenèní vlastnosti ovliòuje také konstrukce rezistoru. Drátové (vinuté) vıkonové rezistory mají obvykle vyšší indukènost ne vrstvové rezistory se stejnım odporem, ale na niší vıkony.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\columnwidth]{rc_do_1MHz/nahrSch}
+	\caption{a) Náhradní schéma rezistoru, b) náhradní schéma kondenzátoru}
+  \label{fig:rcDo1MHz:nahrSch}
+\end{figure}
+
+\subsubsection{\texorpdfstring{Frekvenèní závislost RL a RC prvku}{Frekvencni zavislost RL a RC prvku}}
+
+Po zjednodušení náhradních schémat pro frekvence do 1~MHz lze rezistory i kondenzátory modelovat buï sériovım spojení odporu a indukènosti nebo paralelním spojením odporu a kapacity. Pro impedanci sériového RL obvodu platí vztah:
+
+\begin{equation}
+Z_{RL} = R + j\omega L
+\label{eq:rcDo1MHz:serRL}
+\end{equation}
+
+\noindent
+a pro impedanci paralelního RC obvodu platí vztah:
+
+\begin{equation}
+Z_{RC} =\frac{R}{1+j\omega RC} 
+\label{eq:rcDo1MHz:parRC}
+\end{equation}
+
+\noindent
+Frekvenèní charakteristiky tìchto obvodù jsou vyneseny na obrázcích \ref{fig:rcDo1MHz:impedance} a \ref{fig:rcDo1MHz:faze}. Podobné vısledky oèekáváme i pøi mìøení konkrétních souèástek. Všimnìte si, e v obvodu s dominantní sériovou indukèností impedance roste a fáze je kladná, zatímco u paralelní kapacity je to naopak. Pokud by tyto charakteristiky patøily napøíklad rezistoru, pak by jeho puití mìlo smysl zhruba do frekvencí 1~kHz. Zde si stále ještì uchovává pøiblinì poèáteèní hodnotu impedance a nedochází k velkému fázovému posunu mezi napìtím a proudem.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\columnwidth]{rc_do_1MHz/impedance}
+	\caption{Frekvenèní charakteristika impedance pro sériovı RL a paralelní RC obvod.}
+  \label{fig:rcDo1MHz:impedance}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\columnwidth]{rc_do_1MHz/faze}
+	\caption{Frekvenèní charakteristika fáze pro sériovı RL a paralelní RC obvod.}
+  \label{fig:rcDo1MHz:faze}
+\end{figure}
 
 %---------------------------------------------
 \newpage
@@ -24,7 +69,7 @@ Pro zadané vzorky rezistorù zmìøte závislost impedance (absolutní hodnoty $\vert
 
 Mìøení proveïte v rozsahu kmitoètù od cca 50~Hz a do 1~MHz s pouitím pøístroje HP~4284A. Volte vhodnı krok, abyste pokryli rovnomìrnì všechny  mìøené øády (Hz, kHz, MHz). Pro  vynášení v logaritmické mìøítku je vhodnı krok 1-2-5-10  nebo 1-3-10. Pøístroj umoòuje nastavení kmitoètu jen s urèitım krokem z pøedvolené øady hodnot. Dbejte, aby pøi upnutí souèástek byl minimalizován vliv jejich pøívodù (tj. pøipojovat krátkımi pøívody). 
 
-U odporù tzv. malıch hodnot (øádovì jednotky a desítky $\Omega$) vyhodnote sériovou indukènost $L_S$ (z mìøení impedance), u odporù tzv. velkıch hodnot (øádovì od k$\Omega$ vıše) paralelní kapacitu $C_P$. Povšimnìte si té chování vykompenzovanıch odporù s hodnotami rezistivity kolem 300~$\Omega$. Pøi závìreèném hodnocení se vìnujte i vlivu konstrukce rezistorù na jejich chování. 
+U odporù tzv. malıch hodnot (øádovì jednotky a desítky $\Omega$) vyhodnote sériovou indukènost $L_S$ (z mìøení impedance), u odporù tzv. velkıch hodnot (øádovì od k$\Omega$ vıše) paralelní kapacitu $C_P$. Povšimnìte si té chování vykompenzovanıch odporù s hodnotami rezistivity kolem 330~$\Omega$. Pøi závìreèném hodnocení se vìnujte i vlivu konstrukce rezistorù na jejich chování. 
 
 \subsubsection{\texorpdfstring{Mìøené vzorky}{Merene vzorky}}
 \begin{tabular}{lll}
@@ -41,7 +86,9 @@ Pro zadané vzorky kondenzátorù zmìøte závislost impedance (absolutní hodnoty $\v
 
 \subsubsection{\texorpdfstring{Postup mìøení}{Postup mereni}}
 
-Mìøení proveïte v rozsahu kmitoètù od cca 50~Hz a do 1~MHz s pouitím pøístroje HP~4284A. Volte vhodnı krok, abyste pokryli rovnomìrnì všechny  mìøené øády (Hz, kHz, MHz). Pro  vynášení v logaritmické mìøítku je vhodnı krok 1-2-5-10  nebo 1-3-10. Pøístroj umoòuje nastavení kmitoètu jen s urèitım krokem z pøedvolené øady hodnot. Dbejte, aby pøi upnutí souèástek byl minimalizován vliv jejich pøívodù (tj. pøipojovat krátkımi pøívody). Povšimnìte si vırazné induktivní sloky u svitkovıch kondenzátorù. Pokuste se porovnat jednotlivé technologie kondenzátorù mezi sebou z pohledu jejich frekvenèní charakteristiky.
+Mìøení proveïte v rozsahu kmitoètù od cca 50~Hz a do 1~MHz s pouitím pøístroje HP~4284A. Volte vhodnı krok, abyste pokryli rovnomìrnì všechny  mìøené øády (Hz, kHz, MHz). Pro  vynášení v logaritmické mìøítku je vhodnı krok 1-2-5-10  nebo 1-3-10. Pøístroj umoòuje nastavení kmitoètu jen s urèitım krokem z pøedvolené øady hodnot. Dbejte, aby pøi upnutí souèástek byl minimalizován vliv jejich pøívodù (tj. pøipojovat krátkımi pøívody). Pokuste se porovnat jednotlivé technologie kondenzátorù mezi sebou z pohledu jejich frekvenèní charakteristiky.
+
+POZN.: Bìhem mìøení kapacity a ztrátového èinitele se mùe stát, e kapacita i ztrátovı èinitel budou indikovány záporné. V takovém pøípadì se nemusí jednat o chybu. Pokud k danému jevu došlo na vyšších frekvencích, prošla pravdìpodobnì souèástka rezonancí a nadále se chová jako cívka.
 
 \subsubsection{\texorpdfstring{Mìøené vzorky}{Merene vzorky}}
 \begin{tabular}{lll}
