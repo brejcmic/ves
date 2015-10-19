@@ -6,7 +6,7 @@ Polovodièové souèástky jsou nedílnou souèástí moderních elektronickıch zaøízení.
 
 \subsubsection{\texorpdfstring{Diody}{Diody}}
 
-Diody jsou souèástky s jedním pøechodem PN nebo s pøechodem kov polovodiè (Schottkyho dioda). Tyto prvky mají rùzná uplatnìní závisející na parametrech VA charakteristiky. Ta vypadá tvarovì témìø vdy stejnì, viz obrázek~\ref{fig:polovodice:charDioda}. Hlavní odlišnosti se tıkají hodnot prahového napìtí $U_{FM}$ v propustném smìru a prùrazného napìtí $U_{BR}$ v závìrném smìru. Usmìròovací diody se vyznaèují malım napìtím v propustném smìru (0,3~V Schottkyho dioda, 0,6~V køemíková dioda s pøechodem PN), ale velkım prùraznım napìtím (rádovì stovky voltù). Naproti tomu Zenerovy diody mají prùrazné napìtí nízké. To bıvá v závislosti na dotaci od zhruba 4~V do více ne 100~V. Rùzná hodnota prùraznıch (Zenerovıch) napìtí $U_Z$ tìchto diod se v obvodech vyuívá jako napìová reference. Všimnìte si v charakteristikách, e po pøekroèení urèité hodnoty proudu se napìtí na diodì mìní jen málo. Nejvìtší napìtí v propustném smìru mají zpravidla LED (Light Emitting Diode). Jeliko napìtí v propustném smìru i barva svìtelného záøení jsou závislé na šíøce zakázaného pásu polovodièe, liší se napìtí LED navíc podle barvy vyzaøovaného svìtla.
+Diody jsou souèástky s jedním pøechodem PN nebo s pøechodem kov polovodiè (Schottkyho dioda). Tyto prvky mají rùzná uplatnìní závisející na parametrech VA charakteristiky. Ta vypadá tvarovì témìø vdy stejnì, viz obrázek~\ref{fig:polovodice:charDioda}. Hlavní odlišnosti se tıkají hodnot prahového napìtí $U_{FM}$ v propustném smìru a prùrazného napìtí $U_{BR}$ v závìrném smìru. Usmìròovací diody se vyznaèují malım napìtím v propustném smìru (0,3~V Schottkyho dioda, 0,6~V køemíková dioda s pøechodem PN), ale velkım prùraznım napìtím (øádovì stovky voltù). Naproti tomu Zenerovy diody mají prùrazné napìtí nízké. To bıvá v závislosti na dotaci od zhruba 4~V do více ne 100~V. Rùzná hodnota prùraznıch (Zenerovıch) napìtí $U_Z$ tìchto diod se v obvodech vyuívá jako napìová reference. Všimnìte si v charakteristikách, e po pøekroèení urèité hodnoty proudu se napìtí na diodì mìní jen málo. Nejvìtší napìtí v propustném smìru mají zpravidla LED (Light Emitting Diode). Jeliko napìtí v propustném smìru i barva svìtelného záøení jsou závislé na šíøce zakázaného pásu polovodièe, liší se napìtí LED navíc podle barvy vyzaøovaného svìtla.
 
 \begin{figure}[h]
   \centering
@@ -17,7 +17,7 @@ Diody jsou souèástky s jedním pøechodem PN nebo s pøechodem kov polovodiè (Schot
 
 \subsubsection{\texorpdfstring{Bipolarni tranzistor}{Bipolarni tranzistor}}
 
-Bipolární tranzistor je polovodiè se dvìma pøechody PN, kterı je pøévánì pouíván pro zesilování nebo pro spínací úèely. Podle struktury rozlišujeme typ NPN a PNP. Jedná se o tøívıvodovou souèástku s elektrodami: kolektor (C), emitor (E) a báze (B). Velikost protékajícího proudu mezi kolektorem a emitorem je závislá na velikosti proudu protékajícího mezi bází a emitorem. Obvodovì lze tedy na tranzistor pohlíet jako na zdroj proudu øiditelnı proudem.
+Bipolární tranzistor je polovodiè se dvìma pøechody PN, kterı je pøevánì pouíván pro zesilování nebo pro spínací úèely. Podle struktury rozlišujeme typ NPN a PNP. Jedná se o tøí vıvodovou souèástku s elektrodami: kolektor (C), emitor (E) a báze (B). Velikost protékajícího proudu mezi kolektorem a emitorem je závislá na velikosti proudu protékajícího mezi bází a emitorem. Obvodovì lze tedy na tranzistor pohlíet jako na zdroj proudu øiditelnı proudem.
 
 Tranzistor je pokládán za dvojbran, pøièem v tomto mìøení je emitorovı vıvod spoleènı obìma branám. Vlastnosti tohoto zapojení lze popsat pomocí rùznıch typù charakteristik. V katalozích se pøevánì uvádìjí hybridní h parametry. Tranzistorovı dvojbran je tedy popsán následující soustavou rovnic:
 
@@ -52,9 +52,9 @@ $h$ parametry lze pokládat za konstantní pouze pro urèité okolí pracovního bodu.
 
 \subsubsection{\texorpdfstring{Mìøení VA charakteristiky pulzní metodou}{Pulzni metoda}}
 
-VA charakteristika polovodivého prvku vdy závisí na teplotì. Pøi statickém mìøení stejnosmìrnım proudem dochází vlivem ztrát k ohøívání mìøeného prvku. Pøi pomalém mìøení jsou tak jednotlivé body charakteristiky zmìøeny pøi rùznıch teplotách. Do VA charakteristiky mùeme takto zavléci i urèitou hysterézy, pokud budeme mìøit z nulového proudu do maxima a následnì zpìt. Pracovní bod ohøátého prvku toti pobìí po jiné køivce.
+VA charakteristika polovodivého prvku vdy závisí na teplotì. Pøi statickém mìøení stejnosmìrnım proudem dochází vlivem ztrát k ohøívání mìøeného prvku. Pøi pomalém mìøení jsou tak jednotlivé body charakteristiky zmìøeny pøi rùznıch teplotách. Do VA charakteristiky mùeme takto zavléci i urèitou hysterezi, pokud budeme mìøit z nulového proudu do maxima a následnì zpìt. Pracovní bod ohøátého prvku toti pobìí po jiné køivce.
 
-Ohøívání prvku se vyhneme napájením prvku co nejniší efektivní hodnotou mìøícího proudu. Sníení efektivní hodnoty proudu, ani bychom museli mìnit mìøenı rozsah proudu, dosahneme napájením pomocí pulzù. Celé mìøení tak probìhne v rámci jednoho krátkého pulzu a nedojde k vıraznému ohøátí souèástky. 
+Ohøívání prvku se vyhneme napájením prvku co nejniší efektivní hodnotou mìøícího proudu. Sníení efektivní hodnoty proudu, ani bychom museli mìnit mìøenı rozsah proudu, dosáhneme napájením pomocí pulzù. Celé mìøení tak probìhne v rámci jednoho krátkého pulzu a nedojde k vıraznému ohøátí souèástky. 
 
 %---------------------------------------------
 \newpage
@@ -62,7 +62,7 @@ Ohøívání prvku se vyhneme napájením prvku co nejniší efektivní hodnotou mìøícíh
 
 \subsubsection{\texorpdfstring{Úkol mìøení}{Ukol mereni}}
 
-Zmìøte VA charakteristiky I=f(U) v propustném smìru pøedloenıch polovodièovıch diod. Namìøené hodnoty vyneste do grafu a vzájmnì je porovnejte. Vyberte si jednu diodu, její charakteristiku zmìøíte statickou metodou. Charakteristiky ostatních diod mìøte pulznì generátorem a osciloskopem. U Zenerovy diody navíc zmìøte a vyneste i charakteristiku v závìrném smìru.
+Zmìøte VA charakteristiky I=f(U) v propustném smìru pøedloenıch polovodièovıch diod. Namìøené hodnoty vyneste do grafu a vzájemnì je porovnejte. Vyberte si jednu diodu, její charakteristiku zmìøíte statickou metodou. Charakteristiky ostatních diod mìøte pulznì generátorem a osciloskopem. U Zenerovy diody navíc zmìøte a vyneste i charakteristiku v závìrném smìru.
 
 \subsubsection{\texorpdfstring{Schéma zapojení}{Schema zapojeni}}
 
@@ -75,7 +75,7 @@ Zmìøte VA charakteristiky I=f(U) v propustném smìru pøedloenıch polovodièovıch 
 \subsubsection{\texorpdfstring{Postup mìøení}{Postup mereni}}
 Pøi statickém mìøení pouijte pøípravek pro mìøení VA charakteristik tranzistoru a obvod zapojte dle pøíslušného schéma zapojení. Propustnı smìr diody bude mìøen, pokud bude anoda pøipojena na svorku B (báze) a katoda na svorku E (emitor). Pro vzorky 1,2,3 a 5 mìøte v rozsahu proudù 0-200~mA. U vzorku 4 mìøte jen do maxima proudu 20~mA. Nastavenı proud odeèítejte z ampérmetru A$_1$ a vzniklı úbytek napìtí z voltmetru V$_1$. Charakteristika všech diod je prudce nelineární. Pro snadné vynášení do grafu je tøeba podrobnì promìøit oblast kolene vynášené køivky. Proto danou oblast, kde se napìtí s proudem prudce mìní, mìøte s velmi malım krokem proudu.
 
-U pulsního mìøení pøipojujte jednotlivé diody na mìøící svorky dle schéma zapojení a zobrazujte jejich VA charakteristiky v XY reimu na osciloskopu. Data sejmìte ve formátu CSV a ulote na vhodné medium (flash disk). V tomto pøípadì grafy pøi zpracování vyneste za pomoci odpovídajícího softwaru - EXCEL, MATLAB apod. Napìtí bude v datech zobrazeno pøímo, avšak proud je snímán jako úbytek napìtí na 10~$\Omega$ odporu. Proto proveïte pøíslušnı pøepoèet! Pokud máte tuto monost otestujte, jak se zmìní VA charakteristika vlivem zmìny teploty.
+U pulsního mìøení pøipojujte jednotlivé diody na mìøící svorky dle schéma zapojení a zobrazujte jejich VA charakteristiky v XY reimu na osciloskopu. Data sejmìte ve formátu CSV a ulote na vhodné medium (flash disk). V tomto pøípadì grafy pøi zpracování vyneste za pomoci odpovídajícího softwaru - EXCEL, MATLAB apod. Napìtí bude v datech zobrazeno pøímo, avšak proud je snímán jako úbytek napìtí na 10~$\Omega$ odporu. Proto proveïte pøíslušnı pøepoèet! Pokud máte danou monost, otestujte jak se zmìní VA charakteristika vlivem zmìny teploty.
 
 \subsubsection{\texorpdfstring{Mìøené vzorky}{Merene vzorky}}
 \begin{tabular}{ll}
@@ -93,7 +93,7 @@ U pulsního mìøení pøipojujte jednotlivé diody na mìøící svorky dle schéma zapoje
 \subsubsection{\texorpdfstring{Úkol mìøení}{Ukol mereni}}
 
 \begin{enumerate}
- \item [a)] Zmìøte vıstupní charakteristiky pøedloenıch tranzistorù v zapojení se spoleènım emitorem pro proudy báze $I_B$ = 5, 10, 20~mA. Pøi mìøení nepøesáhnìte  maximální mez bezpeèného napìtí 50~V v kolektorovém obvodì tranzistoru.
+ \item [a)] Zmìøte vıstupní charakteristiky pøedloenıch tranzistorù v zapojení se spoleènım emitorem pro proudy báze $I_B$ = 5, 10, 20~mA. Pøi mìøení nepøesáhnìte maximální mez bezpeèného napìtí 50~V v kolektorovém obvodì tranzistoru.
  \item [b)] Zmìøte pøevodní charakteristiku pøedloenıch tranzistorù pro napìtí $U_{CE}$=~20~V.
  \item [c)] Zmìøte vstupní charakteristiku pøedloenıch tranzistorù pro napìtí $U_{CE}$=~20~V.
 \end{enumerate}
@@ -109,7 +109,7 @@ U pulsního mìøení pøipojujte jednotlivé diody na mìøící svorky dle schéma zapoje
 \subsubsection{\texorpdfstring{Postup mìøení}{Postup mereni}}
 
 \begin{description}
- \item [ad a)] Regulovatelnım proudovım zdrojem I (knofíkem na pøípravku) nastavte poadovanı proud obvodem báze. Pomocí regulovatelného napìového zdroje U, ampérmetru A$_2$ a voltmetru V$_2$ nastavujte napìtí a mìøte proud obvodem kolektoru. Napìtí nastavujte v rozsahu 0 – 20 V.
+ \item [ad a)] Regulovatelnım proudovım zdrojem I (knoflíkem na pøípravku) nastavte poadovanı proud obvodem báze. Pomocí regulovatelného napìového zdroje U, ampérmetru A$_2$ a voltmetru V$_2$ nastavujte napìtí a mìøte proud obvodem kolektoru. Napìtí nastavujte v rozsahu 0 – 20 V.
  \item [ad b)] Regulovatelnım napìovım zdrojem U nastavte napìtí $U_{CE}$=~20~V. Pomocí regulovatelného proudového zdroje I, ampérmetru A$_1$ a A$_2$ nastavujte proud bází $I_B$ a mìøte proud obvodem kolektoru $I_C$. Proud bází nastavujte v rozsahu 0 – 20 mA.
  \item [ad c)] Regulovatelnım napìovım zdrojem U nastavte napìtí $U_{CE}$=~20~V. Pomocí regulovatelného proudového zdroje U, ampérmetru A$_1$ a voltmetru V$_2$ nastavujte proud bází $I_B$ a mìøte napìtí mezi bází a emitorem. Proud bází nastavujte v rozsahu 0 – 20 mA.
 \end{description}

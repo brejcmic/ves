@@ -3,7 +3,53 @@
 \subsection{\texorpdfstring{Úvod}{Uvod}}
 Kondenzátor je souèástka, pomocí ní v elektrickém obvodu realizujeme kapacitu. Podobnì jako ostatní souèástky vykazuje øadu vedlejších závislostí (indukènost, sériovı a paralelní odpor, teplotní a napìovou závislost). Hodnota kapacity $C$ závisí, jak známo, na ploše elektrod ($S$), dielektrické konstantì ($\epsilon$) a nepøímo na vzdálenosti elektrod ($d$). Z toho vycházejí odlišné konstrukce kondenzátorù (plošné - napø. slídové, svitkové, keramické, elektrolytické). Poadavek na minimální rozmìry pøedpokládá pouití materiálù dielektrika s vysokou pomìrnou dielektrickou konstantou (tzv. feroelektrika). Tyto materiály jsou však pøi vyšších teplotách znaènì teplotnì závislé a jejich $\epsilon_r$ pøi vyšší teplotì rychle klesá.
 
+\subsubsection{\texorpdfstring{Teplotní závislost kapacity}{Teplotni zavislost kapacity}}
+
+Teplotní závislost kapacity kondenzátoru závisí pøedevším na typu dielektrika (na teplotní závislosti relativní permitivity). Nejmenší závislost tak lze oèekávat od vzduchovıch nebo vakuovıch kondenzátorù. Velmi dobøe jsou na tom i foliové kondenzátory. Teplotní závislost keramickıch kondenzátorù je naproti tomu velmi rozdílná. Kapacita mùe s teplotou rùst i klesat a to navíc rùznì v rùznıch teplotních intervalech. Konkrétní typ teplotní závislosti popisují vırobci písmennım a èíselnım oznaèením napø. X7R, Z5U, NP0 atd. K tìmto znaèením následnì existují tepelné charakteristiky relativní zmìny kapacity. Nejstabilnìjší keramické kondenzátory nesou oznaèení NP0, nicménì tyto mají obvykle jen malou kapacitu.
+
+Teplotní závislost pro malé zmìny teploty se linearizuje a vyjadøuje pomocí teplotního koeficientu kapacity:
+
+\begin{equation}
+\alpha = \frac{dC}{C_0\cdot d\vartheta}
+\label{eq:feroelKond:tkc}
+\end{equation}
+
+Konkrétní hodnotu kapacity tak mùeme pøiblinì urèit pomocí vztahu:
+
+\begin{equation}
+C_\vartheta = C_0 \cdot \left(1 + \alpha \cdot\left(\vartheta - \vartheta_0\right)\right)
+\label{eq:feroelKond:CTkc}
+\end{equation}
+
+Pøi mìøení teplotní závislosti je vhodné následnì do grafu vynášet relativní zmìnu kapacity $dC/C_0$.
+
+\subsubsection{\texorpdfstring{Napìová závislost kapacity}{Napetova zavislost kapacity}}
+
+Napìová závislost kapacity je nejvıznamnìjší u polárních nebo feroelektrickıch dielektrik. Do této skupiny patøí velkou mìrou opìt keramiky. Závislost na napìtí nebıvá lineární. Závislost lze podobnì jako u teploty popsat napìovım koeficientem závislosti kapacity a po èástech linearizovat:
+ 
+\begin{equation}
+\beta = \frac{dC}{C_0\cdot dU} \approx \frac{C - C_0}{C_0\cdot (U - U_0)}
+\label{eq:feroelKond:ukc}
+\end{equation}
+
+\newpage
 \subsubsection{\texorpdfstring{Ztrátovı èinitel}{Ztratovy cinitel}}
+
+Ztrátovı èinitel udává pomìr jalového vıkonu kondenzátoru ke ztrátám. Jako náhradní obvod kondenzátoru obvykle v tomto pøípadì uvaujeme paralelní spojení kapacitoru a rezistoru, viz obrázek \ref{fig:feroelKond:tgDelta}. Pro ztrátovı èinitel $D$ (nebo také $tg\delta$) lze pomocí èinného $P$ a jalového vıkonu $Q$ odvodit:
+
+\begin{equation}
+D = \frac{P}{Q}= \frac{U_C^2/R}{U_C^2 \cdot \omega C}= \frac{I_R}{I_C} =\frac{1}{\omega RC} = tg \delta
+\label{eq:feroelKond:tgDelta}
+\end{equation}
+
+Paralelní odpor modeluje pøevánì ztráty v dielektriku a podobnì jako kapacita obvykle je teplotnì závislı.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\columnwidth]{feroel_kondenzatory/tgDelta}
+	\caption{Náhradní schéma kondenzátoru pro urèení ztrátového èinitele}
+  \label{fig:feroelKond:tgDelta}
+\end{figure}
 
 %--------------------------------------
 \newpage

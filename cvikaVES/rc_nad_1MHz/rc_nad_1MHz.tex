@@ -2,7 +2,7 @@
 
 \subsection{\texorpdfstring{Úvod}{Uvod}}
 
-Rezistory a kapacitory nejsou ideální souèástky, takže mimo svou dominantní vlastnost (odpor, kapacita) vykazují ještì parazitní vlastnosti (indukènost, kapacitu, sériový a paralelní odpor). Pøi frekvencích nad 1~MHz zpùsobují parazitní parametry vlastní rezonanci. Jelikož se po rezonanci mìní charakter souèástky, mùže dojít k chybné funkci obvodu v daném pásmu frekvencí. Problém je významný pøedevším u pasivních filtrù, kde se významnì mìní pøedpokládaná frekvenèní charakteristika. Pro pøíklad jednoduchý RC filtr 1. øádu typu dolní propust se zmìní po vlastní rezonanci kondenzátoru na RL filtr 1. øádu typu horní propust. Výsledná frekvenèní charakteriska odpovídá ve své podstatì pásmové zádrži. Obecnì konstrukce obvodù nad 1~MHz je nesnadný úkol, který klade velké nároky na výbìr souèástek.
+Rezistory a kapacitory nejsou ideální souèástky, takže mimo svou dominantní vlastnost (odpor, kapacita) vykazují ještì parazitní vlastnosti (indukènost, kapacitu, sériový a paralelní odpor). Pøi frekvencích nad 1~MHz zpùsobují parazitní parametry vlastní rezonanci. Jelikož se po rezonanci mìní charakter souèástky, mùže dojít k chybné funkci obvodu v daném pásmu frekvencí. Problém je významný pøedevším u pasivních filtrù, kde se významnì mìní pøedpokládaná frekvenèní charakteristika. Pro pøíklad jednoduchý RC filtr 1. øádu typu dolní propust se zmìní po vlastní rezonanci kondenzátoru na RL filtr 1. øádu typu horní propust. Výsledná frekvenèní charakteristika odpovídá ve své podstatì pásmové zádrži. Obecnì konstrukce obvodù nad 1~MHz je nesnadný úkol, který klade velké nároky na výbìr souèástek.
 
 \subsubsection{\texorpdfstring{Vlastní rezonance souèástek}{Vlastni rezonance soucastek}}
 
@@ -27,7 +27,7 @@ Oba vztahy dosahují extrému v blízkosti frekvence dané podmínkou:
 \end{equation}
 
 \noindent
-Jde vlastnì o vyjádøení Thomsonova vztahu. Ve skuteènosti je rezonanèní frekvence nižší, než by odpovídalo vztahu~(\ref{eq:rcNad1MHz:podmRez}). Její pøesná hodnota navíc závisí na útlumu, který je úmìrný pomìru odporu ku indukènosti. Posun lze vidìt na ilustraèních obrázku~\ref{fig:rcNad1MHz:impedance}, kde jsou vyneseny impedanèní a fázové charakteristiky náhradního schéma rezistoru a kondenzátoru. Zøejmì pro zkoumané hodnoty prvkù by podle vztahu~(\ref{eq:rcNad1MHz:podmRez}) mìlo dojít u obou souèástek k rezonanci ve stejném místì (pøibližnì pøi 5~MHz). Nicménì u rezistoru, kde je pomìr odporu k indukènosti a tím i útlumu vyšší je maximální impedance posunuta mírnì doleva. Všimnìte si, že pøi rezonanci obì souèástky vykazují výhradnì odporový charakter. Ve fázové charakteristice je na rezonanèní frekvenci fáze vždy 0$^\circ$.
+Jde vlastnì o vyjádøení Thomsonova vztahu. Ve skuteènosti je rezonanèní frekvence nižší, než by odpovídalo vztahu~(\ref{eq:rcNad1MHz:podmRez}). Její pøesná hodnota navíc závisí na útlumu, který je úmìrný pomìru odporu k indukènosti. Posun lze vidìt na ilustraèních obrázku~\ref{fig:rcNad1MHz:impedance}, kde jsou vyneseny impedanèní a fázové charakteristiky náhradního schéma rezistoru a kondenzátoru. Zøejmì pro zkoumané hodnoty prvkù by podle vztahu~(\ref{eq:rcNad1MHz:podmRez}) mìlo dojít u obou souèástek k rezonanci ve stejném místì (pøibližnì pøi 5~MHz). Nicménì u rezistoru, kde je pomìr odporu k indukènosti a tím i útlumu vyšší je maximální impedance posunuta mírnì doleva. Všimnìte si, že pøi rezonanci obì souèástky vykazují výhradnì odporový charakter. Ve fázové charakteristice je na rezonanèní frekvenci fáze vždy 0$^\circ$.
 
 \subsubsection{\texorpdfstring{Smithùv diagram}{Smithuv diagram}}
 
@@ -116,4 +116,4 @@ Mìøení probíhá kontinuálnì. Data zapisujeme na flash disk. Postupnì volíme:
 
 \textbf{\uv{Save/Recall} / \uv{Save Trace Data}}
 
-\noindent \textbf{Nezapomeòte zvolit vhodné uložištì!!!}. Jméno souboru je nutné zadat z klávesnice. Stiskem \textbf{\uv{Save}} se data uloží ve fotmátu CSV. Formát ukládání je CSV. Tento formát souborù lze bìžnì editovat softwary Excel, Matlab apod.
+\noindent \textbf{Nezapomeòte zvolit vhodné uložištì!!!}. Jméno souboru je nutné zadat z klávesnice. Stiskem \textbf{\uv{Save}} se data uloží ve formátu CSV. Formát ukládání je CSV. Tento formát souborù lze bìžnì editovat softwary Excel, Matlab apod.

@@ -2,9 +2,9 @@
 
 \subsection{\texorpdfstring{Úvod}{Uvod}}
 
-V praxi se nejèastìji setkáváme s lineárními rezistory, tj. souèástkami, u nich pøedpokládáme konstantní velikost odporu nezávislou na vnìjších podmínkách aplikace, tj. nezávislost na teplotì, frekvenci, mechanickıch vlivech apod. Odlišují se vıkonovou zatíitelností, teplotní a frekvenèní závislostí podle pouitıch materiálù a  technologií vıroby, tolerancí jmenovité hodnoty a provedením. Pøedpoklad konstantní velikosti odporu vyhovuje obvykle pøi aplikacích do frekvencí 50~kHz a 1~MHz (podle provedení). Pro vyšší frekvence je nutné uvaovat úplné náhradní schéma rezistoru s jeho reaktanèními prvky.
+V praxi se nejèastìji setkáváme s lineárními rezistory, tj. souèástkami, u nich pøedpokládáme konstantní velikost odporu nezávislou na vnìjších podmínkách aplikace, tj. nezávislost na teplotì, frekvenci, mechanickıch vlivech apod. Odlišují se vıkonovou zatíitelností, teplotní a frekvenèní závislostí podle pouitıch materiálù a technologií vıroby, tolerancí jmenovité hodnoty a provedením. Pøedpoklad konstantní velikosti odporu vyhovuje obvykle pøi aplikacích do frekvencí 50~kHz a 1~MHz (podle provedení). Pro vyšší frekvence je nutné uvaovat úplné náhradní schéma rezistoru s jeho reaktanèními prvky.
 
-Nelineární rezistory  jsou na rozdíl od lineárních konstruovány tak, aby  velikost odporu byla vıraznì závislá na vnìjších podmínkách, napø. teplotì (termistory NTC, PTC) nebo pøiloenému napìtí (varistory) a pokud mono nezávisela na dalších vlivech aplikace. Vzhledem k tìmto vlastnostem se vyuívají k mìøení teploty, v obvodech pro tepelnou ochranu pøístrojù, strojù a zaøízení, jako pøepìové ochrany atd.
+Nelineární rezistory jsou na rozdíl od lineárních konstruovány tak, aby  velikost odporu byla vıraznì závislá na vnìjších podmínkách, napø. teplotì (termistory NTC, PTC) nebo pøiloenému napìtí (varistory) a pokud mono nezávisela na dalších vlivech aplikace. Vzhledem k tìmto vlastnostem se vyuívají k mìøení teploty, v obvodech pro tepelnou ochranu pøístrojù, strojù a zaøízení, jako pøepìové ochrany atd.
 
 \subsubsection{\texorpdfstring{Teplotní závislost odporu}{Teplotní závislost odporu}}
 
@@ -33,9 +33,9 @@ R = R_\infty \cdot e^{B/T}
 \label{eq:nelinRez:termOdpor}
 \end{equation}
 
-V rovnici (\ref{eq:nelinRez:termOdpor}) jsou $R_\infty$, $B$ parametry rovnice a $T$ je obsolutní teplota v K. Hodnoty  odporu $R_\infty$ dosáhne rezistor pøi pomyslné nekoneèné teplotì. NTC rezistory lze mimo mìøení teploty vyuít i jako ochranné prvky pøi startu elektrickıch obvodù. Po pøivedení napìtí je termistor studenı a jeho odpor je vysokı, v dùsledku èeho nepropustí velkı nárazovı proud. Prùchodem proudu se postupnì ohøívá a jeho odpor klesá a dochází k postupnému zvyšování proudu.
+V rovnici (\ref{eq:nelinRez:termOdpor}) jsou $R_\infty$, $B$ parametry rovnice a $T$ je absolutní teplota v K. Hodnoty  odporu $R_\infty$ dosáhne rezistor pøi pomyslné nekoneèné teplotì. NTC rezistory lze mimo mìøení teploty vyuít i jako ochranné prvky pøi startu elektrickıch obvodù. Po pøivedení napìtí je termistor studenı a jeho odpor je vysokı, v dùsledku èeho nepropustí velkı nárazovı proud. Prùchodem proudu se postupnì ohøívá a jeho odpor klesá a dochází k postupnému zvyšování proudu.
 
-PTC rezistory mají kladnı teplotní koeficient. Jejich odpor s teplotou roste a podobnì jako u NTC rezistorù je tato závislost na teplotì exponenciální (parametr $B$ je zápornı). Opìt se pouívají jako ochrané prvky, napø. jako vratná pojistka.
+PTC rezistory mají kladnı teplotní koeficient. Jejich odpor s teplotou roste a podobnì jako u NTC rezistorù je tato závislost na teplotì exponenciální (parametr $B$ je zápornı). Opìt se pouívají jako ochranné prvky, napø. jako vratná pojistka.
 
 \subsubsection{\texorpdfstring{Varistory}{Varistory}}
 Varistor je odporovı prvek, jeho odpor je závislı na pøiloeném napìtí. Jedná se o VA charakteristiku s lichou mocninou typu:
