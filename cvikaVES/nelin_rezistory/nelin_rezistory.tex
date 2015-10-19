@@ -6,10 +6,46 @@ V praxi se nejèastìji setkáváme s lineárními rezistory, tj. souèástkami, u nich
 
 Nelineární rezistory  jsou na rozdíl od lineárních konstruovány tak, aby  velikost odporu byla vıraznì závislá na vnìjších podmínkách, napø. teplotì (termistory NTC, PTC) nebo pøiloenému napìtí (varistory) a pokud mono nezávisela na dalších vlivech aplikace. Vzhledem k tìmto vlastnostem se vyuívají k mìøení teploty, v obvodech pro tepelnou ochranu pøístrojù, strojù a zaøízení, jako pøepìové ochrany atd.
 
+\subsubsection{\texorpdfstring{Teplotní závislost odporu}{Teplotní závislost odporu}}
+
+Hodnota odporu je u všech rezistorù teplotnì závislá. Tuto závislost v pøípadì drátovıch, metalizovanıch, metaloxidovıch a uhlíkovıch rezistorù mùeme pro malé zmìny teplot povaovat za lineární. Zpravidla jí popisujeme teplotním koeficientem odporu, kterı udává pomìrnou zmìnu odporu $dR/R_0$ v závislosti na zmìnì teploty $d\vartheta$:
+
+\begin{equation}
+\alpha = \frac{dR}{R_0\cdot d\vartheta}
+\label{eq:nelinRez:tkr}
+\end{equation}
+
+Úpravou tohoto vztahu získáme èasto pouívanou aproximace závislosti odporu:
+
+\begin{equation}
+R_\vartheta = R_0 \cdot \left(1 + \alpha \cdot\left(\vartheta - \vartheta_0\right)\right)
+\label{eq:nelinRez:RTkr}
+\end{equation}
+
+Vıslednı vztah lze s malou chybou vyuít pøedevším v pøípadì kovovıch materiálù. Všimnìte si, e se jedná o lineární závislost. Kovové odporové teplomìry tedy lze vyuít pro mìøení teploty tam, kde je nutnı lineární vztah mezi teplotou a odporem.
+
 \subsubsection{\texorpdfstring{Termistory}{Termistory}}
 
+Termistory jsou polovodivé prvky s velkou závislostí odporu souèástky na teplotì. Rozlišujeme dva typy, NTC a PTC. NTC rezistory mají zápornı teplotní koeficient, tj. jejich odpor s teplotou klesá. Závislost lze modelovat pomocí exponenciální funkce:
+
+\begin{equation}
+R = R_\infty \cdot e^{B/T}
+\label{eq:nelinRez:termOdpor}
+\end{equation}
+
+V rovnici (\ref{eq:nelinRez:termOdpor}) jsou $R_\infty$, $B$ parametry rovnice a $T$ je obsolutní teplota v K. Hodnoty  odporu $R_\infty$ dosáhne rezistor pøi pomyslné nekoneèné teplotì. NTC rezistory lze mimo mìøení teploty vyuít i jako ochranné prvky pøi startu elektrickıch obvodù. Po pøivedení napìtí je termistor studenı a jeho odpor je vysokı, v dùsledku èeho nepropustí velkı nárazovı proud. Prùchodem proudu se postupnì ohøívá a jeho odpor klesá a dochází k postupnému zvyšování proudu.
+
+PTC rezistory mají kladnı teplotní koeficient. Jejich odpor s teplotou roste a podobnì jako u NTC rezistorù je tato závislost na teplotì exponenciální (parametr $B$ je zápornı). Opìt se pouívají jako ochrané prvky, napø. jako vratná pojistka.
+
 \subsubsection{\texorpdfstring{Varistory}{Varistory}}
-Varistor je odporovı prvek, jeho odpor je závislı na pøiloeném napìtí.
+Varistor je odporovı prvek, jeho odpor je závislı na pøiloeném napìtí. Jedná se o VA charakteristiku s lichou mocninou typu:
+
+\begin{equation}
+I = k \cdot U^\alpha
+\label{eq:nelinRez:varistorVA}
+\end{equation}
+
+V rovnici (\ref{eq:nelinRez:varistorVA}) je $k$ koeficient mocninné funkce a $\alpha$ je mocnina popisující tvar VA charakteristiky. Pokles odporu po pøiloení napìtí je velmi prudkı (øádovì desítky nanosekund), co tento prvek pøedurèuje pro pouití v pøepìovıch ochranách.
 
 %---------------------------------------------
 \newpage
