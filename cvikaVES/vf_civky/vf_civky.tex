@@ -5,7 +5,39 @@ Indukènost v elektrickém obvodu je obvykle realizována cívkou, tj. uspoøádáním v
 
 \subsubsection{\texorpdfstring{Èinitel jakosti - pøevıšení}{Cinitel jakosti}}
 
-Narozdíl od kondenzátorù nelze u cívek zanedbat parazitní sériovı odpor. Jen ve velmi ojedinìlıch pøípadech není tøeba pøi konstrukci obvodu hodnotu tohoto odporu uvaovat, nebo je hlavní pøíèinou vzniku ztrát a z toho plynoucího ohøevu cívky (Jouleovy ztráty ve vinutí, ztráty v mag. obvodu atd.). V rezonanèních obvodech pøedevším kvùli tomuto odporu dochází ke ztrátám energie.
+Narozdíl od kondenzátorù nelze u cívek zanedbat parazitní sériovı odpor. Jen ve velmi ojedinìlıch pøípadech není tøeba pøi konstrukci obvodu hodnotu tohoto odporu uvaovat, nebo je hlavní pøíèinou vzniku ztrát a z toho plynoucího ohøevu cívky (Jouleovy ztráty ve vinutí, ztráty v mag. obvodu atd.). Èinitel jakosti je definován jen v rezonanèních obvodech. Zde udává pomìr akumulované energie ku ztracené energii.
+
+Pøi sériovém spojení kondenzátoru a cívky vznikne rezonanèní obvod, jeho energie se ztrácí pøedevším na parazitním odporu cívky. Rezonanèní $LC$ obvod tak pøechází na rezonanèní $RLC$ obvod. Úbytek napìtí na odporu je úmìrnı ztrátám v obvodu a napìtí na indukènosti (resp. kapacitì) je úmìrné jalovému vıkonu, tudí jde o energii akumulovanou v rezonanèním obvodu. Analızou tohoto faktu získáme pro èinitel jakosti vztah:
+
+\begin{equation}
+Q= \frac{\omega L}{R}
+\label{eq:vfCivky:Q}
+\end{equation}
+
+Zøejmì mùeme èinitel jakosti uvaovat jako pøevrácenou hodnotu ztrátového èinitele nebo jako pomìr imaginární a reálné èásti impedance cívky. Jeliko je odpor cívky relativnì malı, dosahuje èinitel jakosti na frekvencích øádovì kHz hodnot øádovì desítek a stovek.
+
+\subsubsection{\texorpdfstring{Napìtí na prvcích v rezonanci}{Napeti na prvcich v rezonanci}}
+
+Bìhem rezonance sériového $RLC$ obvodu dochází ke zvıšení amplitudy napìtí na cívce a kondenzátoru. Analızou vztahù pro impedanci a napìtí na jednotlivıch prvcích lze odvodit pùvod tohoto jevu. Zde celou vìc zjednodušíme úvahou. Pøi rezonanci platí, e induktivní reaktance cívky je a na znaménko rovna kapacitní reaktanci kondenzátoru. Jejich souèet je nulovı a impedance obvodu má pouze reálnou èást danou hodnotou odporu. Pro fázor proudu tak získáváme vztah:
+
+\begin{equation}
+\widehat{I}= \frac{\widehat{U}}{\widehat{Z}}= \frac{\widehat{U}}{\widehat{R}}
+\label{eq:vfCivky:Proud}
+\end{equation}
+
+Reaktance cívky a kondenzátoru je stále v obvodu pøítomna a procházející proud vyvolá na obou prvcích napìtí, která budou vzájemnì v protifázi (vùèi sobì posunuta o 180$^\circ$):
+
+\begin{equation}
+\widehat{U}_L= \widehat{I}\cdot jX_L= \widehat{U} \cdot \frac{j\omega L}{R} = \widehat{U} \cdot jQ
+\label{eq:vfCivky:napetiNaL}
+\end{equation}
+
+\begin{equation}
+\widehat{U}_C= \widehat{I}\cdot (-jX_C)= \widehat{U} \cdot \frac{-j}{\omega CR} = \widehat{U} \cdot (-jQ)
+\label{eq:vfCivky:napetiNaC}
+\end{equation}
+
+Z rovnic vyplıvá (\ref{eq:vfCivky:napetiNaL}) a (\ref{eq:vfCivky:napetiNaC}), e vısledné napìtí na obou reaktancích bude zesíleno velikostí èinitele jakosti.
 
 %--------------------------------------
 \newpage
