@@ -1,33 +1,156 @@
-\section{\texorpdfstring{Porovnání VA charakteristik rùzných typù fv panelù}{Porovnani VA charakteristik fv panelu}}
+\section{\texorpdfstring{Porovnání VA charakteristik rùzných typù fv modulù}{Porovnani VA charakteristik fv modulu}}
 
 \subsection{\texorpdfstring{Úvod}{Uvod}}
+Fotovoltaické moduly jsou sestaveny z èlánkù, které mùžeme podle technologie rozdìlit do nìkolika skupin:
+\begin{itemize}
+ \item Krystalické
+ \begin{itemize}
+  \item Køemíkové
+	\begin{itemize}
+	 \item Multikrystalické
+	 \item Monokrystalické
+	 \item Páskové
+	\end{itemize}
+	\item GaAs
+ \end{itemize}
+ \item Tenkovrstvé
+ \begin{itemize}
+  \item Køemíkové
+	\begin{itemize}
+	 \item Amorfní
+	 \item Mikrokrystalické
+	\end{itemize}
+	\item CI(G)S
+	\item CdTe
+	\item GaAs
+	\item Organické
+	\item DSSC
+	\item Vícepøechodové
+ \end{itemize}
+ \item Hybridní (HIT)
+\end{itemize}
+Nejrozšíøenìjšími èlánky jsou èlánky na bázi køemíku, které jsou levné a mají relativnì vysokou úèinnost. 
+
+\subsubsection{\texorpdfstring{Monokrystalický Si fotovoltaický èlánek}{Monokrystalicky clanek}}
+
+Výroba mono-Si èlánkù je relativnì nároèná, ale díky rozsáhlému použití mono-Si v elektrotechnice dobøe zvládnutá. Výroba zaèíná pøípravou monokrystalického Si ingotu. Nejèastìjším zpùsobem výroby je tažení monokrystalu z taveniny (tzv. Czochralskiho metoda) pomocí zá\-ro\-deè\-né\-ho krystalu. Hotový ingot je poté pomocí diamantové pily rozøezán na destièky. Následuje odleptání zhmoždìné vrstvy, texturace povrchu, difuzní procesy, nanesení antireflexní vrstvy a sítotisk kontaktù. Vzhledem ke kruhovému prùøezu ingotu mají monokrystalické èlánky tzv. pseudoètvercový tvar, tzn. mají oblé rohy. Viz obrázek~\ref{fig:fvClanky:detFVC}, vlevo.
+
+\subsubsection{\texorpdfstring{Multikrystalický Si fotovoltaický èlánek}{Multikrystalicky clanek}}
+
+Výroba multikrystalických èlánkù je levnìjší než výroba monokrystalických èlánkù, nicménì úèinnost je vlivem vyšších rekombinaèních ztrát nižší. Ingot je tažen v bloku z roztaveného køemíku. V pøípadì potøeby je ingot rozøezán na menší ingoty a ty jsou následnì rozøezány (obdobnì jako u mono-Si) na destièky. K pøedchozím operacím je navíc realizována tzv. pasivace vodíkem, která snižuje rekombinaèní ztráty na hranicích zrn. Výsledné èlánky jsou ètvercové. Pøíklad vzhledu multikrystalického èlánku je na obrázku~\ref{fig:fvClanky:detFVC}, vpravo.
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=0.9\columnwidth]{va_char_fv_clanku/detFVC}
+	\caption{Detail FVÈ - monokrystalický (vlevo), multikrystalický (vpravo)}
+  \label{fig:fvClanky:detFVC}
+	\includegraphics[width=0.4\columnwidth]{va_char_fv_clanku/amorfCl}
+	\caption{CdTe amorfní fotovoltaický panel}
+  \label{fig:fvClanky:amorfCl}
+\end{figure}
+
+\subsubsection{\texorpdfstring{Amorfní Si fotovoltaický èlánek}{Amorfni clanek}}
+
+V souèasné dobì nastává boom tenkovrstvých technologií. Tenkovrstvé èlánky mají sice horší parametry (pøedevším úèinnost), ale jejich výroba je velmi levná a navíc umožòuje nanesení vrstvy na prakticky libovolný povrch a v libovolné ploše. Na substrát jsou postupnì nanášeny vrstvy TCO (transparentní vodivý oxid), které fungují jako kontakty, aktivní vrstvy a kontaktní vrstvy. Jednotlivé èlánky jsou oddìleny laserem. Výhodou tenkovrstvých èlánkù proti krystalickým je kromì nižší ceny vyšší teplotní stabilita parametrù. Po výrobì sice úèinnost èlánku rychle klesne, ale poté již stárne obdobným zpùsobem jako krystalické moduly. Ukázka panelu je na obrázku~\ref{fig:fvClanky:amorfCl}.
+
+\subsubsection{\texorpdfstring{Volt – ampérová charakteristika fotovoltaického modulu (èlánku).}{VA charakteristika FVM}}
+
+Pøi vyhodnocování parametrù fotovoltaických modulù (èlánkù) hraje pomìrnì znaènou roli voltampérová charakteristika testovaného modulu (èlánku). Pøíklad charakteristiky sejmuté zaøízením PROVA 210 je na obrázku~\ref{fig:fvClanky:VAchar}. Køivka byla zaznamenána pøi ozaøování èlánku halogenovou žárovkou ze vzdálenosti cca 15 cm.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\columnwidth]{va_char_fv_clanku/VAchar}
+	\caption{VA charakteristika fotovoltaického èlánku}
+  \label{fig:fvClanky:VAchar}
+\end{figure}
+
+\subsubsection{\texorpdfstring{Mìøení základních parametrù FV modulu}{Zakladni parametry FVM}}
+
+\begin{description}
+\item[Proud nakrátko] urèíme pomocí ampérmetru; vzhledem k metodì mìøení proudu pomocí úbytku napìtí na boèníku je tato hodnota pro teoretickou podmínku nulového napìtí na svorkách èlánku obtížnì urèitelná. V reálném obvodu se zapoètením všech vnitøních odporù lze za nulové považovat napìtí o velikosti okolo 100~mV. Lépe je tato skuteènost patrna na schématu, viz obrázek \ref{fig:fvClanky:bocnik}. V pøípadì urèování dalších parametrù je s touto podmínkou nutno poèítat.
+
+\item[Napìtí naprázdno] urèíme zmìøením napìtí na rozpojených svorkách osvìtleného èlánku voltmetrem s dostateèným vnitøním odporem.
+
+\item[Paralelní odpor] urèujeme z hodnot v blízkosti proudu nakrátko, tedy:
+
+\begin{equation}
+\frac{1}{R_P}= \frac{dI}{dU}
+\label{eq:fvClanky:Rp}
+\end{equation}
+
+\item [Sériový odpor] pak urèíme z hodnot namìøených v oblasti napìtí naprázdno, tedy pøi malém zatížení testovaného èlánku. Postupujeme dle rovnice: 
+
+\begin{equation}
+R_S= -\frac{dU}{dI}
+\label{eq:fvClanky:Rs}
+\end{equation}
+
+Tato metoda urèení parametrù náhradního obvodu modulu (èlánku), viz obrázek~\ref{fig:fvClanky:nahrSch}, je metodou pøibližnou, jejíž pøesnost závisí na urèení hodnot dU a dI. Teènu se snažíme vždy umístit do bodu $I_{SC}$ respektive $U_{0C}$.
+
+\item[Bod maximálního výkonu] je nejsnáze urèitelný z podmínky $dP/dU=0$. Je tady nutné nejprve vypoèítat prùbìh køivky výkonu modulu, jako souèin namìøeného napìtí a proudu. Poté nalezneme nejvyšší dosaženou hodnotu, kterou mùžeme považovat za hodnotu $MPP$. Pøi ruèním mìøení je tøeba zaznamenat dostateèné množství dat v oblasti pøedpokládaného bodu $MPP$ (viz obrázek~\ref{fig:fvClanky:VAchar}). 
+
+\item[Èinitel plnìní] je definován dle vztahu:
+
+\begin{equation}
+FF= \frac{U_{MPP}\cdot I_{MPP}}{U_{0C \cdot I_{SC}}}
+\label{eq:fvClanky:FF}
+\end{equation}
+
+\end{description}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.5\columnwidth]{va_char_fv_clanku/bocnik}
+	\caption{Vliv odporu boèníku na mìøení $I_{sc}$}
+  \label{fig:fvClanky:bocnik}
+	\includegraphics[width=0.8\columnwidth]{va_char_fv_clanku/nahrSch}
+	\caption{Náhradní schéma FVÈ a vyznaèení oblasti VA charakteristiky pro výpoèet $R_S$ a $R_P$}
+  \label{fig:fvClanky:nahrSch}
+\end{figure}
 
 %---------------------------------------------
-%\newpage
-%\subsection{\texorpdfstring{Mìøení VA charakteristik fotovoltaických èlánkù}{Mereni VA charakteristik fotovoltaickych clanku}}
-%
-%\subsubsection{\texorpdfstring{Úkol mìøení}{Ukol mereni}}
-%Zmìøte voltampérové charakteristiky pøiložených fotovoltaických èlánkù a urèete o jaký typ èlánku se jedná. U každého typu èlánku urèete:
-%
-%\begin{itemize}
- %\item proud nakrátko $I_{SC}$,
- %\item napìtí naprázdno $U_{0C}$,
- %\item paralelní odpor $R_P$ reprezentující poruchy v èlánku,
- %\item sériový odpor $R_S$ reprezentující elektrické ztráty,
- %\item bod maximálního výkonu $MPP$ (resp. $P_{MAX}$),
- %\item èinitel plnìní (fill factor) $FF$,
- %\item úèinnost èlánku $\eta$.
-%\end{itemize}
-%
-%Proveïte vzájemné porovnání jednotlivých parametrù mezi rùznými èlánky. Do spoleèného grafu vyneste charakteristiky $I= f(U)$ a $P= f(U)$ všech testovaných èlánkù a prùbìhy porovnejte.
-%
-%\subsubsection{\texorpdfstring{Postup mìøení}{Postup mereni}}
-%
-%Zátìž je realizována pøepínatelnou odporovou kaskádou pro krystalické èlánky a posuvným rezistorem v pøípadì tenkovrstvého èlánku. S mìøením zaèínáme v chodu naprázdno a poté postupnì snižujeme odpor až do chodu nakrátko. Pro chod naprázdno rozpojíme svorky zátìže, pro chod nakrátko je zkratujeme. Odeèítáme pøíslušné hodnoty napìtí a proudu. Celé mìøení opakujeme pro všechny typy èlánkù.
-%
+\newpage
+\subsection{\texorpdfstring{Mìøení VA charakteristik fotovoltaických modulù}{Mereni VA charakteristik fotovoltaickych modulu}}
+
+\subsubsection{\texorpdfstring{Úkol mìøení}{Ukol mereni}}
+\begin{enumerate}
+ \item [a)] Zmìøte voltampérové charakteristiky pøedložených fotovoltaických modulù a urèete jejich typ. Každý modul zmìøte dvakrát. První mìøení proveïte pøi teplotì cca 20?C (aktuální teplota laboratoøe). Postupujte rychle, aby nedošlo k ohøátí fotovoltaického modulu. Druhé mìøení proveïte po ustálení teploty na fotovoltaickém modulu. Pro mìøení teploty má každý z modulù nalepen na spodní stranì termoèlánek.
+
+ \item [b)] Pro každý modul urèete následující parametry a proveïte jejich vzájemné porovnání:
+ \begin{itemize}
+  \item proud nakrátko $I_{SC}$,
+  \item napìtí naprázdno $U_{0C}$,
+  \item paralelní odpor $R_P$ reprezentující poruchy v èlánku,
+  \item sériový odpor $R_S$ reprezentující elektrické ztráty,
+  \item bod maximálního výkonu $MPP$ (resp. $P_{MAX}$),
+  \item èinitel plnìní (fill factor) $FF$.
+ \end{itemize}
+
+ \item [c)] Do spoleèného grafu vyneste závislosti $I=f(U)$, $P=f(U)$ všech testovaných modulù a prùbìhy porovnejte. Totéž proveïte pro rùzné teploty.
+ \item [d)] Porovnejte moduly z hlediska výkonu vztaženého na plochu (W/ m$^2$).
+\end{enumerate}
+
+\subsubsection{\texorpdfstring{Schéma zapojení}{Schema zapojeni}}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\columnwidth]{va_char_fv_clanku/fvClanky}
+  \label{fig:fvClanky:fvClanky}
+\end{figure}
+
+\subsubsection{\texorpdfstring{Postup mìøení}{Postup mereni}}
+
+Nejprve zakryjte mìøený modul hliníkovou folií a pak zapnìte osvìtlení (halogen), poèkejte cca 1 minutu, než dojde k stabilizaci svìtelného toku a poté odstraòte krycí folii.
+
+Pøi prvním mìøení modulu pøi teplotì cca 20~$^\circ$C (aktuální teplota je mìøena termoèlánkem umístìným na spodní stranì modulu) proveïte mìøení napìtí naprázdno a proudu na krátko rychle, tak aby se co nejménì zmìnila teplota modulu bìhem mìøení. Po dokonèení prvního mìøení nechte zdroj svìtla (halogen) zapnutý a poèkejte, až se ustálí teplota modulu (cca 50 až 60~$^\circ$C) a poté zmìøte napìtí naprázdno, proud na krátko a celou VA charakteristiku.
+
+Zátìž je realizována pøepínatelnou odporovou kaskádou nebo posuvným rezistorem. S mìøením zaèínáme v chodu naprázdno a poté postupnì snižujeme odpor až do chodu nakrátko. Pro chod naprázdno rozpojíme svorky zátìže, pro chod nakrátko je zkratujeme. Odeèítáme pøíslušné hodnoty napìtí a proudu.
+Celé mìøení opakujeme pro všechny typy modulù.
+
+Pro všechny testované moduly vypoèteme hodnoty dle druhého bodu zadání. Vyneste grafy závislostí požadované v bodu c). V závìru mìøení se pokuste o srovnání parametrù jednotlivých èlánkù. Pøi tomto srovnání berte v úvahu i osvìtlenou plochu èlánku.
+
 %\subsubsection{\texorpdfstring{Mìøené vzorky}{Merene vzorky}}
 %\begin{tabular}{ll}
- %1.& ? \\
- %2.& ? \\
- %3.& ? \\ 
+ %1.& \\
+ %2.& \\
 %\end{tabular}
