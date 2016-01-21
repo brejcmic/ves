@@ -64,6 +64,22 @@
 
 !*.pdf
 
+
+#KiCad
+!*.pro
+_autosave*
+!*.sch
+!*.lib
+*-cache.lib
+*-rescue.lib
+!*.net
+!*.brd
+!*.kicad_pcb
+
+#Gerber
+!*.gbr
+!*.drl
+
 #--------------------------------------
 #ignored files - special specifications
 #--------------------------------------
