@@ -15118,30 +15118,57 @@ drill 1.0 mm</description>
 <plain>
 </plain>
 <instances>
-<instance part="IC1" gate="A" x="86.36" y="58.42"/>
-<instance part="R1" gate="G$1" x="58.42" y="93.98" rot="R90"/>
+<instance part="IC1" gate="A" x="86.36" y="58.42" smashed="yes">
+<attribute name="NAME" x="78.74" y="76.962" size="1.778" layer="95"/>
+<attribute name="VALUE" x="78.74" y="73.533" size="1.778" layer="96"/>
+</instance>
+<instance part="R1" gate="G$1" x="58.42" y="93.98" smashed="yes" rot="R90">
+<attribute name="NAME" x="56.9214" y="90.17" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="56.896" y="95.25" size="1.778" layer="96" rot="R90"/>
+</instance>
 <instance part="C1" gate="G$1" x="111.76" y="40.64"/>
 <instance part="C2" gate="G$1" x="15.24" y="40.64"/>
 <instance part="GND1" gate="1" x="111.76" y="30.48"/>
 <instance part="SUPPLY1" gate="+12V" x="58.42" y="106.68"/>
-<instance part="SUPPLY2" gate="+12V" x="99.06" y="50.8" rot="R270"/>
+<instance part="SUPPLY2" gate="+12V" x="101.6" y="71.12"/>
 <instance part="GND2" gate="1" x="73.66" y="30.48"/>
-<instance part="R4" gate="G$1" x="50.8" y="93.98" rot="R90"/>
-<instance part="R3" gate="G$1" x="43.18" y="93.98" rot="R90"/>
-<instance part="R5" gate="G$1" x="66.04" y="93.98" rot="R90"/>
+<instance part="R4" gate="G$1" x="50.8" y="93.98" smashed="yes" rot="R90">
+<attribute name="NAME" x="49.3014" y="90.17" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="49.276" y="95.25" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R3" gate="G$1" x="43.18" y="93.98" smashed="yes" rot="R90">
+<attribute name="NAME" x="41.6814" y="90.17" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="41.656" y="95.25" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R5" gate="G$1" x="66.04" y="93.98" smashed="yes" rot="R90">
+<attribute name="NAME" x="64.5414" y="90.17" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="64.516" y="95.25" size="1.778" layer="96" rot="R90"/>
+</instance>
 <instance part="SUPPLY3" gate="+12V" x="15.24" y="48.26"/>
 <instance part="GND4" gate="1" x="15.24" y="30.48"/>
-<instance part="D1" gate="G$1" x="43.18" y="76.2" rot="R270"/>
-<instance part="D2" gate="G$1" x="50.8" y="76.2" rot="R270"/>
+<instance part="D1" gate="G$1" x="43.18" y="76.2" smashed="yes" rot="R270">
+<attribute name="NAME" x="43.6626" y="81.28" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="45.9486" y="81.28" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="D2" gate="G$1" x="50.8" y="76.2" smashed="yes" rot="R270">
+<attribute name="NAME" x="51.2826" y="81.28" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="53.5686" y="81.28" size="1.778" layer="96" rot="R270"/>
+</instance>
 <instance part="SL1" gate="G$1" x="5.08" y="86.36"/>
-<instance part="D3" gate="G$1" x="50.8" y="63.5" rot="R270"/>
+<instance part="D3" gate="G$1" x="50.8" y="63.5" smashed="yes" rot="R270">
+<attribute name="NAME" x="51.2826" y="68.58" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="53.5686" y="68.58" size="1.778" layer="96" rot="R270"/>
+</instance>
 <instance part="GND3" gate="1" x="15.24" y="78.74"/>
 <instance part="SUPPLY4" gate="+12V" x="12.7" y="96.52"/>
-<instance part="LED1" gate="G$1" x="33.02" y="86.36" rot="R270"/>
+<instance part="LED1" gate="G$1" x="33.02" y="86.36" smashed="yes" rot="R270">
+<attribute name="NAME" x="28.448" y="92.964" size="1.778" layer="95"/>
+<attribute name="VALUE" x="28.448" y="90.805" size="1.778" layer="96"/>
+</instance>
 <instance part="LED2" gate="G$1" x="22.86" y="83.82" rot="R270"/>
 <instance part="GND5" gate="1" x="119.38" y="30.48"/>
-<instance part="LSP1" gate="1" x="134.62" y="66.04" rot="R270"/>
-<instance part="LSP2" gate="1" x="134.62" y="35.56" rot="R270"/>
+<instance part="LSP1" gate="1" x="127" y="66.04" rot="R270"/>
+<instance part="LSP2" gate="1" x="127" y="35.56" rot="R270"/>
 <instance part="R2" gate="G$1" x="58.42" y="48.26" rot="R90"/>
 <instance part="R6" gate="G$1" x="111.76" y="55.88" rot="R90"/>
 <instance part="C3" gate="G$1" x="116.84" y="66.04" rot="R90"/>
@@ -15175,7 +15202,7 @@ drill 1.0 mm</description>
 <pinref part="GND5" gate="1" pin="GND"/>
 <wire x1="119.38" y1="33.02" x2="119.38" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="LSP2" gate="1" pin="MP"/>
-<wire x1="119.38" y1="35.56" x2="132.08" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="35.56" x2="124.46" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="SL1" gate="G$1" pin="4"/>
@@ -15188,6 +15215,8 @@ drill 1.0 mm</description>
 <segment>
 <pinref part="IC1" gate="A" pin="V+"/>
 <pinref part="SUPPLY2" gate="+12V" pin="+12V"/>
+<wire x1="101.6" y1="68.58" x2="101.6" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="50.8" x2="96.52" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C2" gate="G$1" pin="+"/>
@@ -15325,7 +15354,7 @@ drill 1.0 mm</description>
 <segment>
 <pinref part="C3" gate="G$1" pin="-"/>
 <pinref part="LSP1" gate="1" pin="MP"/>
-<wire x1="121.92" y1="66.04" x2="132.08" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="66.04" x2="124.46" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
