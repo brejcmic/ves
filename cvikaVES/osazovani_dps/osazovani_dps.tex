@@ -8,15 +8,20 @@ Tavidla jsou nekovové materiály usnadòující pájení. Zlepšují smáèivost danıch ma
 
 %--------------------------------------
 \newpage
-\subsection{\texorpdfstring{Osazování desky plošného spoje}{Mereni frekvencni zavislosti cinitele previseni Q}}
+\subsection{\texorpdfstring{Osazování desky plošného spoje}{Osazovani desky plosneho spoje}}
 
 \subsubsection{\texorpdfstring{Úkol mìøení}{Ukol mereni}}
 Osaïte pøipravenı plošnı spoj a pomocí pøípravku ovìøte jeho funkènost.
+\begin{itemize}
+	\item Pomocí tabulky zkuste urèit hodnotu odporu jednoho rezistoru. Zbıvající rezistory mìøte pomocí ohmmetru.
+	\item Polaritu diod ovìøujte pomocí multimetru.
+	\item U LED s prùhlednım pouzdrem najdìte zpùsob jak ovìøit polaritu i barvu svìtla.
+\end{itemize}
 
 \subsubsection{\texorpdfstring{Popis zapojení}{Popis zapojeni}}
-Schéma zapojení osazovaného obvodu je na obrázku \ref{fig:osDPS:schemaZap}. Jedná se o akustickou signalizaci, která má upozornit øidièe na nutnost rozsvítit svìtla. Napájecí napìtí a logické signály svìtel jsou pøivádìny na konektor K1. Reproduktor je pøipojen mezi vıvody J1 a J2. Ke generování obdélníkového signálu pro reproduktor je pouit integrovanı obvod èasovaèe TS555. Signál je odebírán proti zemi z vıstupu Q. Hodnotu periody generovaného signálu lze ovlivnit zmìnou èasové konstanty RC èlánku, kterı je sloen z rezistoru R1 a kondenzátoru C3.
-Èinnost èasovaèe je ovlivòována logickou úrovní na vstupu R. Pokud je zde nízká úroveò, pak je èasovaè vyøazen z èinnosti. Po pøipojení napájecího napìtí (otoèení klíèku automobilu) je na tomto vstupu napìtí blízké 0 V díky rezistoru R2, kterı je pøipojen proti plovoucí zemi (bude vysvìtleno dále). Èasovaè tedy nekmitá, dokud napìtí na tomto vstupu nedosáhne poadované vysoké úrovnì. Napìtí je na vstup pøivádìno pøes diodu D5 z kondenzátoru C2, kterı je pozvolna nabíjen z napájecího zdroje pøes diodu D3 a rezistor R4. Volbou hodnot rezistoru R4 a kondenzátoru C2 tak ovlivòujeme délku èasové prodlevy pøed spuštìním akustické signalizace po zapnutí pøípravku.
-Napájecí napìtí pro èasovaè je vyvedeno mezi uzly V+ a GND. GND je zde znaèena plovoucí zem, co je uzel, kterı je oddìlen od skuteèné zemì napájecího zdroje rezistorem R5. Pøivedením urèitého napìtí na tento rezistor pøes diody D1 nebo D2 snííme o jeho hodnotu napájecí napìtí èasovaèe. Pokud je toto napìtí rovno napìtí zdroje napájení, pak je napájecí napìtí èasovaèe rovno nule a obvod opìt nemùe kmitat.
+Schéma zapojení osazovaného obvodu je na obrázku \ref{fig:osDPS:schemaZap}. Jedná se o generátor tónù. Nejniší je tón \uv{a} na 440~Hz. Další tøi tóny jsou generovány pøi rùzném propojení kolíkù 1 a 2 konektoru SL1 se zemí. Oba kolíky jsou urèeny pro pøipojení tlaèítka proti zemi. Odstupòování frekvencí odpovídá velmi zhruba pùltónu. Napájecími svorkami jsou kolíky 3 (kladná polarita zdroje) a 4 (záporná polarita zdroje) na stejném konektoru. Obvod je moné napájet napìtím v rozmezí 5~V a 15~V.
+
+Funkce obvodu je zaloena na integrovaném èasovaèi NE555 (lze pouít i TS555 nebo 7555). Ten generuje obdélníkovı signál, jeho frekvence je urèena jednak èasovou konstantou prvkù R6 a C1 a pak napìovım posunem komparaèní úrovnì na pinu CV obvodu IC1. Akustickı piezomìniè se pøipojuje na svorky LSP1 a LSP2 a kvùli monému stejnosmìrnému pøedpìtí je od vıstupu èasovaèe oddìlen elektrolytickım kondenzátorem C3. Komparaèní úrovnì pùltónù jsou nastavovány dìlièem realizovanım rezistory R1, R2, R3 a R4. Vyøazováním rezistorù R3, R4 nebo dochází ke sniování komparaèní úrovnì na pinu CV integrovaného obvodu IC1 a tím ke generování vyšších tónù. R3 a R4 zároveò realizují pøedøadnı odpor pro LED. Proto by mìla bıt zelená dioda, která je na vyšší napìtí pøipojena k niší hodnotì pøedøadného rezistoru a èervená k vyšší hodnotì. Obecnì však lze vzájemné pozice rezistorù R3 a R4 nebo vzájemné pozice led LED1 a LED2 zamìnit.
 
 \subsubsection{\texorpdfstring{Postup pájeni}{Postup pajeni}}
 Desku plošného spoje osazujeme dle obrázku \ref{fig:osDPS:schemaPokl}, kterı ukazuje pozice souèástek ze strany souèástek (druhá strana se nazıvá strana plošného spoje a jsou na ní vyleptané vodivé trasy). Dbáme na polaritu diod a elektrolytickıch kondenzátorù a také na správné natoèení pouzdra integrovaného obvodu, které je vyznaèeno klíèem (symbol na pouzdøe – teèka, vıøez apod.). Pøi osazování je vhodné zaèít souèástkami s nízkım profilem (vıškou). Pájení bude jednodušší, pokud si desku plošného spoje upevníme do dráku.
@@ -35,7 +40,7 @@ Vıslednı pájenı spoj by mìl mít vzhled sopky.
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.8\columnwidth]{osazovani_dps/svetla_piskle_schema}
-	\caption{Schéma zapojení signalizace rozsvícenıch svìtel}
+	\caption{Schéma zapojení generátoru tónù}
   \label{fig:osDPS:schemaZap}
 \end{figure}
 
