@@ -12568,9 +12568,9 @@ Siemens, Hewlett-Packard, Texas Instuments, Sharp, Motorola&lt;p&gt;
 <library name="PADs">
 <packages>
 <package name="PAD3MM">
-<pad name="1" x="0" y="0" drill="3" diameter="4" shape="long" rot="R90"/>
-<text x="-1.27" y="6.985" size="1.27" layer="25">&gt;NAME</text>
-<text x="-1.27" y="5.08" size="1.27" layer="27">&gt;VALUE</text>
+<pad name="1" x="0" y="0" drill="3" diameter="4" shape="long" rot="R90" thermals="no"/>
+<text x="2.54" y="0.635" size="1.27" layer="25">&gt;NAME</text>
+<text x="2.54" y="-1.27" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
@@ -12696,12 +12696,12 @@ Siemens, Hewlett-Packard, Texas Instuments, Sharp, Motorola&lt;p&gt;
 <part name="R12" library="rcl" deviceset="R-EU_" device="0207/10" value="5k6"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
-<part name="P1" library="PADs" deviceset="PAD" device="" technology="PAD3MM"/>
-<part name="P2" library="PADs" deviceset="PAD" device="" technology="PAD3MM"/>
-<part name="P3" library="PADs" deviceset="PAD" device="" technology="PAD3MM"/>
-<part name="P4" library="PADs" deviceset="PAD" device="" technology="PAD3MM"/>
-<part name="P5" library="PADs" deviceset="PAD" device="" technology="PAD3MM"/>
-<part name="P6" library="PADs" deviceset="PAD" device="" technology="PAD3MM"/>
+<part name="P1" library="PADs" deviceset="PAD" device="" technology="PAD3MM" value="COLLECTOR"/>
+<part name="P2" library="PADs" deviceset="PAD" device="" technology="PAD3MM" value="BASE"/>
+<part name="P3" library="PADs" deviceset="PAD" device="" technology="PAD3MM" value="EMITTER"/>
+<part name="P4" library="PADs" deviceset="PAD" device="" technology="PAD3MM" value="GROUND"/>
+<part name="P5" library="PADs" deviceset="PAD" device="" technology="PAD3MM" value="COL"/>
+<part name="P6" library="PADs" deviceset="PAD" device="" technology="PAD3MM" value="EMIT"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="P+1" library="supply1" deviceset="VCC" device=""/>
 <part name="P+2" library="supply1" deviceset="VCC" device=""/>
