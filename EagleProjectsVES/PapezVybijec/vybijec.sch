@@ -5944,8 +5944,8 @@ grid 22.86 mm, diameter 6 mm</description>
 <wire x1="-6.223" y1="0" x2="-5.08" y2="0" width="0.1524" layer="21"/>
 <wire x1="11.43" y1="0" x2="9.779" y2="0" width="0.762" layer="51"/>
 <wire x1="-11.43" y1="0" x2="-9.779" y2="0" width="0.762" layer="51"/>
-<pad name="+" x="-11.43" y="0" drill="1.016" diameter="3.1496"/>
-<pad name="-" x="11.43" y="0" drill="1.016" diameter="3.1496" shape="octagon"/>
+<pad name="+" x="-11.43" y="0" drill="1.016"/>
+<pad name="-" x="11.43" y="0" drill="1.016" shape="octagon"/>
 <text x="-8.509" y="3.429" size="1.778" layer="25" ratio="10">&gt;NAME</text>
 <text x="-8.4836" y="-5.2832" size="1.778" layer="27" ratio="10">&gt;VALUE</text>
 <rectangle x1="-4.064" y1="-1.524" x2="-3.556" y2="1.524" layer="21"/>
@@ -12650,8 +12650,13 @@ Siemens, Hewlett-Packard, Texas Instuments, Sharp, Motorola&lt;p&gt;
 </library>
 <library name="PADs">
 <packages>
+<package name="PAD1.6MM">
+<pad name="P$1" x="0" y="0" drill="1.6"/>
+<text x="1.27" y="0" size="1.27" layer="25">&gt;NAME</text>
+<text x="1.27" y="-1.27" size="1.27" layer="27">&gt;VALUE</text>
+</package>
 <package name="PAD3MM">
-<pad name="1" x="0" y="0" drill="3" diameter="4" shape="long" rot="R90" thermals="no"/>
+<pad name="1" x="0" y="0" drill="3" diameter="4" rot="R90" thermals="no"/>
 <text x="2.54" y="0.635" size="1.27" layer="25">&gt;NAME</text>
 <text x="2.54" y="-1.27" size="1.27" layer="27">&gt;VALUE</text>
 </package>
@@ -12671,7 +12676,7 @@ Siemens, Hewlett-Packard, Texas Instuments, Sharp, Motorola&lt;p&gt;
 <gate name="A" symbol="PAD" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="PAD3MM">
+<device name="PAD3MM" package="PAD3MM">
 <connects>
 <connect gate="A" pin="P$1" pad="1"/>
 </connects>
@@ -12679,9 +12684,14 @@ Siemens, Hewlett-Packard, Texas Instuments, Sharp, Motorola&lt;p&gt;
 <technology name="">
 <attribute name="DIAMETER" value="3mm" constant="no"/>
 </technology>
-<technology name="PAD3MM">
-<attribute name="DIAMETER" value="3mm" constant="no"/>
-</technology>
+</technologies>
+</device>
+<device name="PAD1.6MM" package="PAD1.6MM">
+<connects>
+<connect gate="A" pin="P$1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -14003,12 +14013,12 @@ Source: http://www.osram.convergy.de/</description>
 <part name="R12" library="rcl" deviceset="R-EU_" device="0207/10" value="5k6"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
-<part name="P1" library="PADs" deviceset="PAD" device="" technology="PAD3MM" value="COLLECTOR"/>
-<part name="P2" library="PADs" deviceset="PAD" device="" technology="PAD3MM" value="BASE"/>
-<part name="P3" library="PADs" deviceset="PAD" device="" technology="PAD3MM" value="EMITTER"/>
-<part name="P4" library="PADs" deviceset="PAD" device="" technology="PAD3MM" value="GROUND"/>
-<part name="P5" library="PADs" deviceset="PAD" device="" technology="PAD3MM" value="COL"/>
-<part name="P6" library="PADs" deviceset="PAD" device="" technology="PAD3MM" value="EMIT"/>
+<part name="P1" library="PADs" deviceset="PAD" device="PAD3MM" value="COLLECTOR"/>
+<part name="P2" library="PADs" deviceset="PAD" device="PAD3MM" value="BASE"/>
+<part name="P3" library="PADs" deviceset="PAD" device="PAD3MM" value="EMITTER"/>
+<part name="P4" library="PADs" deviceset="PAD" device="PAD3MM" value="GROUND"/>
+<part name="P5" library="PADs" deviceset="PAD" device="PAD1.6MM" value="COL"/>
+<part name="P6" library="PADs" deviceset="PAD" device="PAD1.6MM" value="EMIT"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="P+1" library="supply1" deviceset="VCC" device=""/>
 <part name="P+2" library="supply1" deviceset="VCC" device=""/>
