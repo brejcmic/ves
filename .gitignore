@@ -61,6 +61,7 @@
 #eagle files
 !*.sch
 !*.brd
+!*.lbr
 
 !*.pdf
 
