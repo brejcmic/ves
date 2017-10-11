@@ -6,6 +6,7 @@
 \usepackage{fontenc}
 \usepackage{tgheros}
 \usepackage{array}
+\usepackage{color}
 
 \usetheme{Antibes}
 \usecolortheme{crane}
@@ -222,5 +223,131 @@
 %Basic circuits
 %------------------------------------------------------------------------------
 \section{\texorpdfstring{Basic Circuits}{Basic Circuits}}
-
+%------------------------------------------------------------------------------
+	\begin{frame}
+    \frametitle{Serial Connection of Components}
+		\begin{center}
+		\begin{tabular}{m{0.4\linewidth} m{0.5\linewidth}}
+			\textbf{2\textsuperscript{nd} Kirchhoff's law:} $$\sum_k U_k = 0$$ $$\hat{U}= \hat{U_R} + \hat{U_X}$$& \includegraphics[scale=0.4]{obr11_obvodSeriovy.png}\\
+			\textbf{Complex Impedance:} $$\hat{Z} = R + j\omega L$$ $$\hat{Z} = R - j/\omega C$$& \includegraphics[scale=0.4]{obr12_obvodSeriovyGraf.png}
+		\end{tabular}
+		\end{center}
+  \end{frame}
+%------------------------------------------------------------------------------
+	\begin{frame}
+    \frametitle{Parallel Connection of Components}
+		\begin{center}
+		\begin{tabular}{m{0.45\linewidth} m{0.45\linewidth}}
+			\textbf{1\textsuperscript{st} Kirchhoff's law:} $$\sum_k I_k = 0$$ $$\hat{I}= \hat{I_G} + \hat{I_B}$$& \includegraphics[scale=0.4]{obr11_obvodSeriovy.png}
+		\end{tabular}
+		\begin{tabular}{p{0.45\linewidth} p{0.45\linewidth}}
+			\textbf{Complex Admittance:} $$\hat{Y} = G - j/\omega L$$ $$\hat{Y} = G + j\omega C$$& \textbf{Complex Impedance:} $$\hat{Z} = \frac{R\cdot j\omega L}{R+j\omega L}$$ $$\hat{Z} = \frac{R}{1+j\omega RC} $$
+		\end{tabular}
+		\end{center}
+  \end{frame}
+%------------------------------------------------------------------------------
+%Transients
+%------------------------------------------------------------------------------
+\section{\texorpdfstring{Transients}{Transients}}
+%------------------------------------------------------------------------------
+	\begin{frame}
+    \frametitle{Definition}
+		
+		\begin{itemize}
+			\item It is a non-periodic event as a reaction of the circuit to a sudden change in circuit parameters (variables).
+			\item It is always related to components that are able to cumulate energy: \textcolor{blue}{\textbf{Capacitor, Inductor}}
+		\end{itemize}
+		\textbf{Appearance:}
+		
+		\begin{itemize}
+			\item Step change of the source power (change of the current or voltage),
+			\item sudden change of the circuit component value (R, L, C),
+			\item sudden change in circuit topology $\Rightarrow$ switches.
+		\end{itemize}
+  \end{frame}
+%------------------------------------------------------------------------------
+	\begin{frame}
+    \frametitle{RC Circuit}
+		\begin{center}
+		\begin{tabular}{m{0.45\linewidth} m{0.45\linewidth}}
+			\textbf{Initial Conditions: }
+			\begin{itemize}
+				\item Switch $S$ was in the position 1 for a long time,
+				\item $t \longrightarrow 0-$,
+				\item $u_C = U_0$,
+				\item $i = i_R = U_0/R$.
+			\end{itemize}
+																					& \includegraphics[scale=0.4]{obr14_obvodRC.png}
+		\end{tabular}
+		\begin{tabular}{p{0.45\linewidth} p{0.45\linewidth}}
+			\textbf{Switch in the position 2: } 
+			\begin{itemize}
+				\item $t \longrightarrow 0+$,
+				\item $U_0$ source disappear.
+			\end{itemize}
+																					& $$C\cdot \frac{\partial u_C}{\partial t}+\frac{u_C}{R}= 0$$ $$u_C= -\frac{1}{RC}\cdot \frac{\partial u_C}{\partial t}$$
+		\end{tabular}
+		\end{center}
+  \end{frame}
+%------------------------------------------------------------------------------
+	\begin{frame}
+    \frametitle{RC Circuit Solution}
+		\begin{center}
+		\begin{tabular}{p{0.33\linewidth} p{0.57\linewidth}}
+			\textbf{After Integration: } 				& $$u_C = K\cdot e^{-t/RC}= K\cdot e^{-t/\tau}$$ $$\tau = RC$$\\
+			\textbf{Considering the Initial Conditions: }
+																					& $$U_0 = K\cdot e^{0/\tau}$$ $$K= U_0$$
+		\end{tabular}
+		\end{center}
+  \end{frame}
+%------------------------------------------------------------------------------
+	\begin{frame}
+    \frametitle{RC Circuit Plots}
+		\begin{center}
+		\begin{tabular}{m{0.45\linewidth} m{0.45\linewidth}}
+			\includegraphics[scale=0.4]{obr16_obvodRCNapeti.png} & \includegraphics[scale=0.44]{obr15_obvodRCProud.png}\\
+			$$u_C = U_0\cdot e^{-t/\tau}$$											 & $$i = \frac{U_0}{R}\cdot e^{-t/\tau}$$\\
+			\small{\textbf{Time constant:} 
+			\begin{itemize}
+				\item $\tau_{RC} = R\cdot C$,
+				\item $\tau_{RL} = L/R$.
+			\end{itemize}}
+																													 & \small{\begin{itemize}
+																															 \item It is equal to a time of the current or voltage change from $100\%$ to $37.5\%$,
+																														 \end{itemize}}
+		\end{tabular}
+		\end{center}
+  \end{frame}
+%------------------------------------------------------------------------------
+	\begin{frame}
+    \frametitle{1\textsuperscript{st} order transient}
+		\begin{center}
+		\begin{tabular}{m{0.3\linewidth} m{0.6\linewidth}}
+			\textbf{End of the event: }  												&  \small{\begin{itemize}
+																															 \item $t = 3\tau$... error less than $5\%$,
+																															 \item $t = 5\tau$... error less than $1\%$.
+																														 \end{itemize}}\\
+			\hline
+			\textbf{Short time event: }  												&  \small{\begin{itemize}
+																															 \item $t < \tau/10$... beginning of the transient,
+																															 \item can be used for integration of the input signal.
+																														 \end{itemize}}\\
+			\hline
+	    \textbf{Long time event: }  												&  \small{\begin{itemize}
+																															 \item $t < 10\cdot\tau$... much longer than the transient,
+																															 \item can be used for differentiation of the input signal.
+																														 \end{itemize}}
+		\end{tabular}
+		\end{center}
+  \end{frame}
+%------------------------------------------------------------------------------
+	\begin{frame}
+    \frametitle{Integrator vs Differentiator}
+		\begin{center}
+		\begin{tabular}{m{0.3\linewidth} m{0.6\linewidth}}
+			\includegraphics[scale=0.3]{obr17_integrator.png} & \includegraphics[scale=0.4]{obr18_integratorGraf.png}\\
+			\includegraphics[scale=0.3]{obr19_diferenciator.png} & \includegraphics[scale=0.4]{obr20_diferenciatorGraf.png}
+		\end{tabular}
+		\end{center}
+  \end{frame}
 \end{document}
