@@ -136,7 +136,7 @@
 																	& $i$... instantaneous current\\\\ \hline
 		  \textbf{Connection:}				& \\
 			$R_{total}= \sum{R}$				& $1/R_{total}= \sum{1/R}$\\
-			serial											& shunt\\\\
+			serial											& parallel\\\\
 		\end{tabular}
 		\includegraphics[scale=0.2]{obr02_potenciometr.png}
 		\end{center}
@@ -170,7 +170,7 @@
 																	& $q$... instantaneous charge\\\\ \hline
 		  \textbf{Connection:}				& \\
 			$1/C_{total}= \sum{1/C}$				& $C_{total}= \sum{C}$\\
-			serial											& shunt
+			serial											& parallel
 		\end{tabular}
 		\includegraphics[scale=0.3]{obr05_kondenzator.png}
 		\end{center}
@@ -202,7 +202,7 @@
 																	& $\phi$... instantaneous flux\\\\ \hline
 		  \textbf{Connection:}				& \\
 			$L_{total}= \sum{L}$				& $1/L_{total}= \sum{1/L}$\\
-			serial											& shunt
+			serial											& parallel
 		\end{tabular}
 		\includegraphics[scale=0.2]{obr08_civka.png}
 		\end{center}
@@ -238,7 +238,7 @@
     \frametitle{Parallel Connection of Components}
 		\begin{center}
 		\begin{tabular}{m{0.45\linewidth} m{0.45\linewidth}}
-			\textbf{1\textsuperscript{st} Kirchhoff's law:} $$\sum_k I_k = 0$$ $$\hat{I}= \hat{I_G} + \hat{I_B}$$& \includegraphics[scale=0.4]{obr11_obvodSeriovy.png}
+			\textbf{1\textsuperscript{st} Kirchhoff's law:} $$\sum_k I_k = 0$$ $$\hat{I}= \hat{I_G} + \hat{I_B}$$& \includegraphics[scale=0.4]{obr13_obvodParalelni.png}
 		\end{tabular}
 		\begin{tabular}{p{0.45\linewidth} p{0.45\linewidth}}
 			\textbf{Complex Admittance:} $$\hat{Y} = G - j/\omega L$$ $$\hat{Y} = G + j\omega C$$& \textbf{Complex Impedance:} $$\hat{Z} = \frac{R\cdot j\omega L}{R+j\omega L}$$ $$\hat{Z} = \frac{R}{1+j\omega RC} $$
@@ -285,7 +285,7 @@
 				\item $t \longrightarrow 0+$,
 				\item $U_0$ source disappear.
 			\end{itemize}
-																					& $$C\cdot \frac{\partial u_C}{\partial t}+\frac{u_C}{R}= 0$$ $$u_C= -\frac{1}{RC}\cdot \frac{\partial u_C}{\partial t}$$
+																					& $$C\cdot \frac{\partial u_C}{\partial t}+\frac{u_C}{R}= 0$$ $$u_C= -RC\cdot \frac{\partial u_C}{\partial t}$$
 		\end{tabular}
 		\end{center}
   \end{frame}
