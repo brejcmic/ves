@@ -1,0 +1,113 @@
+\section{\texorpdfstring{Vlastnosti kondenzátorù a rezistorù pøi kmitoètech nad 1~MHz }{Vlastnosti kondenzatoru a rezistoru pri kmitoctech nad 1 MHz}}
+
+\subsection{\texorpdfstring{Úvod}{Uvod}}
+
+Rezistory a kapacitory nejsou ideální souèástky, take mimo svou dominantní vlastnost (odpor, kapacita) vykazují ještì parazitní vlastnosti (indukènost, kapacitu, sériovı a paralelní odpor). Pøi frekvencích nad 1~MHz zpùsobují parazitní parametry vlastní rezonanci. Jeliko se po rezonanci mìní charakter souèástky, mùe dojít k chybné funkci obvodu v daném pásmu frekvencí. Problém je vıznamnı pøedevším u pasivních filtrù, kde se vıznamnì mìní pøedpokládaná frekvenèní charakteristika. Pro pøíklad jednoduchı RC filtr 1. øádu typu dolní propust se zmìní po vlastní rezonanci kondenzátoru na RL filtr 1. øádu typu horní propust. Vısledná frekvenèní charakteristika odpovídá ve své podstatì pásmové zádri. Obecnì konstrukce obvodù nad 1~MHz je nesnadnı úkol, kterı klade velké nároky na vıbìr souèástek.
+
+\subsubsection{\texorpdfstring{Vlastní rezonance souèástek}{Vlastni rezonance soucastek}}
+
+Náhradní modely reálnıch rezistorù a kondenzátorù jsou na obrázku~\ref{fig:rcDo1MHz:nahrSch}. Pro frekvence nad 1~MHz ji nelze tyto obvody dále zjednodušit. Zøejmì v pøípadì rezistoru se jedná o zapojení paralelního rezonanèního obvodu a v pøípadì kondenzátoru o zapojení sériového rezonanèního obvodu. Impedance náhradních obvodù vyjadøují vztahy:
+
+\begin{equation}
+Z_R = \frac{R + j\omega L_S}{1-\omega ^2 L_SC_P + j\omega RC_P}
+\label{eq:rcNad1MHz:impRez}
+\end{equation}
+
+\begin{equation}
+Z_C = \frac{R_P}{1+j\omega R_PC} + R_S + j\omega L_S
+\label{eq:rcNad1MHz:impKond}
+\end{equation}
+
+\noindent
+Oba vztahy dosahují extrému v blízkosti frekvence dané podmínkou:
+
+\begin{equation}
+\omega ^2 LC = 1
+\label{eq:rcNad1MHz:podmRez}
+\end{equation}
+
+\noindent
+Jde vlastnì o vyjádøení Thomsonova vztahu. Ve skuteènosti je rezonanèní frekvence niší, ne by odpovídalo vztahu~(\ref{eq:rcNad1MHz:podmRez}). Její pøesná hodnota navíc závisí na útlumu, kterı je úmìrnı pomìru odporu k indukènosti. Posun lze vidìt na ilustraèních obrázku~\ref{fig:rcNad1MHz:impedance}, kde jsou vyneseny impedanèní a fázové charakteristiky náhradního schéma rezistoru a kondenzátoru. Zøejmì pro zkoumané hodnoty prvkù by podle vztahu~(\ref{eq:rcNad1MHz:podmRez}) mìlo dojít u obou souèástek k rezonanci ve stejném místì (pøiblinì pøi 5~MHz). Nicménì u rezistoru, kde je pomìr odporu k indukènosti a tím i útlumu vyšší je maximální impedance posunuta mírnì doleva. Všimnìte si, e pøi rezonanci obì souèástky vykazují vıhradnì odporovı charakter. Ve fázové charakteristice je na rezonanèní frekvenci fáze vdy 0$^\circ$.
+\begin{figure}[p]
+  \centering	
+  \includegraphics[width=0.65\columnwidth]{rc_nad_1MHz/impedance}
+	\includegraphics[width=0.65\columnwidth]{rc_nad_1MHz/faze}
+	\caption{Frekvenèní charakteristika impedance a fáze pro náhradní obvod rezistoru a kondenzátoru}
+  \label{fig:rcNad1MHz:impedance}
+\end{figure}
+
+%---------------------------------------------
+\newpage
+\subsection{\texorpdfstring{Kmitoètová závislost rezistorù}{Kmitoctova zavislost rezistoru}}
+
+\subsubsection{\texorpdfstring{Úkol mìøení}{Ukol mereni}}
+Pro zadané vzorky rezistorù zmìøte závislost absolutní hodnoty impedance a fáze ($\left|Z\right|$, $\varphi$) na kmitoètu. Namìøené hodnoty vyneste do grafu. V závìru diskutujte vliv hodnoty a technologie rezistoru na namìøené frekvenèní charakteristiky.
+
+\subsubsection{\texorpdfstring{Postup mìøení}{Postup mereni}}
+
+Mìøení proveïte v rozsahu frekvencí 1 MHz a 500 MHz s pouitím pøístroje Agilent E4991A. Vyhodnote, jak se jednotlivé vzorky projevují v závislosti na jejich hodnotì a technologii. Zaznamenejte rezonanèní frekvence jednotlivıch souèástek.
+
+\subsubsection{\texorpdfstring{Mìøené vzorky}{Merene vzorky}}
+\begin{tabular}{lll}
+ 1.& 10~$\Omega$/ 330~$\Omega$/ 10~k$\Omega$& rezistor metalizovanı, 0,6 W, velikost 0207  \\
+ 2.& 10~$\Omega$/ 330~$\Omega$/ 10~k$\Omega$& rezistor metalizovanı, 2 W, velikost 0414  \\
+ 3.& 10~$\Omega$/ 330~$\Omega$/ 10~k$\Omega$& rezistor drátovı, 5 W, keramické pouzdro  \\ 
+\end{tabular}
+
+%---------------------------------------------
+\subsection{\texorpdfstring{Kmitoètová závislost kondenzátorù}{Kmitoctova zavislost kondenzatoru}}
+
+\subsubsection{\texorpdfstring{Úkol mìøení}{Ukol mereni}}
+Pro zadané vzorky kondenzátorù zmìøte závislost kapacity a ztrátového èinitele ($C$, $tg\delta$) na kmitoètu. Namìøené hodnoty vyneste do grafu. V závìru diskutujte vliv technologie kondenzátoru na namìøené frekvenèní charakteristiky.
+
+\subsubsection{\texorpdfstring{Postup mìøení}{Postup mereni}}
+
+Mìøení proveïte v rozsahu frekvencí 1~MHz a 500~MHz s pouitím pøístroje Agilent E4991A. Vyhodnote, jak se jednotlivé vzorky projevují v závislosti na jejich technologii. Zaznamenejte rezonanèní frekvence jednotlivıch souèástek.
+
+\subsubsection{\texorpdfstring{Mìøené vzorky}{Merene vzorky}}
+\begin{tabular}{llll}
+ 1.& Elektrolytickı kondenzátor hliníkovı, 330 $\mu$F/ 25 V &  5.& Keram. kondenzátor, 1 nF  \\
+ 2.& Elektrolytickı kondenzátor tantalovı, 22 $\mu$F/ 10 V & 6.& Keram. kondenzátor, 10 nF  \\ 
+ 3.& Foliovı kondenzátor radiální, 10 nF/ 100 V  & 7.& Keram. kondenzátor, 68 nF  \\ 
+ 4.& Foliovı kondenzátor axiální, 10 nF/ 100 V  && \\
+\end{tabular}
+
+%---------------------------------------------
+\newpage
+\subsection{\texorpdfstring{Mìøení pøístrojem Agilent E4991A}{Mereni pristrojem Agilent E4991A}}
+
+\subsubsection{\texorpdfstring{Schéma zapojení}{Schema zapojeni}}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\columnwidth]{rc_nad_1MHz/RCmer21_v2}
+  \label{fig:rcNad1MHz:RCmer21}
+\end{figure}
+
+\subsubsection{\texorpdfstring{Postup mìøení}{Postup mereni}}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.7\columnwidth]{rc_nad_1MHz/E4991A}
+	\caption{Pøipojení vzorkù pomocí pérového upínacího pøípravku. Vdy je tøeba dodret podmínku co nejkratších pøívodních vodièù (vıvodù souèástky).}
+  \label{fig:rcNad1MHz:E4991A}
+\end{figure}
+Pokud je mìøící pøístroj spouštìn poprvé, je tøeba z menu vybrat jeho nastavení pro tuto úlohu. To najdeme po stisku tlaèítka \textbf{\uv{Save/Recall}} a následné volby \textbf{\uv{Recall State}}. V adresáøové struktuøe vyhledáme a zvolíme soubor \textbf{\uv{VSE.sta}}. Rozsah frekvencí by se mìl sám pøenastavit na 1~MHz a 500~MHz a na obrazovce by se mìly zobrazit hodnoty reálné \uv{R} a imaginární \uv{X} sloky impedance.
+
+Vzorek zaloíme do èelistí dle obrázku~\ref{fig:rcNad1MHz:E4991A}. Dbáme na to, aby souèástka byla pøipojena s co nejkratší délkou vıvodù. Pro pøenastavení maximální a minimální frekvence mìøení lze pouít tlaèítka \uv{START/STOP}. Po stisku daného tlaèítka zadáváme hodnotu frekvence z klávesnice.  Úpravu zobrazenıch os (mìøítek) lze podobnì provést z menu po stisku tlaèítka \uv{SCALE}. Samotné mìøení prùbìhu impedance lze provést manuálnì pomocí kurzorù nebo automaticky, kdy je celı prùbìh zaznamenán na pamìové medium.
+
+\subsubsection*{\texorpdfstring{Manuální nastavení frekvence:}{Manualni nastaveni frekvence}}
+Aktuální frekvenci mùeme nastavit pøi nastavení volby Marker /Marker1. Frekvenci nastavujeme otáèením volièe nebo z klávesnice. Na displeji je moné odeèíst údaje v následujícím poøadí: frekvence ($f$), odpor ($R$), reaktance ($X$).
+
+\subsubsection*{\texorpdfstring{Automatické mìøení:}{Automaticka mereni}}
+Mìøení probíhá kontinuálnì. Data zapisujeme na disketu. Postupnì volíme:
+
+\textbf{\uv{Save/Recall} / \uv{Save Data}}
+
+\noindent \textbf{Nezapomeòte zvolit vhodné uloištì}, tj. disketu. Jméno souboru je nutné zadat z klávesnice. Zvolte také formát v jakém se mají data uloit. Pro pøípad textovıch dat vyberte kolonku ASCII. Stiskem \textbf{\uv{Save}} se data následnì uloí ve formátu TXT. 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.7\columnwidth]{rc_nad_1MHz/E4991A_disp}
+	\caption{Vzhled obrazovky mìøícího pøístroje Agilent E4991A}
+  \label{fig:rcNad1MHz:E4991A_disp}
+\end{figure}
