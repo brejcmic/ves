@@ -1,0 +1,104 @@
+%Beamer class
+\documentclass{beamer}
+
+\usepackage[czech]{babel}
+\usepackage[cp1250]{inputenc}
+\usepackage{fontenc}
+\usepackage{tgheros}
+\usepackage{array}
+\usepackage{color}
+\usepackage{hyperref}
+
+\usetheme{Antibes}
+\usecolortheme{crane}
+
+
+\title[BE1M13VES]{BE1M13VES}
+\subtitle[Manufacturing of Electrical Components] {Manufacturing of Electrical Components}
+\author[Brejcha]{Michal Brejcha}
+\institute[CTU]{CTU in Prague}
+\date[Prague, 2017]{Prague, 2017}
+
+\begin{document}
+%------------------------------------------------------------------------------
+%Uvodni slajd
+%------------------------------------------------------------------------------
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Overview} 
+\tableofcontents
+\end{frame}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{TOPIC}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+%------------------------------------------------------------------------------
+%Impedance
+%------------------------------------------------------------------------------
+\section{\texorpdfstring{Impedance}{Impedance}}
+%------------------------------------------------------------------------------
+	\begin{frame}
+    \frametitle{Phasors}
+		Phasor is representation of sinusoidal function by complex number. Transformation can be defined by the equation:
+		$$u= U_m\cdot sin\left(\omega\cdot t + \varphi\right) = Im\left\{U_m\cdot e^{j\left(\omega t + \varphi\right)}\right\}$$
+		Complex number, phasor: $$\hat{U}= U_m\cdot e^{j\varphi}$$
+		Rewritten transformation with phasor: $$u= U_m\cdot sin\left(\omega\cdot t + \varphi\right) = Im\left\{\hat{U}\cdot e^{j\omega t}\right\}$$
+	\end{frame}
+%------------------------------------------------------------------------------
+	\begin{frame}
+    \frametitle{Phasors - Features}
+		
+		\begin{itemize}
+			\item Part $e^{j\omega t}$ is time dependence of the phasor and its value is the same in a moment for all phasor at the same frequency. Phasors are analyzed, summed and multiplied without considering this part.
+			\item Phasor are time independent in harmonic stable state.
+			\item Time derivations change the value of the phasor by multiplying it by $j\omega$:
+			$$\frac{\partial u}{\partial t} = \frac{\partial}{\partial t}Im\left\{\hat{U}\cdot e^{j\omega t}\right\}=Im\left\{j\omega\cdot\hat{U}\cdot e^{j\omega t}\right\}$$
+			\item Time integration change the value of the phasor by dividing it by $j\omega$:
+			$$\int u dt = \int Im\left\{\hat{U}\cdot e^{j\omega t}\right\} dt=Im\left\{\frac{\hat{U}\cdot e^{j\omega t}}{j\omega}\right\}$$
+		\end{itemize}
+	\end{frame}
+%------------------------------------------------------------------------------
+	\begin{frame}
+    \frametitle{Complex Impedance}
+		Complex impedance can be defined only for ideal components where nominal values of resistance $R$, inductance $L$ and capacitance $C$ are constant.
+		
+		\begin{itemize}
+			\item Capacitive reactance: $$i(t)= C\cdot\frac{\partial u(t)}{\partial t}\Longrightarrow \hat{I}=j\omega C\cdot\hat{U}$$ $$X_C=\frac{-j}{\omega C}$$
+			\item Inductive reactance: $$u(t)= L\cdot\frac{\partial i(t)}{\partial t}\Longrightarrow \hat{U}=j\omega L\cdot\hat{I}$$ $$X_L=j\omega L$$
+		\end{itemize}
+	\end{frame}
+%------------------------------------------------------------------------------
+	\begin{frame}
+    \frametitle{Phasors and Complex Impedance}
+		Phasors and complex impedance make analysis of circuits in harmonic stable state simple:
+		\begin{center}
+			\begin{tabular}{m{0.4\linewidth} m{0.5\linewidth}}
+			\includegraphics[scale=0.25]{obr01_RLobvod.png} &
+			According to Kirchhoffs laws:
+			$$\hat{U}=\hat{U}_R + \hat{U}_L = R\cdot\hat{I}+j\omega L\cdot\hat{I}$$
+			Complex impedance:
+			$$\hat{Z}=R+j\omega L$$
+			\end{tabular}
+		\end{center}
+	\end{frame}
+%------------------------------------------------------------------------------
+	%\begin{frame}
+    %\frametitle{Inductance Calculation}
+		%There is no typical topology for inductance calculation. The resulting formulas can be quite complicated. There are three definitions of inductance:
+		%\begin{tabular}{m{0.4\linewidth} m{0.5\linewidth}}
+		%\begin{enumerate}
+			%\item Static definition: $$N\cdot \phi(t)= L\cdot i(t)$$
+			%\item Dynamic definition: $$u_i(t)=-L\cdot \frac{\partial i(t)}{\partial t}$$
+			%\item Energy definition: $$E_L= \frac{1}{2}\cdot L\cdot I^2$$
+		%\end{enumerate}
+		%& \includegraphics[scale=0.28]{obr01_defIndukcnosti.png}
+		%\end{tabular}
+	%\end{frame}
+%------------------------------------------------------------------------------
+\end{document}
