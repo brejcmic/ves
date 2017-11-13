@@ -80,7 +80,7 @@
 		\begin{center}
 			\begin{tabular}{m{0.4\linewidth} m{0.5\linewidth}}
 			\includegraphics[scale=0.25]{obr01_RLobvod.png} &
-			According to Kirchhoffs laws:
+			According to 2\textsuperscript{nd} Kirchhoff's law:
 			$$\hat{U}=\hat{U}_R + \hat{U}_L = R\cdot\hat{I}+j\omega L\cdot\hat{I}$$
 			Complex impedance:
 			$$\hat{Z}=R+j\omega L$$
@@ -88,17 +88,26 @@
 		\end{center}
 	\end{frame}
 %------------------------------------------------------------------------------
-	%\begin{frame}
-    %\frametitle{Inductance Calculation}
-		%There is no typical topology for inductance calculation. The resulting formulas can be quite complicated. There are three definitions of inductance:
-		%\begin{tabular}{m{0.4\linewidth} m{0.5\linewidth}}
-		%\begin{enumerate}
-			%\item Static definition: $$N\cdot \phi(t)= L\cdot i(t)$$
-			%\item Dynamic definition: $$u_i(t)=-L\cdot \frac{\partial i(t)}{\partial t}$$
-			%\item Energy definition: $$E_L= \frac{1}{2}\cdot L\cdot I^2$$
-		%\end{enumerate}
-		%& \includegraphics[scale=0.28]{obr01_defIndukcnosti.png}
-		%\end{tabular}
-	%\end{frame}
+%Impedance
+%------------------------------------------------------------------------------
+\section{\texorpdfstring{Excercises}{Excercises}}
+%------------------------------------------------------------------------------
+	\begin{frame}
+    \frametitle{Behavior of Components at Harmonic Supply}
+		\begin{enumerate}
+			\setcounter{enumi}{0}
+			\item Identify unknown components in the black-box through their response to a harmonic signal.
+		\end{enumerate}
+		
+		\begin{center}
+			\begin{tabular}{m{0.3\linewidth} m{0.6\linewidth}}
+			\includegraphics[scale=0.25]{obr02_identifikaceZ.png} &
+			Voltage, current and frequency dependency for each component:
+			$$\hat{U}=R \cdot \hat{I}$$
+			$$\hat{U}=X_L \cdot \hat{I} = j\omega L \cdot\hat{I}$$
+			$$\hat{U}=X_C \cdot \hat{I} = \frac{-j}{\omega C}\cdot\hat{I}$$
+			\end{tabular}
+		\end{center}
+	\end{frame}
 %------------------------------------------------------------------------------
 \end{document}
