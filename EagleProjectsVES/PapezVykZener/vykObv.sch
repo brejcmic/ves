@@ -1750,8 +1750,8 @@ Wickmann</description>
 </device>
 <device name="SHK20L" package="SHK20L">
 <connects>
-<connect gate="G$1" pin="1" pad="1A"/>
-<connect gate="G$1" pin="2" pad="2A"/>
+<connect gate="G$1" pin="1" pad="1A 1B"/>
+<connect gate="G$1" pin="2" pad="2A 2B"/>
 </connects>
 <technologies>
 <technology name="">
@@ -11782,7 +11782,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <busses>
 </busses>
 <nets>
-<net name="N$1" class="0">
+<net name="VDD" class="0">
 <segment>
 <pinref part="P1" gate="A" pin="P$1"/>
 <pinref part="C1" gate="G$1" pin="+"/>
@@ -11806,7 +11806,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <junction x="106.68" y="142.24"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="GND" class="0">
 <segment>
 <pinref part="C1" gate="G$1" pin="-"/>
 <wire x1="175.26" y1="119.38" x2="175.26" y2="68.58" width="0.1524" layer="91"/>
@@ -11830,7 +11830,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <junction x="142.24" y="68.58"/>
 </segment>
 </net>
-<net name="N$3" class="0">
+<net name="EMIT" class="0">
 <segment>
 <pinref part="F1" gate="G$1" pin="1"/>
 <pinref part="P5" gate="A" pin="P$1"/>
