@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -77,9 +77,12 @@
 <text x="2.54" y="-1.27" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 <package name="PAD1.6MM">
-<pad name="P$1" x="0" y="0" drill="1.6"/>
+<pad name="P$1" x="0" y="0" drill="1.6" thermals="no"/>
 <text x="1.27" y="0" size="1.27" layer="25">&gt;NAME</text>
 <text x="1.27" y="-1.27" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="PAD2.5MM">
+<pad name="P$1" x="0" y="0" drill="2.5" diameter="4.5" thermals="no"/>
 </package>
 </packages>
 <symbols>
@@ -108,6 +111,14 @@
 </technologies>
 </device>
 <device name="PAD1.6MM" package="PAD1.6MM">
+<connects>
+<connect gate="A" pin="P$1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="PAD2.5MM" package="PAD2.5MM">
 <connects>
 <connect gate="A" pin="P$1" pad="P$1"/>
 </connects>

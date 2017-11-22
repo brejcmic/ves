@@ -11679,9 +11679,12 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <text x="2.54" y="-1.27" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 <package name="PAD1.6MM">
-<pad name="P$1" x="0" y="0" drill="1.6"/>
+<pad name="P$1" x="0" y="0" drill="1.6" thermals="no"/>
 <text x="1.27" y="0" size="1.27" layer="25">&gt;NAME</text>
 <text x="1.27" y="-1.27" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="PAD2.5MM">
+<pad name="P$1" x="0" y="0" drill="2.5" diameter="4.5" thermals="no"/>
 </package>
 </packages>
 <symbols>
@@ -11717,6 +11720,14 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <technology name=""/>
 </technologies>
 </device>
+<device name="PAD2.5MM" package="PAD2.5MM">
+<connects>
+<connect gate="A" pin="P$1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 </devicesets>
@@ -11744,11 +11755,11 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <part name="R5" library="rcl" deviceset="R-EU_" device="0207/10" value="665R"/>
 <part name="R6" library="rcl" deviceset="R-EU_" device="0207/10" value="665R"/>
 <part name="R7" library="rcl" deviceset="R-EU_" device="0207/10" value="3R9"/>
-<part name="P1" library="PADs" deviceset="PAD" device="PAD3MM" value="VCC"/>
-<part name="P2" library="PADs" deviceset="PAD" device="PAD3MM" value="GND"/>
-<part name="P3" library="PADs" deviceset="PAD" device="PAD3MM" value="B"/>
-<part name="P4" library="PADs" deviceset="PAD" device="PAD3MM" value="C"/>
-<part name="P5" library="PADs" deviceset="PAD" device="PAD3MM" value="E"/>
+<part name="P1" library="PADs" deviceset="PAD" device="PAD2.5MM" value="VCC"/>
+<part name="P2" library="PADs" deviceset="PAD" device="PAD2.5MM" value="GND"/>
+<part name="P3" library="PADs" deviceset="PAD" device="PAD2.5MM" value="B"/>
+<part name="P4" library="PADs" deviceset="PAD" device="PAD2.5MM" value="C"/>
+<part name="P5" library="PADs" deviceset="PAD" device="PAD2.5MM" value="E"/>
 <part name="P6" library="PADs" deviceset="PAD" device="PAD1.6MM" value="X4"/>
 <part name="P7" library="PADs" deviceset="PAD" device="PAD1.6MM" value="X3"/>
 </parts>
