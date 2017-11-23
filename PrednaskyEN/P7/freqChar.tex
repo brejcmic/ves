@@ -89,16 +89,16 @@
 		$$\hat{Z}= \frac{R - \frac{j}{\omega C_p}\cdot\left(\omega^2 L_sC_p\cdot\left(\omega^2 L_sC_p - 1\right)+\left(\omega C_pR\right)^2\right)}{\left(1-\omega^2 L_sC_p\right)^2+\left(\omega C_pR\right)^2}$$
 		Low frequencies ($\omega \rightarrow 0$): \textcolor{red}{resistivity}
 		$$\hat{Z}\approx R$$
-		High frequencies ($\omega >> \omega_{REZ}$): \textcolor{red}{parasitic capacitance effect}
+		High frequencies ($\omega >> \omega_{RES}$): \textcolor{red}{parasitic capacitance effect}
 		$$\hat{Z}\approx \frac{1}{j\omega C_p}$$
 	\end{frame}
 %------------------------------------------------------------------------------
 	\begin{frame}
     \frametitle{Equivalent Circuit Analysis - Resonance}
 		Resonance frequency:
-		$$\omega_{REZ}= \sqrt{\frac{1}{L_sC_p} - \left(\frac{R}{L_s}\right)^2}$$
-		Impedance at $\omega_{REZ}$
-		$$\hat{Z}_{REZ}=\frac{Z_0^2}{R}$$
+		$$\omega_{RES}= \sqrt{\frac{1}{L_sC_p} - \left(\frac{R}{L_s}\right)^2}$$
+		Impedance at $\omega_{RES}$
+		$$\hat{Z}_{RES}=\frac{Z_0^2}{R}$$
 		Where $Z_0$ has the same definition as wave impedance:
 		$$Z_0 = \sqrt{\frac{L_s}{C_p}}$$
 	\end{frame}
@@ -118,7 +118,7 @@
 		\setcounter{enumi}{0}
 			\item Resistance: $$R= 33\Omega$$
 			\item Capacitance \textbf{(15 pF)}: $$C_p\approx \frac{1}{\omega \cdot \left|Z\right|}= \frac{1}{503\cdot 10^6\cdot180}= 11pF$$
-			\item Inductance \textbf{(1 $\mu$H)}: $$L\approx Z_{REZ}\cdot R \cdot C_p = 1900\cdot 33\cdot 15\cdot 10^{-12}= 940 \mu H$$
+			\item Inductance \textbf{(1 $\mu$H)}: $$L\approx Z_{RES}\cdot R \cdot C_p = 1900\cdot 33\cdot 15\cdot 10^{-12}= 940 nH$$
 		\end{enumerate}
 	\end{frame}
 %------------------------------------------------------------------------------
@@ -170,18 +170,18 @@
     \frametitle{Equivalent Circuit Analysis}
 		Impedance: 
 		$$\hat{Z}= R_s+\frac{R_p}{\left(1+(\omega C R_p)^2\right)} + j\left(\omega L_s -\frac{1}{\omega C} \cdot \frac{(\omega C Rp)^2}{\left(1+(\omega C R_p)^2\right)}\right)$$
-		Low frequencies ($\omega << \omega_{REZ}$): \textcolor{red}{capacitance}
+		Low frequencies ($\omega << \omega_{RES}$): \textcolor{red}{capacitance}
 		$$\hat{Z}\approx \frac{1}{j\omega C}$$
-		High frequencies ($\omega >> \omega_{REZ}$): \textcolor{red}{parasitic inductance}
+		High frequencies ($\omega >> \omega_{RES}$): \textcolor{red}{parasitic inductance}
 		$$\hat{Z}\approx j\omega L_s$$
 	\end{frame}
 %------------------------------------------------------------------------------
 	\begin{frame}
     \frametitle{Equivalent Circuit Analysis - Resonance}
 		Resonance frequency:
-		$$\omega_{REZ}= \sqrt{\frac{1}{L_sC} - \left(\frac{1}{R_pCp}\right)^2}\approx \sqrt{\frac{1}{L_sC}}$$
-		Impedance at $\omega_{REZ}$
-		$$\hat{Z}_{REZ}=R_s + \frac{Z_0^2}{R_p}\approx R_s$$
+		$$\omega_{RES}= \sqrt{\frac{1}{L_sC} - \left(\frac{1}{R_pCp}\right)^2}\approx \sqrt{\frac{1}{L_sC}}$$
+		Impedance at $\omega_{RES}$
+		$$\hat{Z}_{RES}=R_s + \frac{Z_0^2}{R_p}\approx R_s$$
 		\small
 		\begin{itemize}
 			\item The approximation is made for capacitors with high resistance $R_p$ and value of capacitance $C>$ 1 $nF$
@@ -204,7 +204,7 @@
 		\begin{enumerate}
 		\setcounter{enumi}{0}
 			\item Capacitance \textbf{(10 nF)}: $$C\approx \frac{1}{\omega \cdot \left|Z\right|}= \frac{1}{12.6\cdot 10^6\cdot7.85}= 10.1 nF$$
-			\item Serial resistance \textbf{0.01 $\Omega$)}: $$R_s \approx Z_{REZ} = 0.01\Omega$$
+			\item Serial resistance \textbf{0.01 $\Omega$)}: $$R_s \approx Z_{RES} = 0.01\Omega$$
 			\item Inductance \textbf{(10 nH)}: $$L\approx \frac{\left|Z\right|}{\omega}= \frac{3.65}{376\cdot 10^6}= 9.7 nH$$
 		\end{enumerate}
 	\end{frame}
@@ -230,7 +230,7 @@
     \frametitle{Impedance Plot Example}
 
 		\begin{center}
-			\includegraphics[scale=0.62]{obr04_impedanceL.png}
+			\includegraphics[scale=0.61]{obr04_impedanceL.png}
 		\end{center}
 	\end{frame}
 %------------------------------------------------------------------------------
@@ -238,9 +238,9 @@
     \frametitle{Equivalent Circuit Analysis}
 		Very low frequencies ($\omega \rightarrow 0$): \textcolor{red}{parasitic resistivity}
 		$$\hat{Z}\approx R_s$$
-		Low frequencies ($\omega << \omega_{REZ}$): \textcolor{red}{inductance}
+		Low frequencies ($\omega << \omega_{RES}$): \textcolor{red}{inductance}
 		$$\hat{Z}\approx j\omega L$$
-		High frequencies ($\omega >> \omega_{REZ}$): \textcolor{red}{parasitic capacitance effect}
+		High frequencies ($\omega >> \omega_{RES}$): \textcolor{red}{parasitic capacitance effect}
 		$$\hat{Z}\approx \frac{1}{j\omega C_p}$$
 	\end{frame}
 %------------------------------------------------------------------------------
@@ -259,7 +259,7 @@
 		\setcounter{enumi}{0}
 			\item Inductance \textbf{(1 mH)}: $$L\approx \frac{\left|Z\right|}{\omega}= \frac{2050}{1885\cdot 10^3}= 1.1 mH$$
 			\item Parallel capacitance \textbf{(15 pF)}: $$C\approx \frac{1}{\omega \cdot \left|Z\right|}= \frac{1}{25.1\cdot 10^6\cdot2970}= 13 pF$$
-			\item Serial resistance \textbf{10 $\Omega$)}: $$R_s \approx \frac{Z_0^2}{Z_{REZ}}=\frac{10^{-3}}{15\dot 10^{-12}\cdot 10^6}= 6.67 \Omega$$
+			\item Serial resistance \textbf{10 $\Omega$)}: $$R_s \approx \frac{Z_0^2}{Z_{RES}}=\frac{10^{-3}}{15\dot 10^{-12}\cdot 10^6}= 6.67 \Omega$$
 			
 			\begin{itemize}
 				\item \large\textbf{\textcolor{red}{NO!}} \small... better to find out the serial resistance from DC measurement.
