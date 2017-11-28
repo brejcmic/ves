@@ -1,0 +1,113 @@
+<document type="ProfiCAD sxe" version="8.0">
+<fonts letter="155,0,0,0,Lucida Sans Unicode,000000" text="110,0,0,0,Lucida Sans Unicode,000000" type="85,0,0,0,Arial,000000" refs="85,0,0,0,Arial,000000" cross_refs="70,0,0,0,Tahoma,000000" outlets="70,0,0,0,Tahoma,000000"/>
+<PrintSettings PrinterName="" PaperSize="1" FormName="letter" SheetSizeX="289" SheetSizeY="202" WantsCustom="0" CustomSizeX="283" CustomSizeY="203"/>
+<PrintReportSettings PaperSize="9" FormName="???" SheetSizeX="0" SheetSizeY="0"/>
+<PrinterSettings PaperSizeX="2794" PaperSizeY="2159" PhysicalOffestTenthMm_X="0" PhysicalOffestTenthMm_Y="0"/>
+<tb use="1" name="C:\Users\Public\Documents\ProfiCAD Library\_TB\standard.ptb"/>
+<PageSettings bgColor="FFFFF0" pgsHor="1" pgsVer="1" pgsMrgn="0, 0, 0, 0" pageMargins="10, 10, 10, 10" zoom="200" frame="YES" rastr="20" showT="YES" showV="YES" includeMargins="YES"/>
+<RefGridSettings FieldSize="50"/>
+<NumberingWire Prefill="1" Digits="3" TypeRenumbering="0" ShowWireName="1" WireLabelDist_a="7" WireLabelDist_b="1" WireLabelDist_c="7" Vertically="1"/>
+<summary author="" date="14.2.2012"/>
+<BillColumns/>
+<repo id="32757">
+<tb path="C:\Users\Public\Documents\ProfiCAD Library\_TB\standard.ptb">
+<repo id="12859">
+<imgDesc lastGuid="9c118d35-f0c1-45b0-b06d-162ac2ecb37f" imgType="4">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</imgDesc>
+</repo>
+<layers current="0">
+<layer name="0" v="1">
+<rect left="-840" top="-200" right="840" bottom="200" op-lw="4"/>
+<text x="-829" y="-170" f="80,0,0,0,Tahoma,000000" al="2">Oddělení</text>
+<text x="-829" y="-114" f="80,0,0,0,Tahoma,000000" al="2">{odd}</text>
+<text x="-608" y="-170" f="80,0,0,0,Tahoma,000000" al="2">Technický referent</text>
+<text x="-608" y="-114" f="80,0,0,0,Tahoma,000000" al="2">{techRef}</text>
+<text x="-190" y="-170" f="80,0,0,0,Tahoma,000000" al="2">Kreslil</text>
+<text x="-190" y="-114" f="80,0,0,0,Tahoma,000000" al="2">{author}</text>
+<text x="313" y="-170" f="80,0,0,0,Tahoma,000000" al="2">Přezkoušel</text>
+<text x="313" y="-114" f="80,0,0,0,Tahoma,000000" al="2">{prezkousel}</text>
+<text x="-190" y="-48" f="80,0,0,0,Tahoma,000000" al="2">Druh dokumentu</text>
+<text x="-190" y="8" f="80,0,0,0,Tahoma,000000" al="2">{druhDokumentu}</text>
+<text x="313" y="-48" f="80,0,0,0,Tahoma,000000" al="2">Status dokumentu</text>
+<text x="313" y="8" f="80,0,0,0,Tahoma,000000" al="2">{statusDokumentu}</text>
+<polyline op-lw="4" pts="-840,-80,840,-80,"/>
+<polyline op-lw="4" pts="-200,-200,-200,200,"/>
+<polyline op-lw="4" pts="-620,-200,-620,-80,"/>
+<polyline op-lw="4" pts="300,-200,300,200,"/>
+<polyline op-lw="4" pts="-200,40,840,40,"/>
+<text x="-190" y="70" f="80,0,0,0,Tahoma,000000" al="2">Název, doplňující název</text>
+<text x="-190" y="120" f="80,0,0,0,Tahoma,000000" al="2">{nazev}</text>
+<text x="-190" y="173" f="80,0,0,0,Tahoma,000000" al="2">{nazevDopln}</text>
+<text x="313" y="70" f="80,0,0,0,Tahoma,000000" al="2">Číslo dokumentu</text>
+<text x="560" y="70" f="80,0,0,0,Tahoma,000000" al="2">{cisloDok}</text>
+<text x="717" y="173" f="80,0,0,0,Tahoma,000000" al="2">{sheet}</text>
+<text x="710" y="8" f="80,0,0,0,Tahoma,000000" al="2">{zmena}</text>
+<text x="710" y="-48" f="80,0,0,0,Tahoma,000000" al="2">Změna</text>
+<text x="313" y="126" f="80,0,0,0,Tahoma,000000" al="2">Datum vydání</text>
+<text x="595" y="126" f="80,0,0,0,Tahoma,000000" al="2">Jazyk</text>
+<text x="313" y="173" f="80,0,0,0,Tahoma,000000" al="2">{date}</text>
+<text x="591" y="173" f="80,0,0,0,Tahoma,000000" al="2">{jazyk}</text>
+<text x="726" y="126" f="80,0,0,0,Tahoma,000000" al="2">List</text>
+<polyline op-lw="4" pts="300,100,840,100,"/>
+<polyline op-lw="4" pts="580,100,580,200,"/>
+<polyline op-lw="4" pts="700,100,700,200,"/>
+<img lastGuid="9c118d35-f0c1-45b0-b06d-162ac2ecb37f" preserveAspect="1" left="-805" top="-10" right="-240" bottom="138"/>
+<polyline op-lw="4" pts="700,-80,700,40,"/>
+</layer>
+</layers>
+</tb>
+</repo>
+<pages current="0">
+<page name="1">
+<tb use="1" name="C:\Users\Public\Documents\ProfiCAD Library\_TB\standard.ptb"/>
+<summary _potb="1" _sc="" _po="1" nazev="" _pa="1" nazevDopln=""/>
+<layers current="1">
+<layer name="-1" v="1"/>
+<layer name="0" v="1">
+<polyline op-at="5" pts="700,520,700,180,"/>
+<polyline op-at="5" pts="680,500,1300,500,"/>
+<polyline pts="800,520,800,380,"/>
+<polyline pts="1100,520,1100,380,"/>
+<text x="640" y="200" f="110,0,0,0,Times New Roman,000000" al="9">log(n)</text>
+<text x="1290" y="540" f="110,0,0,0,Times New Roman,000000" al="9">1/T</text>
+<text x="1100" y="540" f="110,0,0,0,Times New Roman,000000" al="9">1/Ts</text>
+<text x="800" y="540" f="110,0,0,0,Times New Roman,000000" al="9">1/Ti</text>
+<polyline op-lw="4" pts="1260,470,1100,400,800,400,720,220,"/>
+<polyline op-at="5" pts="1350,520,1350,180,"/>
+<polyline op-at="5" pts="1330,500,1950,500,"/>
+<polyline pts="1450,520,1450,400,"/>
+<polyline pts="1750,520,1750,350,"/>
+<text x="1290" y="200" f="110,0,0,0,Times New Roman,000000" al="9">log(μ)</text>
+<text x="1940" y="540" f="110,0,0,0,Times New Roman,000000" al="9">1/T</text>
+<text x="1750" y="540" f="110,0,0,0,Times New Roman,000000" al="9">1/Ts</text>
+<text x="1450" y="540" f="110,0,0,0,Times New Roman,000000" al="9">1/Ti</text>
+<polybezier op-lw="4" pts="1922,480,1860,453,1714,385,1672,370,1630,355,1619,347,1582,360,1545,373,1451,435,1372,480,"/>
+<polyline op-at="5" pts="1100,940,1100,600,"/>
+<polyline op-at="5" pts="1080,920,1700,920,"/>
+<polyline pts="1200,940,1200,830,"/>
+<polyline pts="1500,940,1500,800,"/>
+<text x="1040" y="620" f="110,0,0,0,Times New Roman,000000" al="9">log(σ)</text>
+<text x="1690" y="960" f="110,0,0,0,Times New Roman,000000" al="9">1/T</text>
+<text x="1500" y="960" f="110,0,0,0,Times New Roman,000000" al="9">1/Ts</text>
+<text x="1200" y="960" f="110,0,0,0,Times New Roman,000000" al="9">1/Ti</text>
+<polybezier op-lw="4" op-lc="32768" pts="1672,900,1610,873,1480,810,1430,790,1380,770,1369,767,1332,780,1180,880,1180,910,1120,640,"/>
+<text x="1600" y="540" f="110,0,0,0,Times New Roman,000000" al="9">~1/200</text>
+<polyline pts="1600,520,1600,330,"/>
+<text x="1350" y="960" f="110,0,0,0,Times New Roman,000000" al="9">~1/200</text>
+<polyline pts="1350,940,1350,750,"/>
+<text x="1610" y="250" f="110,1,0,0,Times New Roman,000000" al="9">Charge Mobility</text>
+<text x="990" y="250" f="110,1,0,0,Times New Roman,000000" al="9">Charge Concentration</text>
+<text x="900" y="460" f="90,1,0,0,Times New Roman,000000" al="9">intrinsic</text>
+<text x="940" y="380" f="90,1,0,0,Times New Roman,000000" al="9">extrinsic</text>
+<text x="1180" y="380" f="90,1,0,0,Times New Roman,000000" al="9">ionization</text>
+<text x="1280" y="690" f="90,1,0,0,Times New Roman,000000" al="9">like metals</text>
+<polybezier pts="1200,730,1200,710,1275,730,1275,710,1275,730,1350,710,1350,730,"/>
+<text x="1350" y="630" f="110,1,0,0,Times New Roman,000000" al="9">Conductivity</text>
+<polyline pts="720,220,850,510,">
+<op-lt head="čárkovaná (.5x), _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _" body="A,.25,-.125"/>
+</polyline>
+<polygon op-fd="1" op-fc="0" pts="880,840,880,900,980,780,880,660,880,720,840,720,840,840,"/>
+</layer>
+</layers>
+</page>
+</pages>
+</document>
