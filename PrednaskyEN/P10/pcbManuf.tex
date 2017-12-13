@@ -1,0 +1,174 @@
+%Beamer class
+\documentclass{beamer}
+
+\usepackage[czech]{babel}
+\usepackage[cp1250]{inputenc}
+\usepackage{fontenc}
+\usepackage{tgheros}
+\usepackage{array}
+\usepackage{color}
+\usepackage{hyperref}
+
+\usetheme{Antibes}
+\usecolortheme{crane}
+
+
+\title[BE1M13VES]{BE1M13VES}
+\subtitle[Manufacturing of Electrical Components] {Manufacturing of Electrical Components}
+\author[Brejcha]{Michal Brejcha}
+\institute[CTU]{CTU in Prague}
+\date[Prague, 2017]{Prague, 2017}
+
+\begin{document}
+%------------------------------------------------------------------------------
+%Uvodni slajd
+%------------------------------------------------------------------------------
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Overview} 
+\tableofcontents
+\end{frame}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{TOPIC}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+%------------------------------------------------------------------------------
+%Base Material Manufacturing
+%------------------------------------------------------------------------------
+\section{\texorpdfstring{Base Material Manufacturing}{Base Material Manufacturing}}
+%------------------------------------------------------------------------------
+	\begin{frame}
+    \frametitle{Printed Circuit Board}
+		Circuit interconnections created as traces of conductor on dielectric substrate.\\
+
+		\begin{center}
+			\begin{tabular}{p{0.2\linewidth} p{0.7\linewidth}}
+			Conductor: & Cu Film. Thickness is measured in ounces (oz). 1~oz$\approx$35~$\mu$m, most common thickness are 0.5~oz, 1~oz and 2~oz.\\
+			Dielectric: & Glass Fabric $+$ Resin. There are several substrates depending on glass to resin volume ratio in the market. Typical parameters are:
+			
+			\begin{itemize}
+				\item $\epsilon_r\approx 3.8 - 5$,
+				\item $E_{max}\approx 50$~kV/m,
+			\end{itemize}
+			\end{tabular}
+		\end{center}
+	\end{frame}
+%------------------------------------------------------------------------------
+	\begin{frame}
+    \frametitle{Dielectric Glass-Resin Composite - Laminate}
+		\small
+		\begin{center}
+			\begin{tabular}{m{0.4\linewidth} m{0.5\linewidth}}
+			\includegraphics[scale=0.2]{obr23_FR4.png} &
+			
+			\begin{itemize}
+				\item Properties are afected by resin (FR2 phenolic$+$paper, FR4 epoxy$+$glass ) material and warp and fill of the glass,
+				\item common thickness of the layers are from 0.04 mm up to 2 mm.
+				\item FR4 are core materials of laminate with cured resin.
+				\item Pre-preg - stands for "pre-impregnated", resin is cured to an intermediate stage.
+			\end{itemize}
+			\end{tabular}
+		\end{center}
+	\end{frame}
+%------------------------------------------------------------------------------
+	\begin{frame}
+    \frametitle{Coper Foil Manufacturing}
+
+		\begin{center}
+			\includegraphics[scale=0.25]{obr24_Cu.png}
+		\end{center}
+		
+		\begin{itemize}
+			\item Copper is electroplated onto a rotating drum.
+			\item Treatments are applied to: micro-roughen surface for adhesion, plate barrier layer, coat with anti-tarnish
+		\end{itemize}
+	\end{frame}
+%------------------------------------------------------------------------------
+	\begin{frame}
+    \frametitle{FR4 Core Material}
+
+		\begin{center}
+			\begin{tabular}{m{0.4\linewidth} m{0.5\linewidth}}
+			\includegraphics[scale=0.12]{obr02_jadro.png} & \textbf{Lay up}
+			\begin{itemize}
+				\item Sandwich, FR4 core is between two (can be also one sided) Cu layers,
+				\item layers are bonded at specific pressure and temperature
+			\end{itemize}
+			\end{tabular}
+		\end{center}
+		
+		\begin{itemize}
+			\item this base is used as a core for multilayer PCBs or for one or two sided PCBs.
+		\end{itemize}
+	\end{frame}
+%------------------------------------------------------------------------------
+%PCB Manufacturing
+%------------------------------------------------------------------------------
+\section{\texorpdfstring{PCB Manufacturing}{PCB Manufacturing}}
+%------------------------------------------------------------------------------
+	\begin{frame}
+    \frametitle{Drilling the holes to the core}
+
+		\begin{center}
+			\begin{tabular}{m{0.5\linewidth} m{0.4\linewidth}}
+			\textbf{This is done only if:}
+			\begin{itemize}
+				\item it is one or two sided pcb or
+				\item there are some vias only in the inner layers.
+			\end{itemize}
+			 & \includegraphics[scale=0.12]{obr03_jadroVrtani.png}
+			\end{tabular}
+		\end{center}
+		The connection between sides is ensured after through hole plating.
+		\begin{center}
+		\includegraphics[scale=0.12]{obr04_jadroProkovy.png}
+		\end{center}
+	\end{frame}
+%------------------------------------------------------------------------------
+	\begin{frame}
+    \frametitle{Photo-resist deposition}
+
+		\begin{flushleft}
+			\begin{tabular}{m{0.5\linewidth} m{0.4\linewidth}}
+			\begin{itemize}
+				\item resist is applied by heat and pressure to the metal surfaces of the core,
+				\item it is rolled out in most of the cases,
+				\item it can be also sprayed in case of piece production (amateurs),
+				\item the film is sensitive to UV light,
+			\end{itemize}
+			 & \includegraphics[scale=0.12]{obr05_jadroFotofilm.png}
+			\end{tabular}
+			\begin{tabular}{m{0.9\linewidth}}
+			\begin{itemize}
+				\item yellow light is used in most image processing areas to prevent inadvertent exposure of the resist.
+			\end{itemize}
+			\end{tabular}
+		\end{flushleft}
+
+	\end{frame}
+%------------------------------------------------------------------------------
+	\begin{frame}
+    \frametitle{Basic Types of resists}
+
+		\begin{center}
+			\begin{tabular}{m{0.35\linewidth} m{0.55\linewidth}}
+			 \includegraphics[scale=0.9]{obr27_negativAPozitiv.png} &
+				There are two possible reaction of the resist:
+				
+				\begin{enumerate}
+					\item illuminated parts are polymerized (hardened) or
+					\item they are chemical changed and then soluble in developer.
+				\end{enumerate}
+				First type is called negative resist, because the negative pattern (mask) is needed. Second one is positive resist. The negative resist is more common in mass production.
+			\end{tabular}
+		\end{center}
+		
+	\end{frame}
+%------------------------------------------------------------------------------
+\end{document}

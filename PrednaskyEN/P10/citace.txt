@@ -1,0 +1,10 @@
+http://www.isola-group.com/wp-content/uploads/
+https://www.youtube.com/watch?v=z4f-D1EKKD4
+https://www.youtube.com/watch?v=T7S40GYESbY
+https://www.youtube.com/watch?v=hpR4e1n0HKo&t=204s
+
+Plating and Copper Deposition
+
+After drilling, the panel moves onto plating. The process fuses the different layers together using chemical deposition. After a thorough cleaning, the panel undergoes a series of chemical baths. During the baths, a chemical deposition process deposits a thin layer - about one micron thick - of copper over the surface of the panel. The copper goes into the recently drilled holes.
+
+Prior to this step, the interior surface of the holes simply exposes the fiber glass material that comprises the interior of the panel. The copper baths completely cover, or plate, the walls of the holes. Incidentally, the entire panel receives a new layer of copper. Most importantly, the new holes are covered. Computers control the entire process of dipping, removal and procession.

@@ -85,14 +85,14 @@ R_S= -\frac{dU}{dI}
 \label{eq:fvClanky:Rs}
 \end{equation}
 
-Tato metoda urèení parametrù náhradního obvodu modulu (èlánku), viz obrázek~\ref{fig:fvClanky:nahrSch}, je metodou pøibližnou, jejíž pøesnost závisí na urèení hodnot dU a dI. Teènu se snažíme vždy umístit do bodu $I_{SC}$ respektive $U_{0C}$.
+Tato metoda urèení parametrù náhradního obvodu modulu (èlánku), viz obrázek~\ref{fig:fvClanky:nahrSch}, je metodou pøibližnou, jejíž pøesnost závisí na urèení hodnot dU a dI. Teènu se snažíme vždy umístit do bodu $I_{SC}$ respektive $U_{OC}$.
 
 \item[Bod maximálního výkonu] je nejsnáze urèitelný z podmínky $dP/dU=0$. Je tady nutné nejprve vypoèítat prùbìh køivky výkonu modulu, jako souèin namìøeného napìtí a proudu. Poté nalezneme nejvyšší dosaženou hodnotu, kterou mùžeme považovat za hodnotu $MPP$. Pøi ruèním mìøení je tøeba zaznamenat dostateèné množství dat v oblasti pøedpokládaného bodu $MPP$ (viz obrázek~\ref{fig:fvClanky:VAchar}). 
 
 \item[Èinitel plnìní] je definován dle vztahu:
 
 \begin{equation}
-FF= \frac{U_{MPP}\cdot I_{MPP}}{U_{0C \cdot I_{SC}}}
+FF= \frac{U_{MPP}\cdot I_{MPP}}{U_{OC} \cdot I_{SC}}
 \label{eq:fvClanky:FF}
 \end{equation}
 
@@ -101,7 +101,7 @@ FF= \frac{U_{MPP}\cdot I_{MPP}}{U_{0C \cdot I_{SC}}}
 \begin{figure}[t]
   \centering
   \includegraphics[width=0.5\columnwidth]{va_char_fv_clanku/bocnik}
-	\caption{Vliv odporu boèníku na mìøení $I_{sc}$}
+	\caption{Vliv odporu boèníku na mìøení $I_{SC}$}
   \label{fig:fvClanky:bocnik}
 	\includegraphics[width=0.8\columnwidth]{va_char_fv_clanku/nahrSch}
 	\caption{Náhradní schéma FVÈ a vyznaèení oblasti VA charakteristiky pro výpoèet $R_S$ a $R_P$}
@@ -114,12 +114,12 @@ FF= \frac{U_{MPP}\cdot I_{MPP}}{U_{0C \cdot I_{SC}}}
 
 \subsubsection{\texorpdfstring{Úkol mìøení}{Ukol mereni}}
 \begin{enumerate}
- \item [a)] Zmìøte voltampérové charakteristiky pøedložených fotovoltaických modulù a urèete jejich typ. Každý modul zmìøte dvakrát. První mìøení proveïte pøi teplotì cca 20?C (aktuální teplota laboratoøe). Postupujte rychle, aby nedošlo k ohøátí fotovoltaického modulu. Druhé mìøení proveïte po ustálení teploty na fotovoltaickém modulu. Pro mìøení teploty má každý z modulù nalepen na spodní stranì termoèlánek.
+ \item [a)] Zmìøte voltampérové charakteristiky pøedložených fotovoltaických modulù a urèete jejich typ. Každý modul zmìøte dvakrát. První mìøení proveïte pøi teplotì cca 20~$^\circ$C (aktuální teplota laboratoøe). Postupujte rychle, aby nedošlo k ohøátí fotovoltaického modulu. Druhé mìøení proveïte po ustálení teploty na fotovoltaickém modulu. Pro mìøení teploty má každý z modulù nalepen na spodní stranì termoèlánek.
 
  \item [b)] Pro každý modul urèete následující parametry a proveïte jejich vzájemné porovnání:
  \begin{itemize}
   \item proud nakrátko $I_{SC}$,
-  \item napìtí naprázdno $U_{0C}$,
+  \item napìtí naprázdno $U_{OC}$,
   \item paralelní odpor $R_P$ reprezentující poruchy v èlánku,
   \item sériový odpor $R_S$ reprezentující elektrické ztráty,
   \item bod maximálního výkonu $MPP$ (resp. $P_{MAX}$),
